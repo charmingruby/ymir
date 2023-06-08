@@ -6,11 +6,12 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: 'var(--font-roboto)',
+      sans: 'var(--font-inter)',
       alt: 'var(--font-righteous)',
     },
     colors: {
       primary: {
+        100: '#4DB7D1',
         300: '#32A6C3',
         400: '#2D93AD',
         500: '#2A8AA2',

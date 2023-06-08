@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 import './globals.css'
-import { Roboto, Righteous } from 'next/font/google'
+import { Inter, Righteous } from 'next/font/google'
 import { Header } from '@/components/Header'
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-roboto',
+  variable: '--font-inter',
   weight: ['400', '500', '700'],
 })
 const righteous = Righteous({
@@ -24,12 +24,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body
         className={`
-          ${roboto.variable} ${righteous.variable} font-sans bg-gray-700 text-gray-100
-          scrollbar-thin scroll-smooth scrollbar-track-gray-800 scrollbar-thumb-gray-500
+          ${inter.variable} ${righteous.variable} scroll-smooth bg-gray-700 font-sans
+          text-gray-100 scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-gray-500
         `}
       >
-        <Header />
-        {children}
+        <div>
+          <Header />
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   )

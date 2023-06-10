@@ -1,7 +1,6 @@
 import { ReactNode } from 'react'
 import './globals.css'
 import { Inter, Righteous } from 'next/font/google'
-import { Header } from '@/components/Header'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,10 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           text-gray-100 scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-gray-500
         `}
       >
-        <div>
-          <Header />
-          <main>{children}</main>
-        </div>
+        <main>{children}</main>
       </body>
     </html>
   )

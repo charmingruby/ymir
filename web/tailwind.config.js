@@ -9,6 +9,11 @@ module.exports = {
       sans: 'var(--font-inter)',
       alt: 'var(--font-righteous)',
     },
+    blur: {
+      xl: '64px',
+      full: '194px',
+    },
+
     colors: {
       primary: {
         100: '#4DB7D1',

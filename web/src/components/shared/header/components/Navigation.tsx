@@ -1,24 +1,25 @@
-import { RxCaretDown } from 'react-icons/rx'
-
 export function Navigation() {
+  const navItems = [
+    'About',
+    'Organizations',
+    'Projects',
+    'Developers',
+    'Docs',
+    'Pricing',
+  ]
+
   return (
     <nav className="hidden lg:flex">
-      <div className="flex gap-4 text-base font-medium text-gray-50">
-        <div>Home</div>
-        <div className="flex items-center">
-          <span className="">Projects</span>
-          <RxCaretDown size={20} className="text-gray-300" />
-        </div>
-        <div className="flex items-center">
-          <span className="">Organizations</span>
-          <RxCaretDown size={20} className="text-gray-300" />
-        </div>
-        <div className="flex items-center">
-          <span className="">Developers</span>
-          <RxCaretDown size={20} className="text-gray-300" />
-        </div>
-        <div>Docs</div>
-      </div>
+      <ul className="flex gap-8 text-sm font-bold text-gray-200 transition-colors">
+        {navItems.map((item) => (
+          <li
+            key={item}
+            className="flex h-16 cursor-pointer items-center border-b border-gray-500 hover:border-b-2 hover:border-primary-500 hover:text-gray-50"
+          >
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }

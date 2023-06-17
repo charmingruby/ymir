@@ -11,13 +11,13 @@ import { TypingServiceMotivations } from './components/typing-service-motivation
 
 export function HomeHero() {
   return (
-    <section className="h-screen w-full border-b-2 border-gray-600 pt-16">
+    <section className="min-h-screen w-full pt-16">
       <ContentContainer>
         {/* Hero Container */}
-        <div className="mx-auto max-w-4xl px-4 py-12 md:px-8 md:py-24">
+        <div className="mx-auto max-w-4xl py-12  md:py-24">
           {/* Tagline */}
           <div className="mb-16 flex w-full flex-col items-center justify-center gap-y-3.5">
-            <p className="my-0 pb-2 font-alt text-6xl">
+            <p className="my-0 pb-2 font-alt text-6xl text-gray-50">
               Development assistence that
             </p>
             <TypingServiceMotivations />
@@ -38,11 +38,13 @@ export function HomeHero() {
             </div>
 
             {/* Buttons */}
-            <div className="mb-4 flex w-full justify-center gap-4">
-              <Button className="p-5 text-base">Start your app</Button>
-              <Button className="p-5 text-base" variant="uncolored">
+            <div className="mb-4 flex w-full flex-col justify-center gap-4 sm:flex-row">
+              <Button className="px-8">
+                <span className="text-base">Start your app</span>
+              </Button>
+              <Button className="px-8" variant="uncolored">
                 <div className="flex items-center">
-                  <span className="mr-1">Documentation</span>
+                  <span className="mr-1 text-base">Documentation</span>
                   <HiOutlineBookOpen />
                 </div>
               </Button>

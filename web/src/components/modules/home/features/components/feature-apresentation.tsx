@@ -1,7 +1,7 @@
 export function FeatureApresentation() {
   return (
     <div className="flex flex-col gap-6">
-      <span className="font-semibold text-primary-500">
+      <span className="font-semibold text-primary-300">
         Based on most popular patterns
       </span>
       <h2 className="text-5xl font-extrabold text-gray-50">

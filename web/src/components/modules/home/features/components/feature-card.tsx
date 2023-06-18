@@ -4,7 +4,7 @@ export function FeatureCard(feature: Feature) {
   return (
     <div className="flex flex-row gap-2">
       {/* Adjective + Icon */}
-      <div className="flex h-7 w-7 items-center justify-center rounded-md text-primary-500">
+      <div className="flex h-7 w-7 items-center justify-center rounded-md text-primary-300">
         {feature.icon}
       </div>
 

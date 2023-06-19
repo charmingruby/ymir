@@ -12,11 +12,6 @@ export function Footer() {
             <FaGithub size={24} />
           </div>
 
-          {/* License */}
-          <div>
-            <span>Released under the MIT License</span>
-          </div>
-
           {/* Copyright */}
           <div>
             <span>

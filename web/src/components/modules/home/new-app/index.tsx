@@ -5,7 +5,7 @@ import { NewAppActions } from './components/actions'
 
 export function StartApp() {
   return (
-    <div className="border-y-2 border-gray-600 bg-gray-900 py-32">
+    <div className="border-b-2 border-gray-600 bg-primary-600 py-16">
       <ContentContainer>
         <div className="flex w-full">
           {/* Content */}

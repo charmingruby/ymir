@@ -5,6 +5,7 @@ import { FaUserFriends } from 'react-icons/fa'
 import { HiOutlineFolder } from 'react-icons/hi'
 import { LuAlbum, LuSettings } from 'react-icons/lu'
 import { RxDashboard } from 'react-icons/rx'
+import { DashboardSidebarSectionsContainer } from './sections-container'
 
 interface NavigationItem {
   name: string
@@ -40,26 +41,26 @@ const navigationItems: NavigationItem[] = [
 
 export function DashboardSidebarNavigation() {
   return (
-    <nav className="flex flex-col gap-4 py-8">
+    <DashboardSidebarSectionsContainer>
       {/* Title */}
-      <span className="px-8 text-sm font-medium text-gray-300">Navigation</span>
+      <span className="px-6 text-sm font-medium text-gray-300">Navigation</span>
 
       {/* Links */}
       <div className="flex cursor-pointer flex-col gap-1">
-        <div className="ml-6 flex items-center gap-2 rounded-l-md border-r-2 border-primary-100 bg-gray-700 px-2 py-3 text-primary-100 hover:bg-gray-600 hover:text-primary-300">
+        <div className="flex items-center gap-2 border-r-2 border-primary-100 bg-gray-700 px-6 py-3 text-primary-100 hover:bg-gray-600 hover:text-primary-300">
           <LuAlbum size={18} />
           <span className="font-medium">Bookmark</span>
         </div>
         {navigationItems.map((item) => (
           <div
             key={item.name}
-            className="ml-6 flex items-center gap-2 rounded-l-md px-2 py-3 text-gray-200 hover:bg-gray-600 hover:text-primary-100"
+            className="flex items-center gap-2 px-6 py-3 text-gray-200 transition-colors hover:bg-gray-600 hover:text-primary-100"
           >
             {item.icon}
             <span className=" font-medium">{item.name}</span>
           </div>
         ))}
       </div>
-    </nav>
+    </DashboardSidebarSectionsContainer>
   )
 }

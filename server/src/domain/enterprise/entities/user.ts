@@ -22,8 +22,6 @@ interface UserProps {
 }
 
 export class User extends Entity<UserProps> {
- 
-
   static create(
     props: Optional<UserProps, 'createdAt'>,
     id?: string

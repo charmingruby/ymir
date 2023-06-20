@@ -5,7 +5,7 @@ import { FeaturesList } from './components/features-list'
 
 export function Features() {
   return (
-    <section className="min-h-screen w-full border-y-2 border-gray-600 bg-gray-900 py-16">
+    <section className="flex min-h-screen w-full items-center justify-center border-y-2 border-gray-600 bg-gray-900 py-16">
       <ContentContainer>
         <FeatureApresentation />
 

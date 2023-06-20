@@ -6,7 +6,7 @@ import { HeroArguments } from './components/arguments'
 
 export function HomeHero() {
   return (
-    <section className="min-h-screen w-full pt-16">
+    <section className="flex min-h-screen w-full items-center justify-center pt-16">
       <ContentContainer>
         {/* Hero Container */}
         <div className="mx-auto max-w-4xl py-12  md:py-24">

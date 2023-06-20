@@ -1,9 +1,9 @@
 'use client'
 
+import { CreateApp } from '@/components/modules/home/create-app'
 import { Features } from '@/components/modules/home/features'
 import { HomeHero } from '@/components/modules/home/hero'
-import { StructureExplanation } from '@/components/modules/home/structure-info'
-import { StartApp } from '@/components/modules/home/new-app'
+import { StructureExplanation } from '@/components/modules/home/structure-explanation'
 import { SupportsOffered } from '@/components/modules/home/supports-offered'
 
 export default function Home() {
@@ -15,8 +15,7 @@ export default function Home() {
       <Features />
       <StructureExplanation />
       <SupportsOffered />
-
-      <StartApp />
+      <CreateApp />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { ContentDescriptor } from '@/components/shared/content-descriptor'
+import { ContentSectionExplanationText } from '@/components/shared/content-section-explanation-text'
 import { Title } from '@/components/shared/title'
 
 export function FeatureApresentation() {
@@ -9,10 +10,10 @@ export function FeatureApresentation() {
       <Title content="Accelerate your development" />
 
       <div className="max-w-2xl">
-        <p className="w-full text-lg leading-relaxed">
+        <ContentSectionExplanationText>
           Each part of Software Development, from the beggining to the end,
           documented, guaranteing management facilities beyound teams
-        </p>
+        </ContentSectionExplanationText>
       </div>
     </div>
   )

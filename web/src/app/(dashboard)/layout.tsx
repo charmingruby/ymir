@@ -1,16 +1,16 @@
 import { ReactNode } from 'react'
-import { DashboardSidebar } from '@/components/pages/dashboard/sidebar'
-import { DashboardHeader } from '@/components/pages/dashboard/header'
+import { Sidebar } from '@/components/pages/Dashboard/Sidebar'
+import { Header } from '@/components/pages/Dashboard/Header'
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex flex-row">
       {/* Left Side */}
-      <DashboardSidebar />
+      <Sidebar />
 
       {/* Center */}
       <div className=" min-h-screen flex-1 bg-gray-900">
-        <DashboardHeader />
+        <Header />
         <div className="flex-1 p-8">{children}</div>
       </div>
     </div>

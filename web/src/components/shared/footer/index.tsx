@@ -1,10 +1,10 @@
-import { ContentContainer } from '../content-container'
+import { Container } from '../container'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 export function Footer() {
   return (
     <div className="bg-gray-900 py-8">
-      <ContentContainer>
+      <Container>
         <div className="flex flex-col items-center gap-2 text-gray-300">
           {/* Medias */}
           <div className="mb-2 flex gap-4">
@@ -31,7 +31,7 @@ export function Footer() {
             </span>
           </div>
         </div>
-      </ContentContainer>
+      </Container>
     </div>
   )
 }

@@ -24,14 +24,16 @@ describe('User Entity', () => {
       level: 'Senior',
       experience: [],
       technologies: [],
-    }) 
+    })
 
     usersRepository.create(user)
 
     expect(user.id).toBeTruthy()
-    expect(usersRepository.items[0].props).toEqual(expect.objectContaining({
-      name: 'John',
-    }))
+    expect(usersRepository.items[0].props).toEqual(
+      expect.objectContaining({
+        name: 'John',
+      }),
+    )
     expect(usersRepository.items).toHaveLength(1)
   })
 })

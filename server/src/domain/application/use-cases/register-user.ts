@@ -1,4 +1,4 @@
-import { UsersRepository } from "../repositories/users-repositories";
+import { UsersRepository } from '../repositories/users-repositories'
 
 interface RegisterUserUseCaseRequest {
   name: string
@@ -18,24 +18,22 @@ interface RegisterUserUseCaseRequest {
 }
 
 export class RegisterUserUseCase {
-    constructor(private usersRepository: UsersRepository) {}
+  constructor(private usersRepository: UsersRepository) {}
 
-    async execute({
-      name,
-      description,
-      lastName,
-      email,
-      password,
-      birthDate,
-      country,
-      lookingForWork,
-      profileImage,
-      githubUser,
-      roles,
-      level,
-      experience,
-      technologies,
-    }: RegisterUserUseCaseRequest) {
-
-    }
+  async execute({
+    name,
+    description,
+    lastName,
+    email,
+    password,
+    birthDate,
+    country,
+    lookingForWork,
+    profileImage,
+    githubUser,
+    roles,
+    level,
+    experience,
+    technologies,
+  }: RegisterUserUseCaseRequest) {}
 }

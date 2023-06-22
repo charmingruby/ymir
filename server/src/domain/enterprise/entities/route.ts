@@ -1,21 +1,19 @@
-import { Entity } from "core/entities/entity";
-import { Response } from "./value-objects/response";
+import { Entity } from 'core/entities/entity'
+import { Response } from './value-objects/response'
+import { Request } from './value-objects/request'
 
 export interface RouteProps {
-  method: 'POST' |'GET' | 'PATCH' | 'PUT' | 'DELETE'
+  method: 'POST' | 'GET' | 'PATCH' | 'PUT' | 'DELETE'
   path: string
-  summary: string
-  description: string,
-
-
+  description: string
   responses: Response[]
-
-  // request: Request
-  // response: Response
-
-  // use case id
+  request: Request
 }
 
-export class Route extends Entity<RouteProps>{
+export class Route extends Entity<RouteProps> {
+  static create(props: RouteProps, id?: string) {
+    const route = new Route(props, id)
 
+    return route
+  }
 }

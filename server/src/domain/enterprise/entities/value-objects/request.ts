@@ -11,9 +11,9 @@ export class Request {
   private _accessType?: string | null
   private _params?: Field[]
 
-  private constructor({ params = [], type, accessType }: RequestProps) {
-    this._accessType = accessType ?? null
-    this._type = type ?? null
+  private constructor({ params = [], type = null, accessType }: RequestProps) {
+    this._accessType = accessType
+    this._type = type
     this._params = params
   }
 

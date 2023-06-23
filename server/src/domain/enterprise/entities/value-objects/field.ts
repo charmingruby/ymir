@@ -21,10 +21,10 @@ export class Field {
     return this._description
   }
 
-  private constructor({ name, type, description }: FieldProps) {
+  private constructor({ name, type, description = null }: FieldProps) {
     this._name = name
     this._type = type
-    this._description = description ?? null
+    this._description = description
   }
 
   static create(props: FieldProps) {

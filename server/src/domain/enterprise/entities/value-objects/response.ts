@@ -1,3 +1,4 @@
+import { InvalidStatusCodeError } from '../error/invalid-status-code-error'
 import { Field } from './field'
 
 export interface ResponseProps {
@@ -17,7 +18,7 @@ export class Response {
 
   private validateStatusCode(statusCode: number) {
     if (statusCode < 100 || statusCode > 599) {
-      throw new Error(`Invalid status code: ${statusCode}.`)
+      throw new InvalidStatusCodeError()
     }
 
     return statusCode

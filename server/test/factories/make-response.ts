@@ -1,5 +1,5 @@
-import { ResponseProps } from 'src/shared/domain/enterprise/entities/value-objects/response';
-import { Response } from 'src/shared/domain/enterprise/entities/value-objects/response';
+import { ResponseProps } from 'src/modules/accounts/domain/user/value-objects/response';
+import { Response } from 'src/modules/accounts/domain/user/value-objects/response';
 
 export function makeResponse(override: Partial<ResponseProps> = {}) {
   const response = Response.create({

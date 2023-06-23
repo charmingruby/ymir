@@ -1,8 +1,6 @@
-import { Field } from 'domain/enterprise/entities/value-objects/field';
-import {
-  Request,
-  RequestProps,
-} from 'domain/enterprise/entities/value-objects/request';
+import { Field } from 'src/modules/accounts/domain/user/value-objects/field';
+import { RequestProps } from 'src/modules/accounts/domain/user/value-objects/request';
+import { Request } from 'src/modules/accounts/domain/user/value-objects/request';
 
 export function makeRequest(override: Partial<RequestProps> = {}) {
   const request = Request.create({

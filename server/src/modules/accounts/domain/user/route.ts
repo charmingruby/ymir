@@ -1,6 +1,6 @@
-import { Entity } from 'core/entities/entity';
 import { Response } from './value-objects/response';
 import { Request } from './value-objects/request';
+import { Entity } from 'src/@core/entities/entity';
 
 export interface RouteProps {
   method: 'POST' | 'GET' | 'PATCH' | 'PUT' | 'DELETE';

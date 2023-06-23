@@ -1,6 +1,6 @@
-import { RouteProps, Route } from 'domain/enterprise/entities/route';
+import { RouteProps, Route } from 'src/modules/accounts/domain/user/route';
+import { Field } from 'src/modules/accounts/domain/user/value-objects/field';
 import { makeRequest } from './make-request';
-import { Field } from 'domain/enterprise/entities/value-objects/field';
 import { makeResponse } from './make-response';
 
 export function makeRoute(override: Partial<RouteProps> = {}, id?: string) {

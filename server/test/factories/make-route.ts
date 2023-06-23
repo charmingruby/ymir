@@ -1,7 +1,7 @@
-import { RouteProps, Route } from 'domain/enterprise/entities/route'
-import { makeRequest } from './make-request'
-import { Field } from 'domain/enterprise/entities/value-objects/field'
-import { makeResponse } from './make-response'
+import { RouteProps, Route } from 'domain/enterprise/entities/route';
+import { makeRequest } from './make-request';
+import { Field } from 'domain/enterprise/entities/value-objects/field';
+import { makeResponse } from './make-response';
 
 export function makeRoute(override: Partial<RouteProps> = {}, id?: string) {
   const request = makeRequest({
@@ -10,7 +10,7 @@ export function makeRoute(override: Partial<RouteProps> = {}, id?: string) {
       Field.create({ name: 'email', type: 'string' }),
       Field.create({ name: 'password', type: 'string' }),
     ],
-  })
+  });
 
   const responses = [
     makeResponse({
@@ -21,7 +21,7 @@ export function makeRoute(override: Partial<RouteProps> = {}, id?: string) {
       type: 'error',
     }),
     makeResponse(),
-  ]
+  ];
 
   const route = Route.create(
     {
@@ -32,7 +32,7 @@ export function makeRoute(override: Partial<RouteProps> = {}, id?: string) {
       responses,
     },
     id,
-  )
+  );
 
-  return route
+  return route;
 }

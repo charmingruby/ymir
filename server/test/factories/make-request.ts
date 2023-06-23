@@ -1,8 +1,8 @@
-import { Field } from 'domain/enterprise/entities/value-objects/field'
+import { Field } from 'domain/enterprise/entities/value-objects/field';
 import {
   Request,
   RequestProps,
-} from 'domain/enterprise/entities/value-objects/request'
+} from 'domain/enterprise/entities/value-objects/request';
 
 export function makeRequest(override: Partial<RequestProps> = {}) {
   const request = Request.create({
@@ -10,7 +10,7 @@ export function makeRequest(override: Partial<RequestProps> = {}) {
     type: 'body',
     accessType: null,
     ...override,
-  })
+  });
 
-  return request
+  return request;
 }

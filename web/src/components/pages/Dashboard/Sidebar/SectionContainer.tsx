@@ -5,9 +5,5 @@ interface SectionContainerProps {
 }
 
 export function SectionContainer({ children }: SectionContainerProps) {
-  return (
-    <section className="flex flex-col gap-4 border-b-2 border-gray-600 py-8">
-      {children}
-    </section>
-  )
+  return <section className="flex flex-col gap-4 py-8">{children}</section>
 }

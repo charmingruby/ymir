@@ -11,3 +11,7 @@ input {
     outline: none;
     background: transparent;
 }
+
+.dashboard-max-size {
+    height: calc(100vh - 5rem)
+}

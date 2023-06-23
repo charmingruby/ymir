@@ -1,15 +1,13 @@
 import Image from 'next/image'
 import { BiBell } from 'react-icons/bi'
 import exampleAvatar from '@/assets/images/example-profile-icon.jpg'
-import { RxCaretDown, RxMagnifyingGlass } from 'react-icons/rx'
+import { RxCaretDown } from 'react-icons/rx'
+import logoUrl from '@/assets/images/logo.svg'
 
 export function Header() {
   return (
-    <header className="flex h-20 w-full items-center justify-between gap-2 border-b-2 border-gray-600 bg-gray-800 px-8">
-      <div className="flex h-10 w-full items-center gap-2 rounded-full border-2 border-gray-500 bg-gray-700 pl-2 pr-1">
-        <RxMagnifyingGlass className="text-gray-400" />
-        <input className="flex-1 text-gray-50" placeholder="Search..." />
-      </div>
+    <header className="flex h-20 w-full items-center justify-between gap-2 border-b-2 border-gray-600 bg-gray-700 px-6">
+      <Image src={logoUrl} alt="" width={28} height={28} />
 
       <div className="flex items-center gap-2">
         <div className="flex h-8 w-8 items-center justify-center rounded-md ">

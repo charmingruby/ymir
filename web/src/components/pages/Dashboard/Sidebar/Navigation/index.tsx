@@ -7,7 +7,7 @@ import { FaUserFriends } from 'react-icons/fa'
 import { HiOutlineFolder } from 'react-icons/hi'
 import { LuSettings } from 'react-icons/lu'
 import { RxDashboard } from 'react-icons/rx'
-import { SectionContainer } from './SectionContainer'
+import { SectionContainer } from '../SectionContainer'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 

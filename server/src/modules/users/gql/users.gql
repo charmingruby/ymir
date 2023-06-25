@@ -1,0 +1,12 @@
+type Users {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+type Query {
+    getProfile: String
+}
+
+type Mutation {
+    registerUser: String!
+}

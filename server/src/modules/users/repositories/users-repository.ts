@@ -1,3 +1,3 @@
-export interface UsersRepository {
-  create(): Promise<string>;
+export interface UsersRepository<T> {
+  create(): Promise<T>;
 }

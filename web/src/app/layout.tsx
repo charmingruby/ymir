@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`
           ${inter.variable} ${righteous.variable} 
-          scroll-smooth bg-gray-800 font-sans text-gray-100 scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-gray-500
+          scroll-smooth bg-gray-800 font-sans text-gray-100 scrollbar-thin scrollbar-track-gray-900 scrollbar-thumb-gray-500
         `}
       >
         <main>{children}</main>

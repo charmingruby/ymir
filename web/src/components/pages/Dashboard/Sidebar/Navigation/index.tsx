@@ -5,7 +5,6 @@ import { AiOutlineFire } from 'react-icons/ai'
 import { BiTask } from 'react-icons/bi'
 import { FaUserFriends } from 'react-icons/fa'
 import { HiOutlineFolder } from 'react-icons/hi'
-import { LuSettings } from 'react-icons/lu'
 import { RxDashboard } from 'react-icons/rx'
 import { SectionContainer } from '../SectionContainer'
 import Link from 'next/link'
@@ -42,11 +41,6 @@ const navigationItems: NavigationItem[] = [
     name: 'Assignments',
     link: '/dashboard/assignments',
     icon: <BiTask size={18} />,
-  },
-  {
-    icon: <LuSettings size={18} />,
-    name: 'Settings',
-    link: '/dashboard/settings',
   },
 ]
 

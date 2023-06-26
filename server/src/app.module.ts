@@ -3,6 +3,7 @@ import { UsersModule } from './modules/users/users.module';
 import { ApolloDriverConfig, ApolloDriver } from '@nestjs/apollo';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
+import { GraphQLISODateTime } from '@nestjs/graphql';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
       typePaths: ['./**/*.gql'],
       playground: false,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      resolvers: { DateTime: GraphQLISODateTime },
     }),
     UsersModule,
   ],

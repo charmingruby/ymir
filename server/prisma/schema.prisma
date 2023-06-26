@@ -8,19 +8,20 @@ datasource db {
 }
 
 model User {
-  id             String   @id @db.Uuid
+  id             String   @id @default(uuid())
   name           String
   lastName       String   @map("last_name")
   email          String   @unique
   password       String
   birthDate      DateTime
   country        String
-  lookingForWork Boolean  @default(true) @map("looking_for_work")
-  profileImage   String   @map("profile_image")
+  description    String?
+  lookingForWork Boolean? @default(true) @map("looking_for_work")
+  profileImage   String?  @map("profile_image")
   githubUser     String   @map("github_user")
   roles          String[]
   level          String
-  experience     String[]
+  experiences    String[]
   technologies   String[]
   createdAt      DateTime @map("created_at")
   updatedAt      DateTime @map("updated_at")

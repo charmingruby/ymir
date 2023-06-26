@@ -1,7 +1,7 @@
-import { User } from '../../domain/user/user';
-import { UsersRepository } from '../users-repository';
+import { User } from '../../domain/user';
+import { UsersRepository } from '../../../domain/repositories/users-repository';
 
-export class InMemoryUsersRepository implements UsersRepository<User> {
+export class InMemoryUsersRepository implements UsersRepository {
   items: User[] = [];
 
   async create() {
@@ -11,7 +11,7 @@ export class InMemoryUsersRepository implements UsersRepository<User> {
       birthDate: new Date(),
       email: 'g@gmail.com',
       country: 'Brazil',
-      experience: [],
+      experiences: [],
       githubUser: 'charmingruby',
       level: 'Intern',
       lookingForWork: true,
@@ -22,6 +22,16 @@ export class InMemoryUsersRepository implements UsersRepository<User> {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
+
+    this.items.push(user);
+  }
+
+  async findById(id: string) {
+    const user = this.items.find((item) => item._id === id);
+
+    if (!user) {
+      return null;
+    }
 
     return user;
   }

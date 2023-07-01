@@ -1,3 +1,4 @@
+import { PasswordHashEntity } from 'src/@core/entities/password-hash-entity';
 import { Optional } from '../../../../@core/types/optional';
 import { UniqueEntityID } from 'src/@core/entities/unique-entity-id';
 interface UserProps {
@@ -5,7 +6,7 @@ interface UserProps {
   lastName: string;
   description?: string | null;
   email: string;
-  password: string;
+  password: PasswordHashEntity;
   birthDate: Date;
   country: string;
   lookingForWork: boolean;

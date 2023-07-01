@@ -1,4 +1,5 @@
 import { User as PrismaUser } from '@prisma/client';
+import { PasswordHashEntity } from 'src/@core/entities/password-hash-entity';
 import { UniqueEntityID } from 'src/@core/entities/unique-entity-id';
 import { User } from 'src/modules/users/domain/entities/user';
 
@@ -10,7 +11,7 @@ export class PrismaUsersMapper {
       description: user.description,
       lastName: user.lastName,
       email: user.email,
-      password: user.password,
+      password: user.password.passwordHash,
       birthDate: user.birthDate,
       country: user.country,
       lookingForWork: user.lookingForWork,
@@ -32,7 +33,7 @@ export class PrismaUsersMapper {
         description: user.description,
         lastName: user.lastName,
         email: user.email,
-        password: user.password,
+        password: new PasswordHashEntity(user.password),
         birthDate: user.birthDate,
         country: user.country,
         lookingForWork: user.lookingForWork,

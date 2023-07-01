@@ -1,5 +1,6 @@
-import { User } from '../../domain/user';
-import { UsersRepository } from '../../../domain/repositories/users-repository';
+import { User } from 'src/modules/users/domain/entities/user';
+import { UsersRepository } from '../../src/modules/users/domain/repositories/users-repository';
+import { PasswordHashEntity } from 'src/@core/entities/password-hash-entity';
 
 export class InMemoryUsersRepository implements UsersRepository {
   items: User[] = [];
@@ -15,7 +16,7 @@ export class InMemoryUsersRepository implements UsersRepository {
       githubUser: 'charmingruby',
       level: 'Intern',
       lookingForWork: true,
-      password: '123456',
+      password: new PasswordHashEntity('123456'),
       profileImage: 'url.png',
       roles: [],
       technologies: [],
@@ -27,7 +28,7 @@ export class InMemoryUsersRepository implements UsersRepository {
   }
 
   async findById(id: string) {
-    const user = this.items.find((item) => item._id === id);
+    const user = this.items.find((item) => item.id.toString() === id);
 
     if (!user) {
       return null;

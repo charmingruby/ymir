@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { RegisterUserService } from './services/register-user.service';
 import { RegisterUserResolver } from './infra/gql/resolvers/register-user.resolver';
+import { RegisterUserUseCase } from './use-cases/register-user/register-user-use-case';
 
 @Module({
-  providers: [RegisterUserResolver, RegisterUserService],
+  providers: [RegisterUserResolver, RegisterUserUseCase],
 })
 export class UsersModule {}

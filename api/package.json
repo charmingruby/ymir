@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "1.2.0",
+    "eslint": "8.44.0",
+    "prisma": "4.16.2",
+    "tsup": "7.1.0",
+    "typescript": "5.1.6",
+    "vitest": "0.32.2"
+  }
+}

@@ -1,6 +1,6 @@
 'use client'
 
-import { CreateApp } from '@/components/pages/Home/CreateApp'
+import { CTA } from '@/components/pages/Home/CTA'
 import { Features } from '@/components/pages/Home/Features'
 import { Hero } from '@/components/pages/Home/Hero'
 import { Structure } from '@/components/pages/Home/Structure'
@@ -15,7 +15,7 @@ export default function Home() {
       <Features />
       <Structure />
       <Supports />
-      <CreateApp />
+      <CTA />
     </div>
   )
 }

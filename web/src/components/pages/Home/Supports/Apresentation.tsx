@@ -4,7 +4,7 @@ import { Text } from '@/components/shared/Text'
 
 export function Apresentation() {
   return (
-    <>
+    <div className="flex w-auto flex-col gap-6 md:w-1/2">
       <Descriptor content="blabal" />
       <Title content="Special Supports" />
       <div className="max-w-2xl">
@@ -15,6 +15,6 @@ export function Apresentation() {
           numquam deleniti?
         </Text>
       </div>
-    </>
+    </div>
   )
 }

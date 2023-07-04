@@ -13,9 +13,9 @@ export function StructureItem({
 }: StructureItemProps) {
   return (
     <ContentCard>
-      <div className="space-y-4">
+      <div className="space-y-2">
         {/* Icon */}
-        <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gray-700 text-2xl transition-colors group-hover:bg-gray-600 group-hover:text-primary-300">
+        <div className="flex h-11 w-11 items-center justify-center rounded-md bg-gray-700 text-2xl transition-colors group-hover:bg-gray-600 group-hover:text-primary-300">
           {icon}
         </div>
 

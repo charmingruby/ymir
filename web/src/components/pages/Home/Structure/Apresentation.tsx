@@ -4,7 +4,7 @@ import { Text } from '@/components/shared/Text'
 
 export function Apresentation() {
   return (
-    <>
+    <div className="flex flex-col gap-6">
       <Descriptor content="blabla" />
       <Title
         content="
@@ -19,6 +19,6 @@ export function Apresentation() {
           nesciunt ducimus accusamus.
         </Text>
       </div>
-    </>
+    </div>
   )
 }

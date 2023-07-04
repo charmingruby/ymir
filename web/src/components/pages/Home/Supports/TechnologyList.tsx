@@ -1,6 +1,12 @@
 import { ReactNode } from 'react'
 import { TechnologyItem } from './TechnologyItem'
-import { SiTypescript, SiNestjs, SiNodedotjs, SiPrisma } from 'react-icons/si'
+import {
+  SiTypescript,
+  SiNestjs,
+  SiNodedotjs,
+  SiPrisma,
+  SiGraphql,
+} from 'react-icons/si'
 
 export interface SupporttedTechnology {
   name: string
@@ -12,11 +18,12 @@ const supporttedTechnologies: SupporttedTechnology[] = [
   { icon: <SiNestjs className="text-[#E0234E]" />, name: 'Nest' },
   { icon: <SiNodedotjs className="text-[#57A645]" />, name: 'Node' },
   { icon: <SiPrisma className="text-[#16A394]" />, name: 'Prisma' },
+  { icon: <SiGraphql className="text-[#DE33A6]" />, name: 'Graphql' },
 ]
 
 export function TechnologyList() {
   return (
-    <div className="grid h-fit grid-cols-2 gap-4">
+    <div className="grid h-fit w-full grid-cols-2 gap-4">
       {supporttedTechnologies.map((tec) => (
         <TechnologyItem key={tec.name} {...tec} />
       ))}

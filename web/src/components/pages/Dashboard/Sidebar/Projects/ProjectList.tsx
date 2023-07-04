@@ -1,4 +1,4 @@
-import { DUMMY_PROJECTS } from '../../../../../../DUMMY_DATA'
+import { DUMMY_PROJECTS } from '@/data/DUMMY_DATA'
 import { ProjectItem } from './ProjectItem'
 
 export function ProjectList() {

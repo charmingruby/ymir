@@ -1,7 +1,7 @@
-import { User as PrismaUser } from '@prisma/client';
-import { PasswordHashEntity } from 'src/@core/entities/password-hash-entity';
-import { UniqueEntityID } from 'src/@core/entities/unique-entity-id';
-import { User } from 'src/modules/users/domain/entities/user';
+import { PasswordHashEntity } from '../../../@core/entities/password-hash-entity'
+import { UniqueEntityID } from '../../../@core/entities/unique-entity-id'
+import { User as PrismaUser } from '@prisma/client'
+import { User } from '../../../domain/enterprise/entities/user'
 
 export class PrismaUsersMapper {
   public static toPrisma(user: User): PrismaUser {
@@ -23,7 +23,7 @@ export class PrismaUsersMapper {
       technologies: user.technologies,
       roles: user.roles,
       updatedAt: user.updatedAt,
-    };
+    }
   }
 
   public static toDomain(user: PrismaUser): User {
@@ -47,6 +47,6 @@ export class PrismaUsersMapper {
         updatedAt: user.updatedAt,
       },
       new UniqueEntityID(user.id),
-    );
+    )
   }
 }

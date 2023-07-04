@@ -16,7 +16,7 @@ model User {
   birthDate      DateTime
   country        String
   description    String?
-  lookingForWork Boolean? @default(true) @map("looking_for_work")
+  lookingForWork Boolean  @default(true) @map("looking_for_work")
   profileImage   String?  @map("profile_image")
   githubUser     String   @map("github_user")
   roles          String[]

@@ -2,10 +2,12 @@ import { Container } from '@/components/shared/Container'
 import { Actions } from './Actions'
 import { Logo } from './Logo'
 import { Navigation } from './Navigation/Navigation'
+import { Drawer } from './Navigation/Drawer'
 
 export function Header() {
   return (
     <header className="fixed top-0 z-50 h-16 w-full border-b border-gray-500 backdrop-blur-xl backdrop-filter">
+      <Drawer />
       <Container>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-4 md:gap-16">

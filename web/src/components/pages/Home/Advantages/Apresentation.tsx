@@ -1,20 +1,19 @@
 import { Descriptor } from '@/components/shared/Descriptor'
 import { Title } from '@/components/shared/Title'
 import { Text } from '@/components/shared/Text'
+import { advantagesContent } from '@/contents/home/advantages'
 
 export function Apresentation() {
+  const { descriptor, title, description } = advantagesContent
+
   return (
     <div className="flex flex-col gap-6">
-      <Descriptor content="Unlock the potential of your applications" />
+      <Descriptor content={descriptor} />
 
-      <Title content="Accelerate your development" />
+      <Title content={title} />
 
       <div className="max-w-2xl">
-        <Text>
-          Enhance collaboration, boost productivity, and take your software
-          development to new heights. Join us on this journey as we unveil the
-          secrets behind successful application development.
-        </Text>
+        <Text>{description}</Text>
       </div>
     </div>
   )

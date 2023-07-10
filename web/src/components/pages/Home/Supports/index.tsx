@@ -9,14 +9,13 @@ export function Supports() {
       {/* Blur */}
       <div className="absolute right-0 -z-10 h-screen w-1/2 translate-x-1/2 rounded-full bg-gray-800 blur-full" />
       <Container>
-        <Apresentation />
-
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="flex flex-col items-center justify-between md:flex-row">
+          <Apresentation />
           <Illustration />
+        </div>
 
-          <div className="flex flex-1 items-center">
-            <TechnologyList />
-          </div>
+        <div className="flex flex-1 items-center">
+          <TechnologyList />
         </div>
       </Container>
     </section>

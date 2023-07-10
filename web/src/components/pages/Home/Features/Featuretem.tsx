@@ -1,11 +1,6 @@
-import { ReactNode } from 'react'
+import { Feature } from '@/contents/home/features'
 
-interface FeatureItemProps {
-  icon: ReactNode
-  title: string
-  description: string
-}
-export function FeatureItem({ icon, title, description }: FeatureItemProps) {
+export function FeatureItem({ icon, title, description }: Feature) {
   return (
     <div className="cursor-pointer rounded border-2 border-gray-600 bg-gray-700 p-4 shadow-sm transition-shadow hover:shadow-lg">
       <div className="space-y-4">

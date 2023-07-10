@@ -1,20 +1,20 @@
-import { Feature } from './FeatureList'
+import { Advantage } from './AdvantageList'
 
-export function FeatureItem(feature: Feature) {
+export function AdvantageItem(advantage: Advantage) {
   return (
     <div className="flex flex-row gap-2">
       {/* Adjective + Icon */}
       <div className="flex h-7 w-7 items-center justify-center rounded-md text-primary-300">
-        {feature.icon}
+        {advantage.icon}
       </div>
 
       {/* Content */}
       <div className="flex flex-1 flex-col gap-2">
         <header className="text-xl font-bold text-gray-50">
-          {feature.title}
+          {advantage.title}
         </header>
         <span className="leading-relaxed text-gray-100">
-          {feature.description}
+          {advantage.description}
         </span>
       </div>
     </div>

@@ -1,20 +1,18 @@
-import { Apresentation } from './Apresentation'
-import { Separator } from '@/components/shared/Separator'
 import { Container } from '@/components/shared/Container'
 import { FeatureList } from './FeatureList'
+import { Apresentation } from './Apresentation'
 
 export function Features() {
   return (
-    <section className="flex min-h-screen w-full items-center justify-center border-y-2 border-gray-600 bg-gray-900 py-16">
+    <div className="flex min-h-screen items-center justify-center border-b-2 border-gray-600 ">
       <Container>
-        <Apresentation />
-
-        <div className="py-12">
-          <Separator />
+        <div className="flex flex-col py-12">
+          <div className="flex flex-col">
+            <Apresentation />
+            <FeatureList />
+          </div>
         </div>
-
-        <FeatureList />
       </Container>
-    </section>
+    </div>
   )
 }

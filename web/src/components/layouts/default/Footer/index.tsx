@@ -1,4 +1,4 @@
-import { Container } from '../Container'
+import { Container } from '../../../shared/Container'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 export function Footer() {
@@ -27,7 +27,7 @@ export function Footer() {
               Designed by{' '}
               <span className="font-medium text-primary-300">Gustavo Dias</span>
               , hosted by{' '}
-              <span className="font-medium text-primary-300">Netfly</span>
+              <span className="font-medium text-primary-300">Vercel</span>
             </span>
           </div>
         </div>

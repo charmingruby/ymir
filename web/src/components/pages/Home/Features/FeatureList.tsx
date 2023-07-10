@@ -1,48 +1,60 @@
 import { ReactNode } from 'react'
-import { LuExpand } from 'react-icons/lu'
-import { FeatureItem } from './FeatureItem'
+import { FeatureItem } from './Featuretem'
+import { MdOutlineRoute, MdSchema } from 'react-icons/md'
+import { BsUiChecks } from 'react-icons/bs'
+import { FiBriefcase } from 'react-icons/fi'
+import { HiUserGroup, HiOutlineChartPie } from 'react-icons/hi'
 
-export interface Feature {
+interface FeatureItemProps {
   icon: ReactNode
   title: string
   description: string
-  url: string
 }
 
-const featuresList: Feature[] = [
+const featureList: FeatureItemProps[] = [
   {
-    icon: <LuExpand size={20} />,
-    title: 'Scalability',
+    icon: <MdOutlineRoute />,
+    title: 'Routing',
     description:
-      "Empower your applications with unprecedented scalability. Our innovative feature seamlessly scales your applications, ensuring they can handle increased workloads and user demands effortlessly. Stay ahead of the competition and confidently expand your software's capabilities without compromising performance.",
-    url: 'y',
+      'Enhanced route control and status code management for improved response handling and user experience.',
   },
   {
-    icon: <LuExpand size={20} />,
-    title: 'Developer Experience',
+    icon: <MdSchema />,
+    title: 'Schematization',
     description:
-      'Elevate your developer experience with our user-friendly application. We prioritize simplicity and efficiency, offering an intuitive interface and robust features that enhance your productivity. From streamlined project management to seamless collaboration, our app empowers you to focus on what matters most: crafting exceptional software.',
-    url: 'yy',
+      'Streamlined database schema management for efficient structure definition, migration, and validation.',
   },
   {
-    icon: <LuExpand size={20} />,
-    title: 'Code Quality and Testing',
+    icon: <FiBriefcase />,
+    title: 'Requirements Management',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur laboriosam cum reprehenderit quam. Dicta, perspiciatis delectus illo modi amet reprehenderit omnis magnam voluptate odit nesciunt accusantium possimus ex soluta ut.',
-    url: 'yyy',
+      'Efficient management and enforcement of business rules and requirements for enhanced application functionality and compliance.',
   },
   {
-    icon: <LuExpand size={20} />,
-    title: 'Comprehensive Documentation',
-    description: 'lorem ipsum dolor sit amet',
-    url: 'yyyy',
+    icon: <BsUiChecks />,
+    title: 'Assignments Coverage',
+    description:
+      'Comprehensive assignment tracking, visibility for improved productivity and accountability.',
+  },
+  {
+    icon: <HiUserGroup />,
+    title: 'Integration In Teams',
+    description:
+      'Effortless integration management for developer-friendly team collaboration and enhanced productivity.',
+  },
+  {
+    icon: <HiOutlineChartPie />,
+    title: 'Development Analytics',
+    description:
+      'Actionable insights through development analytics for optimizing app performance and development processes.',
   },
 ]
+
 export function FeatureList() {
   return (
-    <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-      {featuresList.map((feature) => (
-        <FeatureItem key={feature.url} {...feature} />
+    <div className="grid  grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {featureList.map((item) => (
+        <FeatureItem key={item.title} {...item} />
       ))}
     </div>
   )

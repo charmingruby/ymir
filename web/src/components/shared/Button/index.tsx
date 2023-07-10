@@ -16,7 +16,7 @@ export function Button({
   return (
     <button
       className={clsx(
-        'flex items-center justify-center rounded-full border-2 px-3 py-2 text-sm font-medium shadow-md transition-colors',
+        'flex items-center justify-center rounded-lg border-2 px-3 py-2 text-sm font-medium shadow-md transition-colors',
         className,
         {
           'border-primary-300 bg-primary-300 text-gray-700 transition-colors hover:border-primary-100 hover:bg-primary-100':

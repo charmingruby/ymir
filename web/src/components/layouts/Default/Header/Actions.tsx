@@ -1,5 +1,5 @@
 import { LuUser } from 'react-icons/lu'
-import { Button } from '@/components/shared/Button'
+import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
 export function Actions() {

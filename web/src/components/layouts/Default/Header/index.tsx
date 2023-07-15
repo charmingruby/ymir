@@ -1,4 +1,4 @@
-import { Container } from '@/components/shared/Container'
+import { Container } from '@/components/ui/Container'
 import { Actions } from './Actions'
 import { Logo } from './Logo'
 import { Navigation } from './Navigation/Navigation'

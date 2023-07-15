@@ -1,6 +1,6 @@
-import { Descriptor } from '@/components/shared/Descriptor'
-import { Title } from '@/components/shared/Title'
-import { Text } from '@/components/shared/Text'
+import { Descriptor } from '@/components/ui/Descriptor'
+import { Title } from '@/components/ui/Title'
+import { Text } from '@/components/ui/Text'
 import { FeaturesContent } from '@/contents/home/features'
 
 export function Apresentation() {

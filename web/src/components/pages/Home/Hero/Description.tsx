@@ -1,4 +1,4 @@
-import { Text } from '@/components/shared/Text'
+import { Text } from '@/components/ui/Text'
 
 export function HeroDescription() {
   return (

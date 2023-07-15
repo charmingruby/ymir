@@ -1,4 +1,4 @@
-import { Container } from '../../../shared/Container'
+import { Container } from '../../../ui/Container'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 export function Footer() {

@@ -8,26 +8,34 @@ interface NavigationItem {
   link: string
 }
 
+/*
+  Dashboard -> Project Data 
+  Documentation -> Documentation, routes, entities, requirements, etc.
+  Implementation -> Tasks
+  Monitoring -> Execution of tasks
+  Conclusion -> What is finished
+*/
+
 const navigationItems: NavigationItem[] = [
   {
     name: 'Dashboard',
     link: '/dashboard',
   },
   {
-    name: 'Organizations',
-    link: '/dashboard/organizations',
+    name: 'Documentation',
+    link: '/',
   },
   {
-    name: 'Projects',
-    link: '/dashboard/projects',
+    name: 'Implementation',
+    link: '/',
   },
   {
-    name: 'Partners',
-    link: '/dashboard/partners',
+    name: 'Monitoring',
+    link: '/monitoring',
   },
   {
-    name: 'Assignments',
-    link: '/dashboard/assignments',
+    name: 'Conclusion',
+    link: '/monitoring',
   },
 ]
 

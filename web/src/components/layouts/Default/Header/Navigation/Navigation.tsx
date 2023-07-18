@@ -1,14 +1,7 @@
 import { MenuButton } from './MenuButton'
 
 export function Navigation() {
-  const navItems = [
-    'About',
-    'Organizations',
-    'Projects',
-    'Developers',
-    'Docs',
-    'Pricing',
-  ]
+  const navItems = ['Home', 'About', 'Docs', 'Pricing']
 
   return (
     <>

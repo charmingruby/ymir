@@ -1,6 +1,6 @@
-import { Descriptor } from '@/components/ui/Descriptor'
-import { Title } from '@/components/ui/Title'
-import { Text } from '@/components/ui/Text'
+import { Descriptor } from '@/components/ui/descriptor'
+import { Title } from '@/components/ui/title'
+import { Text } from '@/components/ui/text'
 import { SupportsContent } from '@/contents/home/supports'
 
 export function Apresentation() {

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { LuArrowRight } from 'react-icons/lu'
 
 export function Actions() {

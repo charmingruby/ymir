@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { HiOutlineBookOpen } from 'react-icons/hi'
 
 export function HeroButtonsGroup() {

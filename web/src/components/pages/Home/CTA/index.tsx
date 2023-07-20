@@ -1,5 +1,5 @@
 import { Actions } from './Actions'
-import { Container } from '@/components/ui/Container'
+import { Container } from '@/components/ui/container'
 import { Description } from './Description'
 import { Title } from './Title'
 

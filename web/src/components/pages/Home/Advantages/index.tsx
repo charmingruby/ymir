@@ -1,6 +1,6 @@
 import { Apresentation } from './Apresentation'
-import { Separator } from '@/components/ui/Separator'
-import { Container } from '@/components/ui/Container'
+import { Separator } from '@/components/ui/separator'
+import { Container } from '@/components/ui/container'
 import { AdvantageList } from './AdvantageList'
 
 export function Advantages() {

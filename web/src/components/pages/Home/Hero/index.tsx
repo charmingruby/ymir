@@ -1,5 +1,5 @@
 import { HeroArguments } from './Arguments'
-import { Container } from '@/components/ui/Container'
+import { Container } from '@/components/ui/container'
 import { HeroButtonsGroup } from './ButtonsGroup'
 import { HeroDescription } from './Description'
 import { HeroTitle } from './Title'

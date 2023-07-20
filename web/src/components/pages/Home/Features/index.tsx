@@ -1,4 +1,4 @@
-import { Container } from '@/components/ui/Container'
+import { Container } from '@/components/ui/container'
 import { FeatureList } from './FeatureList'
 import { Apresentation } from './Apresentation'
 

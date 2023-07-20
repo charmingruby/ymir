@@ -1,11 +1,11 @@
-import { MenuButton } from './MenuButton'
+import { MenuToggleButton } from './menu-toggle-button'
 
-export function Navigation() {
-  const navItems = ['Home', 'About', 'Docs', 'Pricing']
+export function NavigationItems() {
+  const navItems = ['Home', 'About', 'Docs', 'Pricing', 'Cases']
 
   return (
     <>
-      <MenuButton />
+      <MenuToggleButton />
       <nav className="hidden lg:flex">
         <ul className="flex gap-8 text-sm font-bold text-gray-200 transition-colors">
           {navItems.map((item) => (

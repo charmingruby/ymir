@@ -6,10 +6,10 @@ import { HeroTitle } from './title'
 
 export function Hero() {
   return (
-    <section className="mt-16 flex  h-screen w-full items-center justify-center">
+    <section className="mt-16 flex w-full items-center justify-center sm:h-screen">
       <Container>
         {/* Hero Container */}
-        <div className="mx-auto max-w-4xl py-12 md:py-24">
+        <div className="py-12 sm:mx-auto sm:max-w-4xl md:py-24">
           <HeroTitle />
 
           <div className="flex w-full flex-col gap-8">

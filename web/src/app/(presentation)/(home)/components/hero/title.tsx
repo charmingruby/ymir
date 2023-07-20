@@ -1,5 +1,5 @@
-import { heroContent } from '@/contents/home/hero'
-import { TypingServiceMotivations } from './TypingServiceMotivations'
+import { heroContent } from '../../contents/hero'
+import { TypingServiceMotivations } from './typing-service-motivations'
 
 export function HeroTitle() {
   return (

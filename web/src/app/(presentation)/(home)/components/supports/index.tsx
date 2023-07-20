@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/container'
-import { Illustration } from './Illustration'
-import { Apresentation } from './Apresentation'
-import { TechnologyList } from './TechnologyList'
+import { Illustration } from './illustration'
+import { Presentation } from './presentation'
+import { TechnologyList } from './technology-list'
 
 export function Supports() {
   return (
@@ -10,7 +10,7 @@ export function Supports() {
       <div className="absolute right-0 -z-10 h-screen w-1/2 translate-x-1/2 rounded-full bg-gray-800 blur-full" />
       <Container>
         <div className="flex flex-col items-center justify-between md:flex-row">
-          <Apresentation />
+          <Presentation />
           <Illustration />
         </div>
 

@@ -1,7 +1,7 @@
 'use client'
 
-import { heroContent } from '@/contents/home/hero'
 import { useTypewriter } from 'react-simple-typewriter'
+import { heroContent } from '../../contents/hero'
 
 export function TypingServiceMotivations() {
   const [serviceMotivationsData] = useTypewriter({

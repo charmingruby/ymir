@@ -1,4 +1,4 @@
-import { Feature } from '@/contents/home/features'
+import { Feature } from '../../contents/features'
 
 export function FeatureItem({ icon, title, description }: Feature) {
   return (

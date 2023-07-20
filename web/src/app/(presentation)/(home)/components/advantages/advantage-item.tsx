@@ -1,4 +1,4 @@
-import { Advantage } from '@/contents/home/advantages'
+import { Advantage } from '@/app/(presentation)/(home)/contents/advantages'
 
 export function AdvantageItem(advantage: Advantage) {
   return (

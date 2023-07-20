@@ -1,9 +1,9 @@
 import { Descriptor } from '@/components/ui/descriptor'
 import { Title } from '@/components/ui/title'
 import { Text } from '@/components/ui/text'
-import { FeaturesContent } from '@/contents/home/features'
+import { FeaturesContent } from '../../contents/features'
 
-export function Apresentation() {
+export function Presentation() {
   const { descriptor, title, description } = FeaturesContent
 
   return (

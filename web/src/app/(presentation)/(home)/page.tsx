@@ -1,10 +1,10 @@
 'use client'
 
-import { CTA } from '@/components/pages/Home/CTA'
-import { Advantages } from '@/components/pages/Home/Advantages'
-import { Hero } from '@/components/pages/Home/Hero'
-import { Features } from '@/components/pages/Home/Features'
-import { Supports } from '@/components/pages/Home/Supports'
+import { Advantages } from './components/advantages'
+import { CTA } from './components/cta'
+import { Features } from './components/features'
+import { Hero } from './components/hero'
+import { Supports } from './components/supports'
 
 export default function Home() {
   return (

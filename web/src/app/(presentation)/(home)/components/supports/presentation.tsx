@@ -1,17 +1,15 @@
 import { Descriptor } from '@/components/ui/descriptor'
 import { Title } from '@/components/ui/title'
 import { Text } from '@/components/ui/text'
-import { advantagesContent } from '@/contents/home/advantages'
+import { SupportsContent } from '../../contents/supports'
 
-export function Apresentation() {
-  const { descriptor, title, description } = advantagesContent
+export function Presentation() {
+  const { descriptor, title, description } = SupportsContent
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex w-auto flex-col gap-6 md:w-1/2">
       <Descriptor content={descriptor} />
-
       <Title content={title} />
-
       <div className="max-w-2xl">
         <Text>{description}</Text>
       </div>

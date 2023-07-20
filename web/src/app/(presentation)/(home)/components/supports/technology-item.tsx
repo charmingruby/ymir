@@ -1,4 +1,4 @@
-import { SupporttedTechnology } from './TechnologyList'
+import { SupporttedTechnology } from './technology-list'
 
 export function TechnologyItem({ icon, name }: SupporttedTechnology) {
   return (

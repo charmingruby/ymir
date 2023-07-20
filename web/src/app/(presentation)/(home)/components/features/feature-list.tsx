@@ -1,5 +1,5 @@
-import { FeatureItem } from './Featuretem'
-import { FeaturesContent } from '@/contents/home/features'
+import { FeaturesContent } from '../../contents/features'
+import { FeatureItem } from './feature-item'
 
 export function FeatureList() {
   const { featureList } = FeaturesContent

@@ -1,4 +1,4 @@
-import { TechnologyItem } from './TechnologyItem'
+import { TechnologyItem } from './technology-item'
 import { ReactNode } from 'react'
 import {
   SiTypescript,

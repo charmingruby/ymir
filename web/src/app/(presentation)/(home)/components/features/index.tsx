@@ -1,6 +1,6 @@
 import { Container } from '@/components/ui/container'
-import { FeatureList } from './FeatureList'
-import { Apresentation } from './Apresentation'
+import { FeatureList } from './feature-list'
+import { Presentation } from './presentation'
 
 export function Features() {
   return (
@@ -8,7 +8,7 @@ export function Features() {
       <Container>
         <div className="flex flex-col py-12">
           <div className="flex flex-col">
-            <Apresentation />
+            <Presentation />
             <FeatureList />
           </div>
         </div>

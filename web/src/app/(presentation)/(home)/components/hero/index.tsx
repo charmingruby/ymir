@@ -1,8 +1,8 @@
-import { HeroArguments } from './Arguments'
+import { HeroArguments } from './arguments'
 import { Container } from '@/components/ui/container'
-import { HeroButtonsGroup } from './ButtonsGroup'
-import { HeroDescription } from './Description'
-import { HeroTitle } from './Title'
+import { HeroButtonsGroup } from './buttons-group'
+import { HeroDescription } from './description'
+import { HeroTitle } from './title'
 
 export function Hero() {
   return (

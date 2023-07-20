@@ -1,5 +1,5 @@
-import { AdvantageItem } from './AdvantageItem'
-import { advantagesContent } from '@/contents/home/advantages'
+import { AdvantageItem } from './advantage-item'
+import { advantagesContent } from '@/app/(presentation)/(home)/contents/advantages'
 
 export function AdvantageList() {
   const { advantagesList } = advantagesContent

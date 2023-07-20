@@ -1,7 +1,7 @@
-import { Actions } from './Actions'
+import { Actions } from './actions'
 import { Container } from '@/components/ui/container'
-import { Description } from './Description'
-import { Title } from './Title'
+import { Description } from './description'
+import { Title } from './title'
 
 export function CTA() {
   return (

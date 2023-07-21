@@ -1,12 +1,8 @@
 import { TechnologyItem } from './technology-item'
 import { ReactNode } from 'react'
-import {
-  SiTypescript,
-  SiNestjs,
-  SiNodedotjs,
-  SiPrisma,
-  SiGraphql,
-} from 'react-icons/si'
+import { SiNestjs, SiNodedotjs, SiDjango } from 'react-icons/si'
+import { FaPhoenixFramework, FaJava } from 'react-icons/fa'
+import { TbBrandGolang } from 'react-icons/tb'
 
 export interface SupporttedTechnology {
   name: string
@@ -14,11 +10,15 @@ export interface SupporttedTechnology {
 }
 
 const supporttedTechnologies: SupporttedTechnology[] = [
-  { icon: <SiTypescript className="text-[#007acc]" />, name: 'TypeScript' },
-  { icon: <SiNestjs className="text-[#E0234E]" />, name: 'Nest' },
-  { icon: <SiNodedotjs className="text-[#57A645]" />, name: 'Node' },
-  { icon: <SiPrisma className="text-[#16A394]" />, name: 'Prisma' },
-  { icon: <SiGraphql className="text-[#DE33A6]" />, name: 'Graphql' },
+  { icon: <SiNodedotjs className="text-primary-300" />, name: 'Node' },
+  { icon: <SiNestjs className="text-primary-300" />, name: 'Nest' },
+  { icon: <FaJava className="text-primary-300" />, name: 'Java' },
+  { icon: <TbBrandGolang className="text-primary-300" />, name: 'Go' },
+  { icon: <SiDjango className="text-primary-300" />, name: 'Django' },
+  {
+    icon: <FaPhoenixFramework className="text-primary-300" />,
+    name: 'Phoenix',
+  },
 ]
 
 export function TechnologyList() {

@@ -2,7 +2,7 @@ import { Advantage } from '@/app/(presentation)/(home)/contents/advantages'
 
 export function AdvantageItem(advantage: Advantage) {
   return (
-    <div className="flex flex-row gap-2">
+    <div className="flex flex-col gap-2 lg:flex-row">
       {/* Adjective + Icon */}
       <div className="flex h-7 w-7 items-center justify-center rounded-md text-primary-300">
         {advantage.icon}

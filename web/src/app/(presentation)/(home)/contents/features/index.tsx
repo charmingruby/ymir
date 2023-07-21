@@ -1,58 +1,35 @@
-import { ReactNode } from 'react'
-import { BsUiChecks } from 'react-icons/bs'
-import { FiBriefcase } from 'react-icons/fi'
-import { HiUserGroup, HiOutlineChartPie } from 'react-icons/hi'
-import { MdOutlineRoute, MdSchema } from 'react-icons/md'
-
 export interface Feature {
-  icon: ReactNode
   title: string
   description: string
 }
 
 const featureList: Feature[] = [
   {
-    icon: <MdOutlineRoute />,
-    title: 'Routing',
+    title: 'Agile Business Rules Enforcement',
     description:
-      'Enhanced route control and status code management for improved response handling and user experience.',
+      'Effortlessly enforce and manage dynamic business rules with our agiles feature. Enhance functionality, adapt to changes, and ensure seamless compliance.',
   },
   {
-    icon: <MdSchema />,
-    title: 'Schematization',
+    title: 'Smart Route Handling',
     description:
-      'Streamlined database schema management for efficient structure definition, migration, and validation.',
+      'Streamline responses and routing, enhance adaptability, and elevate user experience.',
   },
   {
-    icon: <FiBriefcase />,
-    title: 'Requirements Management',
+    title: 'Simplified Database Schema Management',
     description:
-      'Efficient management and enforcement of business rules and requirements for enhanced application functionality and compliance.',
+      'Easily manage your database structure with our simplified schema feature. Effortlessly define and validate data for improved organization and efficiency.',
   },
   {
-    icon: <BsUiChecks />,
-    title: 'Assignments Coverage',
+    title: 'Insightful Development Analytics',
     description:
-      'Comprehensive assignment tracking, visibility for improved productivity and accountability.',
-  },
-  {
-    icon: <HiUserGroup />,
-    title: 'Integration In Teams',
-    description:
-      'Effortless integration management for developer-friendly team collaboration and enhanced productivity.',
-  },
-  {
-    icon: <HiOutlineChartPie />,
-    title: 'Development Analytics',
-    description:
-      'Actionable insights through development analytics for optimizing app performance and development processes.',
+      'Gain valuable insights with our Development Analytics feature. Optimize app performance and processes through actionable data-driven intelligence.',
   },
 ]
 
 export const FeaturesContent = {
-  descriptor: 'Most notable features',
+  descriptor: 'Developer friendly features',
   title: 'Streamlined development features',
   description:
-    'Discover the Power of Our Application&apos;s Top Features, Ensuring Scalability and Organizational Excellence. With our robust feature set, you can efficiently manage and scale your projects while maintaining a well-organized development process. Boost productivity, enhance collaboration, and achieve seamless scalability with our powerful tools and functionalities.',
+    'Discover the strength of our feature-rich application that enables efficient project management and seamless scalability. Boost productivity, enhance collaboration, and achieve organizational excellence with our powerful tools and functionalities.',
   featureList,
 }

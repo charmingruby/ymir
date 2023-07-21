@@ -4,6 +4,8 @@ interface DescriptorProps {
 
 export function Descriptor({ content }: DescriptorProps) {
   return (
-    <span className="text-base font-semibold text-primary-300">{content}</span>
+    <span className="text-sm font-semibold uppercase text-primary-300">
+      {content}
+    </span>
   )
 }

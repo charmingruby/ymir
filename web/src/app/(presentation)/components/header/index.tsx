@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 z-50 h-16 w-full border-b border-gray-500 bg-gray-800">
-      {isMenuOpen && <Drawer />}
+      {isMenuOpen && <Drawer onClick={handleMenuToggle} />}
       <Container>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-4 lg:gap-16">

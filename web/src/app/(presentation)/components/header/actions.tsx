@@ -14,7 +14,7 @@ export function Actions() {
       </div>
       <Link href="/dashboard">
         <Button variant="secondary" className="h-8">
-          <span className="">Start app</span>
+          <span className="">Sign up</span>
         </Button>
       </Link>
     </div>

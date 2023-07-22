@@ -1,4 +1,4 @@
-defmodule Server.Application do
+defmodule Ymir.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,22 +9,22 @@ defmodule Server.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      ServerWeb.Telemetry,
+      YmirWeb.Telemetry,
       # Start the Ecto repository
-      Server.Repo,
+      Ymir.Repo,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Server.PubSub},
+      {Phoenix.PubSub, name: Ymir.PubSub},
       # Start Finch
-      {Finch, name: Server.Finch},
+      {Finch, name: Ymir.Finch},
       # Start the Endpoint (http/https)
-      ServerWeb.Endpoint
-      # Start a worker by calling: Server.Worker.start_link(arg)
-      # {Server.Worker, arg}
+      YmirWeb.Endpoint
+      # Start a worker by calling: Ymir.Worker.start_link(arg)
+      # {Ymir.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Server.Supervisor]
+    opts = [strategy: :one_for_one, name: Ymir.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -32,7 +32,7 @@ defmodule Server.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    ServerWeb.Endpoint.config_change(changed, removed)
+    YmirWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

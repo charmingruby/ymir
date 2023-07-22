@@ -7,18 +7,18 @@
 # General application configuration
 import Config
 
-config :server,
-  ecto_repos: [Server.Repo]
+config :ymir,
+  ecto_repos: [Ymir.Repo]
 
 # Configures the endpoint
-config :server, ServerWeb.Endpoint,
+config :ymir, YmirWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [json: ServerWeb.ErrorJSON],
+    formats: [json: YmirWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Server.PubSub,
-  live_view: [signing_salt: "b+MIFxCw"]
+  pubsub_server: Ymir.PubSub,
+  live_view: [signing_salt: "6om062an"]
 
 # Configures the mailer
 #
@@ -27,7 +27,7 @@ config :server, ServerWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :server, Server.Mailer, adapter: Swoosh.Adapters.Local
+config :ymir, Ymir.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configures Elixir's Logger
 config :logger, :console,

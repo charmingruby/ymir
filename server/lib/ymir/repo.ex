@@ -1,5 +1,5 @@
-defmodule Server.Repo do
+defmodule Ymir.Repo do
   use Ecto.Repo,
-    otp_app: :server,
+    otp_app: :ymir,
     adapter: Ecto.Adapters.Postgres
 end

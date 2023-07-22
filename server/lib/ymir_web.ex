@@ -1,12 +1,12 @@
-defmodule ServerWeb do
+defmodule YmirWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use ServerWeb, :controller
-      use ServerWeb, :html
+      use YmirWeb, :controller
+      use YmirWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -39,10 +39,10 @@ defmodule ServerWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: ServerWeb.Layouts]
+        layouts: [html: YmirWeb.Layouts]
 
       import Plug.Conn
-      import ServerWeb.Gettext
+      import YmirWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -51,9 +51,9 @@ defmodule ServerWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: ServerWeb.Endpoint,
-        router: ServerWeb.Router,
-        statics: ServerWeb.static_paths()
+        endpoint: YmirWeb.Endpoint,
+        router: YmirWeb.Router,
+        statics: YmirWeb.static_paths()
     end
   end
 

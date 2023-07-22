@@ -1,16 +1,16 @@
-defmodule ServerWeb.Router do
-  use ServerWeb, :router
+defmodule YmirWeb.Router do
+  use YmirWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ServerWeb do
+  scope "/api", YmirWeb do
     pipe_through :api
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
-  if Application.compile_env(:server, :dev_routes) do
+  if Application.compile_env(:ymir, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
     # it behind authentication and allow only admins to access it.
     # If your application does not have an admins-only section yet,
@@ -21,7 +21,7 @@ defmodule ServerWeb.Router do
     scope "/dev" do
       pipe_through [:fetch_session, :protect_from_forgery]
 
-      live_dashboard "/dashboard", metrics: ServerWeb.Telemetry
+      live_dashboard "/dashboard", metrics: YmirWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end

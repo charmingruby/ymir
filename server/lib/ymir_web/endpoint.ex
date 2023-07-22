@@ -1,13 +1,13 @@
-defmodule ServerWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :server
+defmodule YmirWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :ymir
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_server_key",
-    signing_salt: "5+SxsfI1",
+    key: "_ymir_key",
+    signing_salt: "GFCIT9rT",
     same_site: "Lax"
   ]
 
@@ -19,15 +19,15 @@ defmodule ServerWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :server,
+    from: :ymir,
     gzip: false,
-    only: ServerWeb.static_paths()
+    only: YmirWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :server
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :ymir
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -45,5 +45,5 @@ defmodule ServerWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ServerWeb.Router
+  plug YmirWeb.Router
 end

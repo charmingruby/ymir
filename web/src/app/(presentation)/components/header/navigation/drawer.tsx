@@ -16,6 +16,7 @@ export function Drawer({ onClick }: DrawerProps) {
           <ul className="flex flex-col items-center gap-4">
             {navItems.map((item) => (
               <Link
+                prefetch={false}
                 href={`/${item === 'Home' ? '' : item.toLowerCase()}`}
                 key={item}
                 onClick={onClick}
@@ -29,13 +30,13 @@ export function Drawer({ onClick }: DrawerProps) {
 
           {/* Actions */}
           <div className="flex flex-col items-center gap-2">
-            <Link href="/dashboard" onClick={onClick}>
+            <Link href="/dashboard" prefetch={false} onClick={onClick}>
               <Button variant="secondary" className="h-8">
                 <span className="">Sign in</span>
               </Button>
             </Link>
 
-            <Link href="/dashboard" onClick={onClick}>
+            <Link href="/dashboard" onClick={onClick} prefetch={false}>
               <Button variant="primary" className="h-8">
                 <span className="">Sign up</span>
               </Button>

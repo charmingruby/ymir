@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const navItems = ['Home', 'About', 'Docs', 'Pricing', 'Cases']
+export const navItems = ['Home', 'About', 'Pricing', 'Docs']
 
 export function NavigationItems() {
   return (
@@ -8,6 +8,7 @@ export function NavigationItems() {
       <ul className="flex gap-8 text-sm font-bold text-gray-200 transition-colors">
         {navItems.map((item) => (
           <Link
+            prefetch={false}
             href={`/${item === 'Home' ? '' : item.toLowerCase()}`}
             key={item}
           >

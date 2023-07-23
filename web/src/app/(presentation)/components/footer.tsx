@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 export function Footer() {
   return (
-    <div className="bg-gray-900 py-8">
+    <div className="border-t-2 border-gray-600 bg-gray-900 py-8">
       <Container>
         <div className="flex flex-col items-center gap-2 text-gray-300">
           {/* Medias */}

@@ -1,4 +1,4 @@
-import { Project } from '@/data/types/collection'
+import { Project } from '@/mocks/types/collection'
 
 export const DUMMY_PROJECTS: Project[] = [
   { name: 'Ymir.dev', organization: 'Gustavo Dias' },

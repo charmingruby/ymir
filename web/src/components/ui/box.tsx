@@ -10,7 +10,7 @@ export function Box({ children, spacing = 'md' }: BoxProps) {
   return (
     <div
       className={clsx(
-        'flex w-full cursor-pointer items-center justify-start gap-4 rounded-md border-2 border-gray-500 bg-gray-700 shadow-sm transition-shadow hover:shadow-lg',
+        'flex w-full cursor-pointer items-center justify-start gap-4 rounded-md border-2 border-gray-500 bg-gray-700 shadow-lg transition-shadow hover:shadow-lg',
         {
           'p-2.5': spacing === 'sm',
           'p-4': spacing === 'md',

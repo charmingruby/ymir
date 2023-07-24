@@ -12,8 +12,8 @@ export default function Pricing() {
       </div>
 
       <Container larger>
-        <div className=" py-12">
-          <div className="grid grid-cols-3 gap-x-2">
+        <div className="pt-8">
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
             <PricingCard />
             <PricingCard />
             <PricingCard />

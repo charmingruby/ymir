@@ -1,18 +1,22 @@
 import { Box } from '@/components/ui/box'
 import { Button } from '@/components/ui/button'
 
+import { LuCheckCircle2 } from 'react-icons/lu'
+
 export function PricingCard() {
   return (
-    <Box>
+    <Box spacing="lg">
       <div>
         {/* Header */}
-        <header className="flex flex-col gap-1">
-          <h3 className="text-gray-50">Developer</h3>
-          <p className="">The basics for individuals.</p>
+        <header className="flex flex-col">
+          <h3 className="text-lg font-medium text-gray-50">Developer</h3>
+          <span className="">The basics for individuals.</span>
         </header>
 
         {/* Permissions */}
-        <div></div>
+        <div>
+          <LuCheckCircle2 className="text-2xl text-success-300" />
+        </div>
 
         {/* Separator */}
         <div />
@@ -21,7 +25,7 @@ export function PricingCard() {
         <div></div>
 
         {/* Button */}
-        <Button className="px-16">
+        <Button small className="px-16">
           <span className="text-base font-semibold">Select</span>
         </Button>
       </div>

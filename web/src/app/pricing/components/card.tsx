@@ -1,31 +1,55 @@
 import { Box } from '@/components/ui/box'
 import { Button } from '@/components/ui/button'
-
-import { LuCheckCircle2 } from 'react-icons/lu'
+import { Permission } from './permission'
 
 export function PricingCard() {
   return (
     <Box spacing="lg">
-      <div>
+      <div className="w-full">
         {/* Header */}
-        <header className="flex flex-col">
-          <h3 className="text-lg font-medium text-gray-50">Developer</h3>
-          <span className="">The basics for individuals.</span>
+        <header className="mb-6 flex flex-col">
+          <h3 className="text-xl font-medium text-gray-50">Developer</h3>
+          <span className="text-gray-200">The basics for individuals.</span>
         </header>
 
         {/* Permissions */}
-        <div>
-          <LuCheckCircle2 className="text-2xl text-success-300" />
+        <div className="mb-16 flex flex-col gap-2">
+          <Permission text="Unlimited local projects" permitted />
+          <Permission text="Unlimited local projects" permitted={false} />
+          <Permission text="Unlimited local projects" permitted />
         </div>
 
         {/* Separator */}
-        <div />
+        <div className="mb-16 h-0.5 w-full bg-gray-600" />
 
         {/* Pricing */}
-        <div></div>
+        <div className="mb-12 flex flex-col gap-2">
+          <div className="flex items-baseline gap-2">
+            {/* Price */}
+            <div>
+              <span className="text-4xl font-semibold leading-3 text-primary-300">
+                $5
+              </span>
+              <span className="leading-3 text-gray-100">/month</span>
+            </div>
+
+            {/* Sale */}
+            <span className="leading-3 text-gray-200 line-through">
+              $25 / month
+            </span>
+          </div>
+
+          {/* Explanation */}
+          <p className="text-gray-200">Simple month-to-month pricing.</p>
+        </div>
+
+        {/* Sale code */}
+        <div className="mb-12 w-full rounded-md bg-gray-600 p-3 leading-relaxed">
+          Use the TEAM25 promo code to activate the discount.
+        </div>
 
         {/* Button */}
-        <Button small className="px-16">
+        <Button className="w-full px-20 sm:w-auto">
           <span className="text-base font-semibold">Select</span>
         </Button>
       </div>

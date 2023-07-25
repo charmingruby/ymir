@@ -18,7 +18,7 @@ export function Button({
   return (
     <button
       className={clsx(
-        'flex items-center justify-center rounded-lg border px-3 text-sm font-medium shadow-md transition-colors',
+        'flex items-center justify-center rounded-md border px-3 text-sm font-medium shadow-md transition-colors',
         className,
         {
           'py-1': small,

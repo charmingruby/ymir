@@ -49,7 +49,7 @@ export function PricingCard() {
         </div>
 
         {/* Button */}
-        <Button className="w-full px-20 sm:w-auto">
+        <Button className="w-full px-24 sm:w-auto">
           <span className="text-base font-semibold">Select</span>
         </Button>
       </div>

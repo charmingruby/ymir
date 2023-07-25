@@ -15,9 +15,9 @@ export function Permission({
     <div className="flex items-center gap-2">
       {/* Icon */}
       {permitted ? (
-        <LuCheckCircle2 className="text-xl text-success-300" />
+        <LuCheckCircle2 className="text-2xl text-success-300" />
       ) : (
-        <LuXCircle className="text-xl text-danger-300" />
+        <LuXCircle className="text-2xl text-danger-300" />
       )}
 
       {/* Permission Text */}

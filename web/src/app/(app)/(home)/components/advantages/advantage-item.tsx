@@ -1,22 +1,14 @@
 import { Advantage } from '@/app/(app)/(home)/contents/advantages'
+import { LuCheck } from 'react-icons/lu'
 
 export function AdvantageItem(advantage: Advantage) {
   return (
-    <div className="flex flex-col gap-2 lg:flex-row">
-      {/* Adjective + Icon */}
-      <div className="flex h-7 w-7 items-center justify-center rounded-md text-primary-300">
-        {advantage.icon}
+    <div className="flex gap-2">
+      <div className="mt-1">
+        <LuCheck className="text-2xl text-success-300" />
       </div>
 
-      {/* Content */}
-      <div className="flex flex-1 flex-col gap-2">
-        <header className="text-xl font-bold text-gray-50">
-          {advantage.title}
-        </header>
-        <span className="leading-relaxed text-gray-100">
-          {advantage.description}
-        </span>
-      </div>
+      <div className="text-lg font-medium text-gray-100">{advantage.title}</div>
     </div>
   )
 }

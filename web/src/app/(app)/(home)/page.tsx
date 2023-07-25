@@ -4,7 +4,7 @@ import { Advantages } from './components/advantages'
 import { CTA } from './components/cta'
 import { Features } from './components/features'
 import { Hero } from './components/hero'
-import { Supports } from './components/supports'
+import { Informative } from './components/informative'
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <Advantages />
       <Features />
-      <Supports />
+      <Informative />
       <CTA />
     </div>
   )

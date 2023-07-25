@@ -23,7 +23,7 @@ const supporttedTechnologies: SupporttedTechnology[] = [
 
 export function TechnologyList() {
   return (
-    <div className="grid h-fit w-full gap-4 md:grid-cols-2">
+    <div className="grid h-fit w-full grid-cols-3 gap-4">
       {supporttedTechnologies.map((tec) => (
         <TechnologyItem key={tec.name} {...tec} />
       ))}

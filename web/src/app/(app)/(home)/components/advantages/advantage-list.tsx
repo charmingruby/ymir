@@ -5,7 +5,7 @@ export function AdvantageList() {
   const { advantagesList } = advantagesContent
 
   return (
-    <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+    <div className="flex flex-col gap-1.5">
       {advantagesList.map((advantage) => (
         <AdvantageItem key={advantage.title} {...advantage} />
       ))}

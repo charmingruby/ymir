@@ -27,13 +27,25 @@ const advantagesList: Advantage[] = [
   },
   {
     icon: <LuFlaskConical size={20} />,
-    title: 'Code Quality and Testing',
+    title: 'Code Quality',
+    description:
+      'Ensure top-notch code quality and comprehensive testing for your software. Offers features helps the write of the automated testing, and code reviews, delivering high-quality software and with enhance stability.',
+  },
+  {
+    icon: <LuFlaskConical size={20} />,
+    title: 'Testing',
     description:
       'Ensure top-notch code quality and comprehensive testing for your software. Offers features helps the write of the automated testing, and code reviews, delivering high-quality software and with enhance stability.',
   },
   {
     icon: <LuBookOpenCheck size={20} />,
     title: 'Comprehensive Documentation',
+    description:
+      'Effortless generation of comprehensive documentation for enhanced software understanding and collaboration.',
+  },
+  {
+    icon: <LuBookOpenCheck size={20} />,
+    title: 'Database Schemas',
     description:
       'Effortless generation of comprehensive documentation for enhanced software understanding and collaboration.',
   },

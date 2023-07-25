@@ -3,8 +3,8 @@ import supportImage from '@/assets/images/support.svg'
 
 export function Illustration() {
   return (
-    <div>
-      <Image src={supportImage} alt="" width={400} height={400} />
+    <div className="hidden md:block">
+      <Image src={supportImage} alt="" width={480} />
     </div>
   )
 }

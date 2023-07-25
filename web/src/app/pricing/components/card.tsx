@@ -7,8 +7,10 @@ export function PricingCard() {
     <Box spacing="lg">
       <div className="w-full">
         {/* Header */}
-        <header className="mb-6 flex flex-col">
-          <h3 className="text-xl font-medium text-gray-50">Developer</h3>
+        <header className="mb-8 flex flex-col">
+          <h3 className="mb-2 text-3xl font-semibold text-gray-50">
+            Developer
+          </h3>
           <span className="text-gray-200">The basics for individuals.</span>
         </header>
 
@@ -49,7 +51,7 @@ export function PricingCard() {
         </div>
 
         {/* Button */}
-        <Button className="w-full px-24 sm:w-auto">
+        <Button className="w-full px-24">
           <span className="text-base font-semibold">Select</span>
         </Button>
       </div>

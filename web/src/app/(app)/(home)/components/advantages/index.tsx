@@ -21,7 +21,7 @@ export function Advantages() {
             <AdvantageList />
           </div>
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           <HighlightedTopic />
           <HighlightedTopic />
         </div>

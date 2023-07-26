@@ -1,11 +1,16 @@
 'use client'
 
 import { useTypewriter } from 'react-simple-typewriter'
-import { heroContent } from '../../contents/hero'
+
+const servicesMotivation = [
+  'your team needed',
+  'will save your time',
+  'facilitates maintenance',
+]
 
 export function TypingServiceMotivations() {
   const [serviceMotivationsData] = useTypewriter({
-    words: heroContent.title.servicesMotivation,
+    words: servicesMotivation,
     loop: true,
     delaySpeed: 2000,
   })

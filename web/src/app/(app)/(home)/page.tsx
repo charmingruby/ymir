@@ -1,6 +1,6 @@
 'use client'
 
-import { Advantages } from './components/advantages'
+import { WhyUs } from './components/why-us'
 import { CTA } from './components/cta'
 import { Features } from './components/features'
 import { Hero } from './components/hero'
@@ -13,7 +13,7 @@ export default function Home() {
       <div className="absolute -z-10 h-screen w-1/2 -translate-x-1/2 rounded-full bg-gray-800 blur-full" />
 
       <Hero />
-      <Advantages />
+      <WhyUs />
       <Features />
       <Informative />
       <CTA />

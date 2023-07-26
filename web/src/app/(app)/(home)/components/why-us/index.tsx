@@ -5,7 +5,7 @@ import { Presentation } from './presentation'
 import { AdvantageList } from './advantage-list'
 import { HighlightedTopic } from './highlighted-topic'
 
-export function Advantages() {
+export function WhyUs() {
   return (
     <section className="flex min-h-screen w-full items-center border-y border-gray-600 bg-gray-900 py-16">
       <Container>

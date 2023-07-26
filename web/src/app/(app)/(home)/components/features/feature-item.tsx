@@ -1,5 +1,5 @@
-import { Feature } from '../../contents/features'
 import { LuCheck } from 'react-icons/lu'
+import { Feature } from './feature-list'
 
 export function FeatureItem({ title, description }: Feature) {
   return (

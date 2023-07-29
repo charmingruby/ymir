@@ -7,7 +7,7 @@ export function HeroButtonsGroup() {
       <Button className="px-8">
         <span className="text-base font-medium">Start your app</span>
       </Button>
-      <Button className="px-8" variant="uncolored">
+      <Button className="px-8" color="uncolored">
         <div className="flex items-center">
           <span className="mr-1 text-base font-medium">Documentation</span>
           <HiOutlineBookOpen />

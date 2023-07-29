@@ -1,38 +1,43 @@
-import { clsx } from 'clsx'
-import { ButtonHTMLAttributes } from 'react'
+import { ComponentProps, ReactNode } from 'react'
+import { tv, VariantProps } from 'tailwind-variants'
 
-type BaseButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+const button = tv({
+  base: 'flex items-center justify-center rounded-md border px-3 text-sm font-medium shadow-md transition-colors',
+  variants: {
+    size: {
+      default: 'py-2',
+      sm: 'py-1',
+    },
+    color: {
+      primary:
+        'border-primary-300 bg-primary-300 text-gray-700 transition-colors hover:border-primary-100 hover:bg-primary-100',
+      secondary:
+        'border-primary-300 text-gray-50 transition-colors hover:bg-primary-300 hover:text-gray-700',
+      uncolored:
+        'border-gray-300 bg-gray-500 text-gray-50 transition-colors hover:bg-gray-400',
+    },
+  },
+  defaultVariants: {
+    size: 'default',
+    color: 'primary',
+  },
+})
 
-interface ButtonProps extends BaseButtonProps {
-  variant?: 'primary' | 'secondary' | 'uncolored'
-  small?: boolean
-}
+type ButtonProps = ComponentProps<'button'> &
+  VariantProps<typeof button> & {
+    children: ReactNode
+    className?: string
+  }
 
 export function Button({
   children,
+  size,
+  color,
   className,
-  variant = 'primary',
-  small = false,
   ...props
 }: ButtonProps) {
   return (
-    <button
-      className={clsx(
-        'flex items-center justify-center rounded-md border px-3 text-sm font-medium shadow-md transition-colors',
-        className,
-        {
-          'py-1': small,
-          'py-2': !small,
-          'border-primary-300 bg-primary-300 text-gray-700 transition-colors hover:border-primary-100 hover:bg-primary-100':
-            variant === 'primary',
-          'border-primary-300 text-gray-50 transition-colors hover:bg-primary-300 hover:text-gray-700':
-            variant === 'secondary',
-          'border-gray-300 bg-gray-500 text-gray-50 transition-colors hover:bg-gray-400':
-            variant === 'uncolored',
-        },
-      )}
-      {...props}
-    >
+    <button className={button({ color, size, class: className })} {...props}>
       {children}
     </button>
   )

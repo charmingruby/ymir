@@ -17,8 +17,8 @@ export function Actions() {
       </Link>
 
       {/* Sign up  */}
-      <Link href="/sign-in" prefetch={false}>
-        <Button variant="secondary" className="h-8">
+      <Link href="/sign-up" prefetch={false}>
+        <Button color="secondary" className="h-8">
           <span className="">Sign up</span>
         </Button>
       </Link>

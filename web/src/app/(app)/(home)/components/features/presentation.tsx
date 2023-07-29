@@ -6,7 +6,7 @@ import { LuArrowRight } from 'react-icons/lu'
 
 export function Presentation() {
   return (
-    <div className="flex flex-col gap-6 lg:max-w-lg">
+    <div className="flex flex-col justify-center gap-6">
       <Descriptor content="Developer friendly features" />
       <Title content="Streamlined development features" />
       <div className="flex items-center justify-center">
@@ -18,7 +18,7 @@ export function Presentation() {
         </Text>
       </div>
 
-      <Button className="gap-2 px-8 lg:self-start" variant="secondary">
+      <Button className="gap-2 px-8 lg:self-start" color="secondary">
         <span className="text-base">Read more</span>
         <LuArrowRight />
       </Button>

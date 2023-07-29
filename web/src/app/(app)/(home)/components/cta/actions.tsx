@@ -4,7 +4,7 @@ import { LuArrowRight } from 'react-icons/lu'
 export function Actions() {
   return (
     <div className="flex w-full flex-col gap-4 md:w-auto md:flex-row md:justify-center">
-      <Button variant="primary" className="w-full rounded-full px-8 md:w-auto">
+      <Button color="primary">
         <span className="text-base font-medium">Start your App</span>
       </Button>
 

@@ -1,31 +1,42 @@
 import { Descriptor } from '@/components/descriptor'
 import { FeatureItem } from './feature-item'
+import { ReactNode } from 'react'
+import { LuDatabase } from 'react-icons/lu'
 
 export interface Feature {
+  icon: ReactNode
   title: string
-  description: string
+  description: string[]
 }
 
 const featureList: Feature[] = [
   {
+    icon: <LuDatabase />,
     title: 'Agile Business Rules Enforcement',
-    description:
+    description: [
       'Effortlessly enforce and manage dynamic business rules with our agiles feature. Enhance functionality, adapt to changes, and ensure seamless compliance.',
+    ],
   },
   {
+    icon: <LuDatabase />,
     title: 'Smart Route Handling',
-    description:
+    description: [
       'Streamline responses and routing, enhance adaptability, and elevate user experience.',
+    ],
   },
   {
+    icon: <LuDatabase />,
     title: 'Simplified Database Schema Management',
-    description:
+    description: [
       'Easily manage your database structure with our simplified schema feature. Effortlessly define and validate data for improved organization and efficiency.',
+    ],
   },
   {
+    icon: <LuDatabase />,
     title: 'Insightful Development Analytics',
-    description:
+    description: [
       'Gain valuable insights with our Development Analytics feature. Optimize app performance and processes through actionable data-driven intelligence.',
+    ],
   },
 ]
 

@@ -12,7 +12,7 @@ export function NavigationList() {
             href={`/${item === 'Home' ? '' : item.toLowerCase()}`}
             key={item}
           >
-            <li className="flex h-[3.875rem] cursor-pointer items-center border-b-2 border-gray-800 transition-colors hover:border-b-2 hover:border-primary-500 hover:text-gray-50">
+            <li className="flex h-[3.75rem] cursor-pointer items-center border-b-2 border-gray-800 transition-colors hover:border-b-2 hover:border-primary-500 hover:text-gray-50">
               <span className="text-base font-medium">{item}</span>
             </li>
           </Link>

@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import supportImage from '@/assets/images/support.svg'
+import coding from '@/assets/images/code-typing.svg'
 
 export function Illustration() {
   return (
     <div className="hidden md:block">
-      <Image src={supportImage} alt="" width={480} />
+      <Image src={coding} alt="" width={480} />
     </div>
   )
 }

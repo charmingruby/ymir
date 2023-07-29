@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const navItems = ['Home', 'About', 'Pricing', 'Docs']
+export const navItems = ['About', 'Products', 'Pricing', 'Docs']
 
 export function NavigationList() {
   return (

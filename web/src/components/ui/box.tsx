@@ -1,22 +1,39 @@
 import { ReactNode } from 'react'
-import { clsx } from 'clsx'
+import { VariantProps, tv } from 'tailwind-variants'
 
-interface BoxProps {
+const box = tv({
+  base: 'rounded-md border border-gray-500 shadow-lg transition-shadow hover:shadow-lg',
+  variants: {
+    spacing: {
+      default: 'p-4',
+      larger: 'p-8',
+      icon: 'h-12 w-12 flex items-center justify-center',
+      spaceless: 'p-0',
+    },
+    color: {
+      default: 'bg-gray-700',
+      transparent: 'bg-none',
+    },
+  },
+  defaultVariants: {
+    spacing: 'default',
+    color: 'default',
+  },
+})
+
+type BoxProps = VariantProps<typeof box> & {
   children: ReactNode
-  spacing?: 'sm' | 'md' | 'lg'
+  className?: string
 }
 
-export function Box({ children, spacing = 'md' }: BoxProps) {
+export function Box({ children, className, spacing, color }: BoxProps) {
   return (
     <div
-      className={clsx(
-        'group flex w-full cursor-pointer items-center justify-start gap-4 rounded-md border border-gray-500 bg-gray-700 shadow-lg transition-shadow hover:shadow-lg',
-        {
-          'p-2.5': spacing === 'sm',
-          'p-4': spacing === 'md',
-          'p-8': spacing === 'lg',
-        },
-      )}
+      className={box({
+        spacing,
+        color,
+        class: className,
+      })}
     >
       {children}
     </div>

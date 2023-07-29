@@ -4,7 +4,7 @@ import { Permission } from './permission'
 
 export function PricingCard() {
   return (
-    <Box spacing="lg">
+    <Box spacing="larger">
       <div className="w-full">
         {/* Header */}
         <header className="mb-8 flex flex-col">

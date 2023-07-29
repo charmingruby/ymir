@@ -41,13 +41,13 @@ export function Drawer({ onClick }: DrawerProps) {
             </div>
             <div className="flex flex-col gap-3">
               <Link href="/dashboard" prefetch={false} onClick={onClick}>
-                <Button variant="secondary" className="h-8">
+                <Button color="secondary" className="h-8">
                   <span className="">Sign in</span>
                 </Button>
               </Link>
 
               <Link href="/dashboard" onClick={onClick} prefetch={false}>
-                <Button variant="primary" className="h-8">
+                <Button color="primary" className="h-8">
                   <span className="">Sign up</span>
                 </Button>
               </Link>

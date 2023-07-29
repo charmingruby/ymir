@@ -7,11 +7,8 @@ export function Content() {
   return (
     <div className="flex w-auto flex-col gap-6 md:w-1/2">
       <Presentation />
-
       <TechnologyList />
-
       <Separator />
-
       <TecHelp />
     </div>
   )

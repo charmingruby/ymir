@@ -10,7 +10,7 @@ export function TecHelp() {
         <span className="font-medium text-success-300">pros</span> and{' '}
         <span className="font-medium text-danger-300">cons</span> for some apps.
       </Text>
-      <Button className="gap-2 px-8 lg:self-start" variant="primary">
+      <Button className="gap-2 px-8 lg:self-start">
         <span className="text-base">Read more</span>
         <LuArrowRight />
       </Button>

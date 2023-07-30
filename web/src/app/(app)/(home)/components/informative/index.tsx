@@ -4,7 +4,7 @@ import { Content } from './content'
 
 export function Informative() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden border-b border-gray-600 py-12">
+    <section className="relative flex items-center overflow-hidden border-b border-gray-600 py-12">
       {/* Blur */}
       <div className="absolute right-0 -z-10 h-screen w-1/2 translate-x-1/2 rounded-full bg-gray-800 blur-full" />
       <Container>

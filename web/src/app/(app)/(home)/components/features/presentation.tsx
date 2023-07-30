@@ -18,7 +18,7 @@ export function Presentation() {
         </Text>
       </div>
 
-      <Button className="gap-2 px-8 lg:self-start" color="secondary">
+      <Button className="gap-2 px-8 lg:self-start" color="primary">
         <span className="text-base">Read more</span>
         <LuArrowRight />
       </Button>

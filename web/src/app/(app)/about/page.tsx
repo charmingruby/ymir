@@ -1,9 +1,5 @@
-import { Presentation } from './components/presentation'
+import { UnderDevelopment } from '@/components/under-development'
 
 export default function About() {
-  return (
-    <div>
-      <Presentation />
-    </div>
-  )
+  return <UnderDevelopment />
 }

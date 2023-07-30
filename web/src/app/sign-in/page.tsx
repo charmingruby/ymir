@@ -1,5 +1,5 @@
 import { UnderDevelopment } from '@/components/under-development'
 
-export default function SignUp() {
+export default function SignIn() {
   return <UnderDevelopment />
 }

@@ -3,7 +3,7 @@ import { Title } from '@/components/ui/title'
 
 export function Presentation() {
   return (
-    <div className="mb-10 flex flex-col gap-6 lg:mb-16 lg:items-center">
+    <div className="mb-8 flex flex-col gap-6 lg:mb-16 lg:items-center">
       <Descriptor content="bring agility to your apps" />
       <div className="flex flex-col items-center gap-4">
         <Title content="Build apps with speed and confidence" />

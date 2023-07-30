@@ -7,19 +7,19 @@ export function ReasonList() {
       <ReasonItem
         icon={LuExpand}
         reason="Scalability"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita reiciendis debitis nisi, voluptate labore minima sunt autem sit magnam."
+        description="Guarantees seamless scalability with distributed architecture, load balancing, caching, auto-scaling, and robust monitoring."
       />
 
       <ReasonItem
         icon={LuWand2}
         reason="Ease of use"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita reiciendis debitis nisi, voluptate labore minima sunt autem sit magnam."
+        description="Ensures ease of use through an intuitive interface, optimized workflows, and user-friendly features."
       />
 
       <ReasonItem
         icon={LuCircleDot}
         reason="Consistency"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita reiciendis debitis nisi, voluptate labore minima sunt autem sit magnam."
+        description="Achieved through dependable synchronization, meticulous transaction management, and unwavering adherence to established rules and standards."
       />
     </div>
   )

@@ -11,10 +11,9 @@ export function Presentation() {
       <div className="max-w-2xl">
         <Text>
           {' '}
-          Elevate Your Innovation: Tailored Support for Advanced Technologies.
-          Explore our dedicated section, offering specialized features and
-          support for cutting-edge technologies. Achieve remarkable results with
-          our comprehensive technology support.,
+          The application is technology-agnostic, offering independence to
+          users, allowing them to choose their preferred technology stack
+          without any constraints.
         </Text>
       </div>
     </>

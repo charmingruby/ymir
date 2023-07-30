@@ -4,7 +4,7 @@ import { ReasonList } from './reason-list'
 
 export function WhyUs() {
   return (
-    <section className="flex w-full items-center border-y border-gray-600 bg-gray-900 py-24">
+    <section className="flex w-full items-center border-y border-gray-600 bg-gray-900 py-12 lg:py-24">
       <Container>
         <Presentation />
 

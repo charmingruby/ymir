@@ -1,13 +1,13 @@
 import { Presentation } from './components/presentation'
-import { Features } from './components/features'
 import { CTA } from './components/cta'
+import { BundleList } from './components/bundle-list'
 
-export default function About() {
+export default function Features() {
   return (
-    <div>
+    <>
       <Presentation />
-      <Features />
+      <BundleList />
       <CTA />
-    </div>
+    </>
   )
 }

@@ -6,15 +6,15 @@ export function Actions() {
     <div className="flex items-center gap-2">
       {/* Sign in */}
       <Link href="/sign-in" prefetch={false}>
-        <div className="group flex h-8 cursor-pointer items-center gap-1 rounded-full px-4 text-gray-50 transition-colors hover:bg-gray-700 hover:text-primary-100">
-          <span className="text-sm font-semibold">Sign in</span>
-        </div>
+        <Button color="transparent" className="h-8 text-sm">
+          Sign in
+        </Button>
       </Link>
 
       {/* Sign up  */}
       <Link href="/sign-up" prefetch={false}>
-        <Button color="secondary" className="h-8">
-          <span className="">Sign up</span>
+        <Button color="secondary" className="h-8 text-sm">
+          Sign up
         </Button>
       </Link>
     </div>

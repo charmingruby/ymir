@@ -5,12 +5,13 @@ import { Text } from '@/components/ui/text'
 import { Descriptor } from '@/components/descriptor'
 import { Button } from '@/components/ui/button'
 import { LuArrowRight } from 'react-icons/lu'
+import { Motivations } from './motivations'
 
 export function Presentation() {
   return (
-    <section className="pt-16">
+    <section className="pb-12 pt-16">
       <Container>
-        <div className="grid grid-cols-2 py-12">
+        <div className="mb-16 grid grid-cols-2">
           <Illustration />
 
           <div className="flex flex-col justify-center gap-6">
@@ -24,13 +25,13 @@ export function Presentation() {
             </Text>
 
             <Button>
-              <div className="flex items-center gap-2">
-                <span className="text-base">Get services</span>{' '}
-                <LuArrowRight size={18} />
-              </div>
+              <span className="text-base">Check prices</span>{' '}
+              <LuArrowRight size={18} />
             </Button>
           </div>
         </div>
+
+        <Motivations />
       </Container>
     </section>
   )

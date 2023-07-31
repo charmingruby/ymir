@@ -6,9 +6,10 @@ export interface LinkProps {
 }
 
 const links: LinkProps[] = [
-  { label: 'About', url: '/about' },
+  { label: 'Dev Tools', url: '/devtools' },
   { label: 'Products', url: '/products' },
   { label: 'Pricing', url: '/pricing' },
+  { label: 'Team', url: '/team' },
   { label: 'Docs', url: '/docs' },
 ]
 

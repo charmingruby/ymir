@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const navItems = ['About', 'Products', 'Pricing', 'Docs']
+export const navItems = ['Dev Tools', 'Products', 'Pricing', 'Team', 'Docs']
 
 export function NavigationList() {
   return (
@@ -9,7 +9,9 @@ export function NavigationList() {
         {navItems.map((item) => (
           <Link
             prefetch={false}
-            href={`/${item === 'Home' ? '' : item.toLowerCase()}`}
+            href={`/${
+              item === 'Home' ? '' : item.toLowerCase().replace(' ', '')
+            }`}
             key={item}
           >
             <li className="flex h-[3.75rem] cursor-pointer items-center border-b-2 border-gray-800 transition-colors hover:border-b-2 hover:border-primary-500 hover:text-gray-50">

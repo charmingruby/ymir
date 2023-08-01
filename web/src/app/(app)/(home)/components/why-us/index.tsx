@@ -7,7 +7,6 @@ export function WhyUs() {
     <section className="flex w-full items-center border-y border-gray-600 bg-gray-900 py-12">
       <Container>
         <Presentation />
-
         <ReasonList />
       </Container>
     </section>

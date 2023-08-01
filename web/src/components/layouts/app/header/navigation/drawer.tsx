@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/container'
-import { navItems } from './navigation-list'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { DrawerItem } from './drawer-item'
 
 interface DrawerProps {
   onClick: () => void
@@ -19,18 +19,11 @@ export function Drawer({ onClick }: DrawerProps) {
             </div>
 
             <ul className="flex flex-col gap-3">
-              {navItems.map((item) => (
-                <Link
-                  prefetch={false}
-                  href={`/${item === 'Home' ? '' : item.toLowerCase()}`}
-                  key={item}
-                  onClick={onClick}
-                >
-                  <li className="cursor-pointer font-medium text-gray-200 transition-colors hover:text-gray-50 active:text-gray-50">
-                    {item}
-                  </li>
-                </Link>
-              ))}
+              <DrawerItem label="Features" onClick={onClick} url="/features" />
+              <DrawerItem label="Products" onClick={onClick} url="/products" />
+              <DrawerItem label="Pricing" onClick={onClick} url="/pricing" />
+              <DrawerItem label="Team" onClick={onClick} url="/team" />
+              <DrawerItem label="Docs" onClick={onClick} url="/docs" />
             </ul>
           </div>
 

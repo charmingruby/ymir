@@ -3,10 +3,10 @@
 import { Container } from '@/components/ui/container'
 import { Actions } from './actions'
 import { Logo } from './logo'
-import { NavigationList } from './navigation/navigation-list'
 import { Drawer } from './navigation/drawer'
 import { useState } from 'react'
 import { MenuToggleButton } from './navigation/menu-toggle-button'
+import { NavItem } from './navigation/nav-item'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
@@ -28,7 +28,15 @@ export function Header() {
 
             <MenuToggleButton onClick={handleMenuToggle} />
 
-            <NavigationList />
+            <nav className="hidden lg:flex">
+              <ul className="flex gap-8 text-sm font-bold text-gray-200 transition-colors">
+                <NavItem label="Features" url="/features" />
+                <NavItem label="Products" url="/products" />
+                <NavItem label="Pricing" url="/pricing" />
+                <NavItem label="Team" url="/team" />
+                <NavItem label="Docs" url="/docs" />
+              </ul>
+            </nav>
           </div>
 
           <Actions />

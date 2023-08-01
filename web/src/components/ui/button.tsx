@@ -6,7 +6,7 @@ const button = tv({
   variants: {
     size: {
       default: 'py-2',
-      sm: 'py-1',
+      sm: 'h-8 text-sm sm:h-10 sm:text-base p-0 px-1 sm:px-3',
     },
     color: {
       primary:

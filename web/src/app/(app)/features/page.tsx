@@ -1,13 +1,13 @@
 import { Presentation } from './components/presentation'
 import { CTA } from './components/cta'
-import { BundleList } from './components/bundle-list'
+import { FeatureList } from './components/feature-list'
 
 export default function Features() {
   return (
-    <>
+    <div className="min-h-screen">
       <Presentation />
-      <BundleList />
+      <FeatureList />
       <CTA />
-    </>
+    </div>
   )
 }

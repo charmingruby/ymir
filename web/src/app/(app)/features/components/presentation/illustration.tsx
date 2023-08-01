@@ -9,6 +9,7 @@ export function Illustration() {
       height={400}
       priority
       quality={100}
+      className="hidden lg:flex"
     />
   )
 }

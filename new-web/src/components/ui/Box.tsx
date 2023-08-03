@@ -2,11 +2,11 @@ import { ReactNode } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const box = tv({
-  base: 'rounded-lg border border-gray-500 shadow-sm transition-shadow transition-all group text-base',
+  base: 'rounded-lg border border-gray-500 shadow-md transition-shadow transition-all group text-base',
   variants: {
     spacing: {
       default: 'p-4',
-      larger: 'p-8',
+      larger: 'p-4 sm:p-8',
       icon: 'h-12 w-12 flex items-center justify-center',
       spaceless: 'p-0',
     },
@@ -15,7 +15,9 @@ const box = tv({
       hover: 'hover:shadow-lg hover:bg-gray-600 cursor-pointer',
     },
     color: {
-      default: 'bg-gray-700',
+      default: 'bg-gray-800',
+      light: 'bg-gray-700',
+      dark: 'bg-gray-900',
       transparent: 'bg-none',
     },
   },

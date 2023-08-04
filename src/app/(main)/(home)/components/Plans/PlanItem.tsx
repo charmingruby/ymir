@@ -12,7 +12,7 @@ interface PlanItemProps {
 
 export function PlanItem({ icon: Icon, name, description }: PlanItemProps) {
   return (
-    <Box className="flex flex-col" spacing="spaceless" color="light">
+    <Box className="flex flex-col" spacing="spaceless">
       <div className="sm:px-8 px-4 py-4 flex flex-col items-center">
         <div className="w-12 h-12 items-center flex justify-center">
           <Icon className="text-primary-300" size={32} />
@@ -22,7 +22,7 @@ export function PlanItem({ icon: Icon, name, description }: PlanItemProps) {
         <Text className="mt-2 text-center">{description}</Text>
       </div>
 
-      <div className="border-t border-gray-600 py-3 bg-gray-500 rounded-b-lg">
+      <div className="border-t border-gray-600 py-3 bg-gray-700 rounded-b-lg">
         <Link
           href="/"
           prefetch={false}

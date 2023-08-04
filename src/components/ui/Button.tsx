@@ -15,7 +15,7 @@ const button = tv({
         'shadow-md border border-primary-300 text-gray-50 transition-colors hover:bg-primary-300 hover:text-gray-700',
       uncolored:
         'shadow-md border border-gray-300 bg-gray-500 text-gray-50 transition-colors hover:bg-gray-400',
-      dark: 'shadow-sm text-gray-50 border border-gray-600 bg-gray-800 transition-colors hover:bg-gray-600 hover:text-green-300',
+      dark: 'shadow-sm text-gray-50 border border-gray-600 bg-gray-800 transition-colors hover:bg-gray-600',
       light:
         'shadow-md bg-gray-50 text-gray-700 transition-colors hover:bg-gray-100',
     },

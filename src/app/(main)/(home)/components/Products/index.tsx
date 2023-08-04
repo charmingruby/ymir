@@ -3,6 +3,8 @@ import { SectionTitle } from '@/components/SectionTitle'
 import { Container } from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
 import { ProductList } from './ProductList'
+import { Button } from '@/components/ui/Button'
+import { ArrowRight } from 'lucide-react'
 
 export function Products() {
   return (
@@ -18,6 +20,13 @@ export function Products() {
               variety of pre-made apps just for you. And if you need a custom
               app, we{"'"}ve got you covered!
             </Text>
+          </div>
+
+          <div className="mt-4">
+            <Button>
+              <span>Check all</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Button>
           </div>
         </div>
 

@@ -36,3 +36,5 @@ next-env.d.ts
 
 # Developer Requirements
 requirements
+
+.env

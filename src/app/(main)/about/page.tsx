@@ -1,5 +1,5 @@
 import { UnderDevelopment } from '@/components/UnderDevelopment'
 
-export default function Docs() {
+export default function About() {
   return <UnderDevelopment />
 }

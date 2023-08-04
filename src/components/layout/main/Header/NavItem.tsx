@@ -3,13 +3,24 @@ import Link from 'next/link'
 interface NavItemProps {
   label: string
   url: string
+  currentUrl: string
 }
 
-export function NavItem({ label, url }: NavItemProps) {
+export function NavItem({ label, url, currentUrl }: NavItemProps) {
+  const isTheCurrentUrl = url === currentUrl
+
   return (
     <Link prefetch={false} href={url} key={url}>
-      <li className="flex h-[3.75rem] cursor-pointer items-center border-b-2 border-gray-900 transition-colors hover:border-b-2 group hover:border-primary-500 hover:text-gray-50">
-        <span className="text-base font-semibold group-hover:text-primary-300 transition-colors">
+      <li
+        className={`flex h-[3.75rem] cursor-pointer items-center  transition-colors group hover:text-gray-50
+      ${
+        isTheCurrentUrl
+          ? 'border-b-2 border-primary-500 text-primary-500'
+          : 'border-b-2 border-gray-900 text-gray-200'
+      }
+      `}
+      >
+        <span className="text-base font-medium group-hover:text-gray-50 transition-colors">
           {label}
         </span>
       </li>

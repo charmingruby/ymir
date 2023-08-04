@@ -20,8 +20,8 @@ export function Drawer({ onClick }: DrawerProps) {
               <DrawerItem label="Features" onClick={onClick} url="/features" />
               <DrawerItem label="Products" onClick={onClick} url="/products" />
               <DrawerItem label="Pricing" onClick={onClick} url="/pricing" />
+              <DrawerItem label="The Ymir" onClick={onClick} url="/about" />
               <DrawerItem label="Team" onClick={onClick} url="/team" />
-              <DrawerItem label="Docs" onClick={onClick} url="/docs" />
             </ul>
           </div>
 

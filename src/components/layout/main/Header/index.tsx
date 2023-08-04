@@ -7,9 +7,14 @@ import { useState } from 'react'
 import { BurguerButton } from './BurguerButton'
 import { Drawer } from './Drawer'
 import { Actions } from './Actions'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
+  const pathname = usePathname()
+
+  console.log(pathname)
 
   function handleMenuToggle() {
     setIsMenuOpen(!isMenuOpen)
@@ -26,11 +31,19 @@ export function Header() {
 
             <div className="hidden lg:flex">
               <nav className="flex gap-8">
-                <NavItem label="Features" url="/features" />
-                <NavItem label="Products" url="/products" />
-                <NavItem label="Pricing" url="/pricing" />
-                <NavItem label="Team" url="/team" />
-                <NavItem label="Docs" url="/docs" />
+                <NavItem
+                  label="Features"
+                  url="/features"
+                  currentUrl={pathname}
+                />
+                <NavItem
+                  label="Products"
+                  url="/products"
+                  currentUrl={pathname}
+                />
+                <NavItem label="Pricing" url="/pricing" currentUrl={pathname} />
+                <NavItem label="The Ymir" url="/about" currentUrl={pathname} />
+                <NavItem label="Team" url="/team" currentUrl={pathname} />
               </nav>
             </div>
           </div>

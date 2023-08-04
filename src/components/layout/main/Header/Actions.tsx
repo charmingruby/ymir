@@ -16,6 +16,14 @@ export function Actions() {
 
   return (
     <div className="lg:flex items-center gap-2 hidden">
+      <Link
+        href="/contact"
+        prefetch={false}
+        className="text-base text-gray-200 transition-colors hover:text-gray-50"
+      >
+        Contact
+      </Link>
+
       <Link href="/sign-in" prefetch={false}>
         <Button size="sm" color="dark">
           Sign in

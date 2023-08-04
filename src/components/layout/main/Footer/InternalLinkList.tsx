@@ -11,6 +11,7 @@ const links: LinkProps[] = [
   { label: 'Pricing', url: '/pricing' },
   { label: 'The Ymir', url: '/about' },
   { label: 'Team', url: '/team' },
+  { label: 'Contact', url: '/contact' },
 ]
 
 export function InternalLinkList() {

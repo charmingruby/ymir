@@ -6,7 +6,7 @@ import { SectionTitle } from '@/components/SectionTitle'
 
 export function Plans() {
   return (
-    <div>
+    <div className="">
       <Container>
         <div className="flex flex-col">
           <div className="grid-cols-1 md:grid-cols-3 grid">

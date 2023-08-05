@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight, Building } from 'lucide-react'
 
 export function ProductItem() {
   return (
-    <Box spacing="spaceless">
+    <Box spacing="spaceless" className="bg-gray-900">
       <div className="px-4 sm:px-8 py-4 space-y-4">
         <Box spacing="icon">
           <Building className="text-primary-300" />
@@ -22,7 +22,7 @@ export function ProductItem() {
         </div>
       </div>
 
-      <div className="flex flex-col sm:px-8 px-4 py-4 rounded-b-lg border-t border-gray-600 sm:flex-row gap-2 bg-gray-700">
+      <div className="flex flex-col sm:px-8 px-4 py-4 rounded-b-lg border-t border-gray-500 sm:flex-row gap-2 bg-gray-700">
         <Button size="sm">
           <span>Demo</span>
           <ArrowUpRight className="h-4 w-4" />

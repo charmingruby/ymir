@@ -22,7 +22,7 @@ export function PlanItem({ icon: Icon, name, description }: PlanItemProps) {
         <Text className="mt-2 text-center">{description}</Text>
       </div>
 
-      <div className="border-t border-gray-600 py-3 bg-gray-700 rounded-b-lg">
+      <div className="border-t border-gray-500 py-3 bg-gray-700 rounded-b-lg">
         <Link
           href="/"
           prefetch={false}

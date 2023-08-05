@@ -10,7 +10,7 @@ const container = tv({
     },
     spacing: {
       default: 'py-8 lg:py-16',
-      topPage: 'pb-16 pt-28',
+      topPage: 'lg:pb-16 pb-8 pt-24',
       spaceless: 'py-0',
     },
   },

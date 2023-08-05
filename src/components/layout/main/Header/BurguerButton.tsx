@@ -7,12 +7,12 @@ interface BurguerButtonProps {
 export function BurguerButton({ onClick }: BurguerButtonProps) {
   return (
     <div
-      className="cursor-pointer lg:hidden text-gray-50 border p-1 rounded-sm hover:bg-gray-700 transition-colors group border-gray-600"
+      className="cursor-pointer lg:hidden text-gray-50 rounded-sm hover:bg-gray-700 transition-colors group"
       onClick={onClick}
     >
       <AlignRight
         className="group-hover:text-primary-300 group-active:text-primary-300 transition-colors"
-        size={32}
+        size={24}
       />
     </div>
   )

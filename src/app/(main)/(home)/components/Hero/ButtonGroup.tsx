@@ -5,7 +5,7 @@ export function ButtonGroup() {
     <div className="flex flex-col md:flex-row gap-4 justify-center">
       <Button>Start developing</Button>
       <Button color="uncolored">
-        <span>Contact sales</span>
+        <span>Get an app</span>
       </Button>
     </div>
   )

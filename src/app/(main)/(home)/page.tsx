@@ -13,15 +13,13 @@ export default function Home() {
       <div className="relative">
         <HeroBlur />
 
-        <div className="divide-y divide-gray-600">
-          <Hero />
-          <WhyUs />
-          <Features />
-          <Plans />
-          <Products />
-          <Attractive />
-          <CTA />
-        </div>
+        <Hero />
+        <WhyUs />
+        <Features />
+        <Plans />
+        <Products />
+        <Attractive />
+        <CTA />
       </div>
     </>
   )

@@ -9,8 +9,8 @@ const container = tv({
       lg: 'max-w-[90rem]',
     },
     spacing: {
-      default: 'py-12',
-      topPage: 'pb-12 pt-28',
+      default: 'py-8 lg:py-16',
+      topPage: 'pb-16 pt-28',
       spaceless: 'py-0',
     },
   },

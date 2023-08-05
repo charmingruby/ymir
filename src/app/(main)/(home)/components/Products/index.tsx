@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react'
 
 export function Products() {
   return (
-    <div>
+    <div className="">
       <Container>
         <div className="flex sm:items-center flex-col">
           <SectionDescriptor text="some services already done for you" />
@@ -24,8 +24,8 @@ export function Products() {
 
           <div className="mt-4">
             <Button>
-              <span>Check all</span>
-              <ArrowRight className="h-3.5 w-3.5" />
+              <span>View all</span>
+              <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>

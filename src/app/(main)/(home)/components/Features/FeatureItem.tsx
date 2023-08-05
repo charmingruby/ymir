@@ -1,13 +1,12 @@
-import { Box } from '@/components/ui/Box'
 import { Text } from '@/components/ui/Text'
-import { ArrowRightLeft } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 export function FeatureItem() {
   return (
-    <div className="flex flex-col gap-3">
-      <Box spacing="icon">
-        <ArrowRightLeft className="text-primary-300" />
-      </Box>
+    <div className="flex flex-col gap-3 relative bg-gray-800 p-8 border border-gray-600 rounded-lg shadow-md">
+      <div className="absolute -left-4 top-1/2 bg-primary-300 border border-gray-600 p-1.5 rounded-full -translate-y-1/2">
+        <Check className="text-gray-50" size={20} />
+      </div>
 
       <div className="space-y-2">
         <span className="text-lg font-semibold">Smart Route Handling</span>

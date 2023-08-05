@@ -1,10 +1,13 @@
 import { TypingMotivations } from './TypingMotivations'
 import { Text } from '@/components/ui/Text'
+import { Pin } from './Pin'
 
 export function Presentation() {
   return (
     <>
       <div className="mb-16 flex w-full flex-col items-center justify-center gap-y-3.5">
+        <Pin />
+
         <h1 className="my-0 pb-2 text-center font-alt font-medium text-4xl text-gray-50 sm:text-6xl">
           Development assistence that
         </h1>

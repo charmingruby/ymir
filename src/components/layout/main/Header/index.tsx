@@ -14,8 +14,6 @@ export function Header() {
 
   const pathname = usePathname()
 
-  console.log(pathname)
-
   function handleMenuToggle() {
     setIsMenuOpen(!isMenuOpen)
   }
@@ -28,25 +26,15 @@ export function Header() {
         <div className="flex items-center h-16 justify-between">
           <div className="flex items-center h-16 gap-4 lg:gap-16">
             <Logo />
-
-            <div className="hidden lg:flex">
-              <nav className="flex gap-8">
-                <NavItem
-                  label="Features"
-                  url="/features"
-                  currentUrl={pathname}
-                />
-                <NavItem
-                  label="Products"
-                  url="/products"
-                  currentUrl={pathname}
-                />
-                <NavItem label="Pricing" url="/pricing" currentUrl={pathname} />
-                <NavItem label="The Ymir" url="/about" currentUrl={pathname} />
-                <NavItem label="Team" url="/team" currentUrl={pathname} />
-              </nav>
-            </div>
           </div>
+
+          <nav className="hidden lg:flex gap-8">
+            <NavItem label="Features" url="/features" currentUrl={pathname} />
+            <NavItem label="Products" url="/products" currentUrl={pathname} />
+            <NavItem label="Pricing" url="/pricing" currentUrl={pathname} />
+            <NavItem label="The Ymir" url="/about" currentUrl={pathname} />
+            <NavItem label="Team" url="/team" currentUrl={pathname} />
+          </nav>
 
           <Actions />
 

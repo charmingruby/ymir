@@ -6,7 +6,7 @@ import { SectionTitle } from '@/components/SectionTitle'
 
 export function WhyUs() {
   return (
-    <section className="bg-gray-900">
+    <section className="bg-gray-900 border-t border-gray-600">
       <Container className="flex flex-col lg:items-center">
         <SectionDescriptor text="bring agility to your apps" />
 

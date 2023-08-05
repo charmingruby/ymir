@@ -2,15 +2,15 @@ import { ComponentProps, ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const button = tv({
-  base: 'flex items-center w-full md:w-auto lg:self-start gap-2 justify-center rounded-lg text-base font-medium transition-colors',
+  base: 'flex items-center w-full md:w-auto  gap-2 justify-center rounded-lg text-base font-medium transition-colors',
   variants: {
     size: {
-      default: 'py-2 px-8',
+      default: 'px-6 py-3',
       sm: 'h-6 text-sm sm:h-9 sm:text-base p-0 px-2 sm:px-4',
     },
     color: {
       primary:
-        'shadow-md border border-primary-300 bg-primary-300 text-gray-500 transition-colors hover:border-primary-100 hover:bg-primary-100',
+        'shadow-md border border-primary-50 bg-primary-300 text-gray-50 transition-colors hover:border-primary-100 hover:bg-primary-100',
       secondary:
         'shadow-md border border-primary-300 text-gray-50 transition-colors hover:bg-primary-300 hover:text-gray-700',
       uncolored:

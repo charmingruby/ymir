@@ -2,8 +2,6 @@ import { Box } from '@/components/ui/Box'
 import { Button } from '@/components/ui/Button'
 import { Text } from '@/components/ui/Text'
 import { ArrowRight, ArrowUpRight, Building } from 'lucide-react'
-import { Guarantee } from './Guarantee'
-import { Separator } from '@/components/ui/Separator'
 
 export function ProductItem() {
   return (
@@ -21,17 +19,6 @@ export function ProductItem() {
             mollitia impedit placeat fugit dolores maiores! Labore laborum atque
             porro repellat quae.
           </Text>
-        </div>
-
-        <Separator />
-
-        <div className="space-y-2">
-          <h3 className="text-xl font-medium">Contains:</h3>
-
-          <div className="flex flex-col gap-1">
-            <Guarantee />
-            <Guarantee />
-          </div>
         </div>
       </div>
 

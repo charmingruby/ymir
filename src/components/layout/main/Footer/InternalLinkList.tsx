@@ -10,7 +10,6 @@ const links: LinkProps[] = [
   { label: 'Products', url: '/products' },
   { label: 'Pricing', url: '/pricing' },
   { label: 'The Ymir', url: '/about' },
-  { label: 'Team', url: '/team' },
   { label: 'Contact', url: '/contact' },
 ]
 

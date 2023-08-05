@@ -33,7 +33,7 @@ export function Header() {
             <NavItem label="Products" url="/products" currentUrl={pathname} />
             <NavItem label="Pricing" url="/pricing" currentUrl={pathname} />
             <NavItem label="The Ymir" url="/about" currentUrl={pathname} />
-            <NavItem label="Team" url="/team" currentUrl={pathname} />
+            <NavItem label="Contact" url="/contact" currentUrl={pathname} />
           </nav>
 
           <Actions />

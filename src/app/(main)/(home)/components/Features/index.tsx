@@ -1,11 +1,10 @@
 import { Container } from '@/components/ui/Container'
-import { SectionDescriptor } from '@/components/SectionDescriptor'
+import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { Text } from '@/components/ui/Text'
-
 import { FeatureList } from './FeatureList'
-import { SectionTitle } from '@/components/SectionTitle'
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
+import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function Features() {
   return (

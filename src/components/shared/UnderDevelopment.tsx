@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import logo from '@/assets/images/logo.svg'
-import { Container } from './ui/Container'
-import { Box } from './ui/Box'
+
 import { AlertTriangle } from 'lucide-react'
+import { Container } from '../ui/Container'
+import { Box } from '../ui/Box'
 
 export function UnderDevelopment() {
   return (

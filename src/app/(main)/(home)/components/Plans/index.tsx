@@ -1,8 +1,10 @@
-import { SectionDescriptor } from '@/components/SectionDescriptor'
+import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { Container } from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
 import { PlanList } from './PlanList'
-import { SectionTitle } from '@/components/SectionTitle'
+import { Button } from '@/components/ui/Button'
+import { ArrowRight } from 'lucide-react'
+import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function Plans() {
   return (
@@ -19,6 +21,10 @@ export function Plans() {
                   thriving enterprise, Ymir provides all the essential
                   components to craft a website that outshines the competition.
                 </Text>
+                <Button>
+                  <span>View all</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
               </div>
             </div>
           </div>

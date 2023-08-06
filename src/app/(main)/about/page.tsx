@@ -1,5 +1,9 @@
-import { UnderDevelopment } from '@/components/UnderDevelopment'
+import { Container } from '@/components/ui/Container'
 
 export default function About() {
-  return <UnderDevelopment />
+  return (
+    <div className="min-h-screen">
+      <Container spacing="topPage">kk</Container>
+    </div>
+  )
 }

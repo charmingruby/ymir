@@ -1,4 +1,4 @@
-import { SectionDescriptor } from '@/components/SectionDescriptor'
+import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { Container } from '@/components/ui/Container'
 import Image from 'next/image'
 import codingImage from '@/assets/images/code-typing.svg'
@@ -7,7 +7,7 @@ import { Separator } from '@/components/ui/Separator'
 import { Text } from '@/components/ui/Text'
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
-import { SectionTitle } from '@/components/SectionTitle'
+import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function Attractive() {
   return (

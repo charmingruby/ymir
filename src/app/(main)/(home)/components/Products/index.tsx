@@ -1,10 +1,10 @@
-import { SectionDescriptor } from '@/components/SectionDescriptor'
-import { SectionTitle } from '@/components/SectionTitle'
+import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { Container } from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
 import { ProductList } from './ProductList'
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
+import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function Products() {
   return (

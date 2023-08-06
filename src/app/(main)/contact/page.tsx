@@ -1,9 +1,5 @@
-import { Container } from '@/components/ui/Container'
+import { UnderDevelopment } from '@/components/shared/UnderDevelopment'
 
 export default function Contact() {
-  return (
-    <Container spacing="topPage" className="min-h-screen">
-      contact
-    </Container>
-  )
+  return <UnderDevelopment />
 }

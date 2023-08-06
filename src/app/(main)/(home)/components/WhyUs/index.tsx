@@ -1,8 +1,8 @@
-import { SectionDescriptor } from '@/components/SectionDescriptor'
+import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { Container } from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
 import { ReasonList } from './ReasonList'
-import { SectionTitle } from '@/components/SectionTitle'
+import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function WhyUs() {
   return (

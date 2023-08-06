@@ -6,3 +6,63 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id String @id @default(cuid())
+
+  @@map("users")
+}
+
+model Organization {
+  id String @id @default(cuid())
+
+  @@map("organizations")
+}
+
+model Project {
+  id String @id @default(cuid())
+
+  @@map("projects")
+}
+
+model Schedule {
+  id String @id @default(cuid())
+
+  @@map("schedules")
+}
+
+model Routes {
+  id String @id @default(cuid())
+
+  @@map("routes")
+}
+
+model Service {
+  id String @id @default(cuid())
+
+  @@map("services")
+}
+
+model Database {
+  id String @id @default(cuid())
+
+  @@map("databases")
+}
+
+model Schema {
+  id String @id @default(cuid())
+
+  @@map("schema")
+}
+
+model Assignment {
+  id String @id @default(cuid())
+
+  @@map("assignments")
+}
+
+model Task {
+  id String @id @default(cuid())
+
+  @@map("tasks")
+}

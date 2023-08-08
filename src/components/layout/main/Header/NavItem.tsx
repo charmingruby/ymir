@@ -20,7 +20,7 @@ export function NavItem({ label, url, currentUrl }: NavItemProps) {
       }
       `}
       >
-        <span className="text-base font-medium group-hover:text-gray-50 transition-colors">
+        <span className="text-sm font-semibold group-hover:text-gray-50 transition-colors">
           {label}
         </span>
       </li>

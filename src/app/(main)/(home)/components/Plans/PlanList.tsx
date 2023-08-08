@@ -3,7 +3,7 @@ import { Building, User, Users } from 'lucide-react'
 
 export function PlanList() {
   return (
-    <div className="grid gap-4 mt-12 grid-cols-1 md:grid-cols-3">
+    <div className="grid gap-8 mt-12 grid-cols-1 md:grid-cols-3">
       <PlanItem
         icon={User}
         name="Individual"

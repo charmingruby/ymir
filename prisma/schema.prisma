@@ -52,7 +52,13 @@ model Database {
 model Schema {
   id String @id @default(cuid())
 
-  @@map("schema")
+  @@map("schemas")
+}
+
+model Note {
+  id String @id @default(cuid())
+
+  @@map("notes")
 }
 
 model Assignment {

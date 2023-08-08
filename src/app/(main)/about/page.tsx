@@ -1,9 +1,11 @@
-import { Container } from '@/components/ui/Container'
+import { Presentation } from './components/Presentation'
+import { Banner } from './components/Banner'
 
 export default function About() {
   return (
-    <div className="min-h-screen">
-      <Container spacing="topPage">kk</Container>
-    </div>
+    <>
+      <Presentation />
+      <Banner />
+    </>
   )
 }

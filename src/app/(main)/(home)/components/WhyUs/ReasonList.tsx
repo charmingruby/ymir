@@ -3,7 +3,7 @@ import { ReasonItem } from './ReasonItem'
 
 export function ReasonList() {
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
       <ReasonItem
         icon={Expand}
         label="Scalability"

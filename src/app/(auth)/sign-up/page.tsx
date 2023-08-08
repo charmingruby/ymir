@@ -1,3 +1,4 @@
+import { Header } from '@/components/layout/auth/Header'
 import { Box } from '@/components/ui/Box'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
@@ -6,6 +7,8 @@ export default function SignUp() {
   return (
     <div className="flex-1 bg-gray-900 min-h-screen flex flex-col">
       <Container spacing="topPage" className="flex flex-col items-center">
+        <Header />
+
         <Box className="max-w-xl w-full">
           <form className="w-full flex flex-col">
             <div className="w-full flex flex-col gap-2">

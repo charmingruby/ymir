@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/Button'
 
 export function Header() {
   return (
-    <header className="h-16 border-b border-gray-500">
+    <header className="h-16 mb-8 border-b border-gray-500">
       <Container
         spacing="spaceless"
         className="flex flex-row justify-between items-center h-16 "

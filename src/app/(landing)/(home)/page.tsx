@@ -1,4 +1,4 @@
-import { HeroBlur } from '@/components/layout/main/HeroBlur'
+import { HeroBlur } from '@/components/layout/landing/HeroBlur'
 import { Hero } from './components/Hero'
 import { WhyUs } from './components/WhyUs'
 import { Features } from './components/Features'

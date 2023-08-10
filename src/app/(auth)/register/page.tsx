@@ -7,7 +7,7 @@ export default function SignUp() {
   return (
     <div className="flex-1 bg-gray-900 min-h-screen flex flex-col">
       <Header />
-      <Container spacing="topPage" className="flex flex-col max-w-xl w-full">
+      <Container spacing="spaceless" className="flex flex-col max-w-xl w-full">
         <div className="mb-4 space-y-4  p-4">
           <div className="flex flex-col items-center">
             <strong className="block text-2xl">Create a new account</strong>

@@ -1,28 +1,34 @@
-import { Header } from '@/components/layout/auth/Header'
 import { Box } from '@/components/ui/Box'
-import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
+import { RegisterForm } from './components/RegisterForm'
+import { Header } from '@/components/layout/auth/Header'
 
 export default function SignUp() {
   return (
     <div className="flex-1 bg-gray-900 min-h-screen flex flex-col">
-      <Container spacing="topPage" className="flex flex-col items-center">
-        <Header />
+      <Header />
+      <Container spacing="topPage" className="flex flex-col max-w-xl w-full">
+        <div className="mb-4 space-y-4  p-4">
+          <div className="flex flex-col items-center">
+            <strong className="block text-2xl">Create a new account</strong>
+            <span className="text-gray-200 text-sm">
+              at the speeed of thought
+            </span>
+          </div>
 
-        <Box className="max-w-xl w-full">
-          <form className="w-full flex flex-col">
-            <div className="w-full flex flex-col gap-2">
-              <Button color="light">Sign up with Google</Button>
-              <Button color="light">Sign up with Github</Button>
+          {/* Multistep */}
+          <div className="w-full pb-2 pt-4">
+            <div className="text-sm text-gray-100 mb-2">Step 2 of 3</div>
+            <div className="w-full flex gap-2">
+              <div className="h-1 bg-primary-300 w-full rounded-md" />
+              <div className="h-1 bg-primary-300 w-full rounded-md" />
+              <div className="h-1 bg-gray-400 w-full rounded-md" />
             </div>
+          </div>
+        </div>
 
-            <div className="h-8 relative flex items-center justify-center">
-              <div className="absolute w-full h-px bg-gray-600" />
-              <span className="bg-gray-800 z-10 px-4">or</span>
-            </div>
-
-            <Button>Create account</Button>
-          </form>
+        <Box spacing="spaceless">
+          <RegisterForm />
         </Box>
       </Container>
     </div>

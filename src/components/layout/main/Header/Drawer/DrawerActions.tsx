@@ -12,13 +12,13 @@ export function DrawerActions({ onClick }: DrawerActionsProps) {
         <strong>Start using</strong>
       </div>
       <div className="flex flex-col gap-3">
-        <Link href="/dashboard" prefetch={false} onClick={onClick}>
+        <Link href="/login" prefetch={false} onClick={onClick}>
           <Button color="secondary" size="sm" className="w-auto">
             <span className="">Sign in</span>
           </Button>
         </Link>
 
-        <Link href="/dashboard" onClick={onClick} prefetch={false}>
+        <Link href="/register" onClick={onClick} prefetch={false}>
           <Button color="primary" size="sm" className="w-auto">
             <span className="">Sign up</span>
           </Button>

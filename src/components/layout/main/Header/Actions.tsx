@@ -16,13 +16,13 @@ export function Actions() {
 
   return (
     <div className="lg:flex items-center gap-2 hidden">
-      <Link href="/sign-in" prefetch={false}>
+      <Link href="/login" prefetch={false}>
         <Button size="sm" color="dark">
           Sign in
         </Button>
       </Link>
 
-      <Link href="sign-up" prefetch={false}>
+      <Link href="register" prefetch={false}>
         <Button size="sm" color="primary">
           Sign up
         </Button>

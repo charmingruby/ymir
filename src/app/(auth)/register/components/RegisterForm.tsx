@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/Button'
-import { Text } from '@/components/ui/Text'
 import { ArrowRight } from 'lucide-react'
 
 export function RegisterForm() {

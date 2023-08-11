@@ -1,3 +1,4 @@
+import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { SectionTitle } from '@/components/shared/SectionTitle'
 import { Box } from '@/components/ui/Box'
 import { Container } from '@/components/ui/Container'
@@ -8,6 +9,8 @@ export function ReasonList() {
   return (
     <section className="bg-gray-900">
       <Container>
+        <SectionDescriptor text="From dev to dev" />
+
         <div className="flex flex-col gap-4">
           <SectionTitle title="We provide the resolutions of devs" />
           <Text>

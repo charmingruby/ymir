@@ -1,7 +1,6 @@
 import { ReactNode } from 'react'
 import './globals.css'
 import { Inter, Righteous } from 'next/font/google'
-import { Provider } from '@/components/layout/auth/Provider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,9 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           scroll-smooth bg-gray-800 font-sans text-gray-50 scrollbar-thin scrollbar-track-gray-900 scrollbar-thumb-gray-500
         `}
       >
-        <Provider>
-          <main>{children}</main>
-        </Provider>
+        <main>{children}</main>
       </body>
     </html>
   )

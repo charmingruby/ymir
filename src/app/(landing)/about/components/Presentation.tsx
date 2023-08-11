@@ -8,7 +8,7 @@ import { Container } from '@/components/ui/Container'
 
 export function Presentation() {
   return (
-    <div className="md:min-h-screen bg-gray-900">
+    <div className="md:min-h-screen flex items-center justify-center bg-gray-900">
       <Container spacing="topPage">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="hidden md:flex">

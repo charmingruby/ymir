@@ -3,7 +3,7 @@ import { Container } from '@/components/ui/Container'
 
 export function FreeTrial() {
   return (
-    <section className="bg-gray-900">
+    <section className="bg-gray-900-gradient ">
       <Container>
         <Box>free trial</Box>
       </Container>

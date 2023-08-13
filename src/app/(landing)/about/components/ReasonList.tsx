@@ -7,7 +7,7 @@ import { ReasonItem } from './ReasonItem'
 
 export function ReasonList() {
   return (
-    <section className="bg-gray-900">
+    <section className="bg-gray-900-gradient ">
       <Container>
         <SectionDescriptor text="From dev to dev" />
 

@@ -8,7 +8,7 @@ import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function Creator() {
   return (
-    <section className="bg-gray-900 border-b border-gray-500">
+    <section className="bg-gray-900-gradient border-b border-gray-500">
       <Container className="">
         <div className="flex flex-col gap-4 mx-auto text-center mb-12">
           <Quote className="text-primary-300" />

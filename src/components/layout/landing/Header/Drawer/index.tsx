@@ -8,7 +8,7 @@ interface DrawerProps {
 
 export function Drawer({ onClick }: DrawerProps) {
   return (
-    <div className="fixed mt-16 w-full border-b border-gray-600 bg-gray-900 py-6 shadow-lg">
+    <div className="fixed mt-16 w-full border-b border-gray-600 bg-gray-900-gradient  py-6 shadow-lg">
       <Container spacing="spaceless">
         <div className="flex w-full flex-col gap-6">
           <div>

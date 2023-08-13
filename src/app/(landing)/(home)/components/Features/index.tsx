@@ -8,7 +8,7 @@ import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function Features() {
   return (
-    <div className="bg-gray-900 border-b border-gray-600">
+    <div className="bg-gray-900-gradient border-b border-gray-600">
       <Container className="pt-8 pb-16 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 grid-cols-1">
           <div className="flex flex-col">

@@ -8,7 +8,7 @@ import { Container } from '@/components/ui/Container'
 
 export function Presentation() {
   return (
-    <div className="md:min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="md:min-h-screen flex items-center justify-center bg-gray-900-gradient ">
       <Container spacing="topPage">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="hidden md:flex">
@@ -30,7 +30,7 @@ export function Presentation() {
             <div className=" mb-12">
               <div className=" mb-8">
                 <SectionTitle title="We assist devs" />
-                <strong className="text-4xl sm:text-5xl font-semibold bg-gradient-to-r from-primary-50 to-primary-700 text-transparent bg-clip-text">
+                <strong className="text-4xl sm:text-5xl font-semibold text-primary-gradient ">
                   as like us
                 </strong>
               </div>

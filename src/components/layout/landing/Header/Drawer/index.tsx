@@ -17,9 +17,9 @@ export function Drawer({ onClick }: DrawerProps) {
             </div>
 
             <ul className="flex flex-col gap-2">
+              <DrawerItem label="The Ymir" onClick={onClick} url="/about" />
               <DrawerItem label="Features" onClick={onClick} url="/features" />
               <DrawerItem label="Products" onClick={onClick} url="/products" />
-              <DrawerItem label="The Ymir" onClick={onClick} url="/about" />
               <DrawerItem label="Contact" onClick={onClick} url="/contact" />
             </ul>
           </div>

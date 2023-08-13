@@ -29,9 +29,9 @@ export function Header() {
           </div>
 
           <nav className="hidden lg:flex gap-8">
+            <NavItem label="The Ymir" url="/about" currentUrl={pathname} />
             <NavItem label="Features" url="/features" currentUrl={pathname} />
             <NavItem label="Products" url="/products" currentUrl={pathname} />
-            <NavItem label="The Ymir" url="/about" currentUrl={pathname} />
             <NavItem label="Contact" url="/contact" currentUrl={pathname} />
           </nav>
 

@@ -1,17 +1,17 @@
 import { Box } from '@/components/ui/Box'
 import { ElementType } from 'react'
 
-interface ReasonItemProps {
+interface MissionItemProps {
   icon: ElementType
   label: string
   description: string
 }
 
-export function ReasonItem({
+export function MissionItem({
   icon: Icon,
   label,
   description,
-}: ReasonItemProps) {
+}: MissionItemProps) {
   return (
     <Box color="default" spacing="larger" className="flex flex-col gap-4">
       <Box spacing="icon" color="light">

@@ -1,7 +1,7 @@
 import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { Container } from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
-import { ReasonList } from './ReasonList'
+import { MissionList } from './MissionList'
 import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function WhyUs() {
@@ -23,7 +23,7 @@ export function WhyUs() {
           </Text>
         </div>
 
-        <ReasonList />
+        <MissionList />
       </Container>
     </section>
   )

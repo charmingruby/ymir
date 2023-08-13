@@ -8,9 +8,8 @@ datasource db {
 }
 
 model BetaKey {
-  id     String @id @default(cuid())
-  value  String
-  userId String
+  id    String @id @default(cuid())
+  value String
 
   betaUser BetaUser?
 

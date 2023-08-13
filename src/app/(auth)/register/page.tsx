@@ -2,6 +2,7 @@ import { Box } from '@/components/ui/Box'
 import { Container } from '@/components/ui/Container'
 import { RegisterForm } from './components/RegisterForm'
 import { Header } from '@/components/layout/auth/Header'
+import { Multistep } from '@/components/ui/Form/Multistep'
 
 export default function SignUp() {
   return (
@@ -16,15 +17,7 @@ export default function SignUp() {
             </span>
           </div>
 
-          {/* Multistep */}
-          <div className="w-full pb-2 pt-4">
-            <div className="text-sm text-gray-100 mb-2">Step 2 of 3</div>
-            <div className="w-full flex gap-2">
-              <div className="h-1 bg-primary-300 w-full rounded-md" />
-              <div className="h-1 bg-primary-300 w-full rounded-md" />
-              <div className="h-1 bg-gray-400 w-full rounded-md" />
-            </div>
-          </div>
+          <Multistep currentStep={1} size={4} />
         </div>
 
         <Box spacing="spaceless">

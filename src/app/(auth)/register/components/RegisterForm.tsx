@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
+import * as Input from '@/components/ui/Form/Input'
 
 export function RegisterForm() {
   return (
@@ -7,24 +8,20 @@ export function RegisterForm() {
       {/* Fields */}
       <div className="flex  w-full flex-col gap-4">
         <div className="w-full grid gap-2 grid-cols-2">
-          <input
-            placeholder="Name"
-            type="text"
-            className="bg-gray-900 p-4 rounded-md outline-none focus:border-primary-300 transition-colors border-2 border-gray-900"
-          />
-          <input
-            placeholder="Last Name"
-            type="text"
-            className="bg-gray-900 p-4 rounded-md outline-none focus:border-primary-300 transition-colors border-2 border-gray-900"
-          />
+          <Input.Root>
+            <Input.Control type="text" placeholder="Name" />
+          </Input.Root>
+
+          <Input.Root>
+            <Input.Control type="text" placeholder="Last Name" />
+          </Input.Root>
         </div>
 
-        <input
-          placeholder="Your E-mail"
-          type="text"
-          className="bg-gray-900 p-4 rounded-md outline-none focus:border-primary-300 transition-colors border-2 border-gray-900"
-        />
+        <Input.Root>
+          <Input.Control type="email" placeholder="E-mail" />
+        </Input.Root>
       </div>
+
       <Button className="">
         <span>Next</span>
         <ArrowRight className="h-3.5 w-3.5" />

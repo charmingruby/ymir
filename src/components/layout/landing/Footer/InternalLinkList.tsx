@@ -8,7 +8,6 @@ export interface LinkProps {
 const links: LinkProps[] = [
   { label: 'Features', url: '/features' },
   { label: 'Products', url: '/products' },
-  { label: 'Pricing', url: '/pricing' },
   { label: 'The Ymir', url: '/about' },
   { label: 'Contact', url: '/contact' },
 ]

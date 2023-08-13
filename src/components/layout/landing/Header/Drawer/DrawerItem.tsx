@@ -9,7 +9,7 @@ interface DrawerItemProps {
 export function DrawerItem({ label, url, onClick }: DrawerItemProps) {
   return (
     <Link prefetch={false} href={url} key={url} onClick={onClick}>
-      <li className="cursor-pointer font-medium text-gray-100 transition-colors hover:text-gray-50 active:text-gray-50">
+      <li className="cursor-pointer font-medium text-gray-100 transition-colors hover:text-gray-50 active:text-gray-50 text-lg">
         {label}
       </li>
     </Link>

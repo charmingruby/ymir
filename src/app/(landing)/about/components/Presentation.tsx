@@ -45,7 +45,7 @@ export function Presentation() {
 
             <div className="flex gap-4 items-center">
               <ArrowDown className="text-primary-300" />
-              <span className="text-gray-50">Learn more</span>
+              <span className="text-gray-50 font-medium">Learn more</span>
             </div>
           </div>
         </section>

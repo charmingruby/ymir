@@ -1,9 +1,9 @@
 import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { SectionTitle } from '@/components/shared/SectionTitle'
-import { Box } from '@/components/ui/Box'
 import { Container } from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Users } from 'lucide-react'
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp } from 'lucide-react'
+import { ReasonItem } from './ReasonItem'
 
 export function ReasonList() {
   return (
@@ -22,46 +22,16 @@ export function ReasonList() {
         {/* Top Cycle */}
         <div className="mt-12 flex flex-col gap-8">
           <div className="flex flex-row gap-8">
-            <Box>
-              <div className="flex items-center gap-2">
-                <Box spacing="icon">
-                  <Users />
-                </Box>
-
-                <span>Route</span>
-              </div>
-
-              <Text>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-                consequuntur cupiditate earum impedit rerum enim minima, maxime
-                voluptatibus. Cupiditate commodi obcaecati pariatur dignissimos
-                a, earum inventore. Officiis veritatis reiciendis laudantium.
-              </Text>
-            </Box>
+            <ReasonItem />
             <div className="flex justify-center items-center">
-              <ArrowRight />
+              <ArrowRight className="text-primary-50" />
             </div>
-            <Box>
-              <div className="flex items-center gap-2">
-                <Box spacing="icon">
-                  <Users />
-                </Box>
-
-                <span>Route</span>
-              </div>
-
-              <Text>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-                consequuntur cupiditate earum impedit rerum enim minima, maxime
-                voluptatibus. Cupiditate commodi obcaecati pariatur dignissimos
-                a, earum inventore. Officiis veritatis reiciendis laudantium.
-              </Text>
-            </Box>
+            <ReasonItem />
           </div>
         </div>
 
         {/* Mid Cycle */}
-        <div className="grid grid-cols-2 mt-8">
+        <div className="grid grid-cols-2 mt-8 text-primary-100">
           <div className="flex items-center justify-center">
             <ArrowUp />
           </div>
@@ -73,41 +43,11 @@ export function ReasonList() {
         {/* Bottom Cycle */}
         <div className="mt-12 flex flex-col gap-8">
           <div className="flex flex-row gap-8">
-            <Box>
-              <div className="flex items-center gap-2">
-                <Box spacing="icon">
-                  <Users />
-                </Box>
-
-                <span>Route</span>
-              </div>
-
-              <Text>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-                consequuntur cupiditate earum impedit rerum enim minima, maxime
-                voluptatibus. Cupiditate commodi obcaecati pariatur dignissimos
-                a, earum inventore. Officiis veritatis reiciendis laudantium.
-              </Text>
-            </Box>
-            <div className="flex justify-center items-center">
+            <ReasonItem />
+            <div className="flex justify-center items-center text-primary-100">
               <ArrowLeft />
             </div>
-            <Box>
-              <div className="flex items-center gap-2">
-                <Box spacing="icon">
-                  <Users />
-                </Box>
-
-                <span>Route</span>
-              </div>
-
-              <Text>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-                consequuntur cupiditate earum impedit rerum enim minima, maxime
-                voluptatibus. Cupiditate commodi obcaecati pariatur dignissimos
-                a, earum inventore. Officiis veritatis reiciendis laudantium.
-              </Text>
-            </Box>
+            <ReasonItem />
           </div>
         </div>
       </Container>

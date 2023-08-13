@@ -5,8 +5,8 @@ const button = tv({
   base: 'flex items-center w-full md:w-auto  gap-2 justify-center rounded-lg text-base font-medium transition-colors',
   variants: {
     size: {
-      default: 'px-6 py-3',
-      sm: 'h-10 text-sm p-0 px-4',
+      default: 'px-6 py-2 ',
+      sm: 'h-8 text-sm p-0 px-4',
     },
     color: {
       primary:

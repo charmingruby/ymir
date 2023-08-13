@@ -12,14 +12,13 @@ export function Drawer({ onClick }: DrawerProps) {
       <Container spacing="spaceless">
         <div className="flex w-full flex-col gap-6">
           <div>
-            <div className="mb-4 text-lg text-gray-50">
+            <div className="mb-3 text-lg text-gray-50">
               <strong>For you</strong>
             </div>
 
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-2">
               <DrawerItem label="Features" onClick={onClick} url="/features" />
               <DrawerItem label="Products" onClick={onClick} url="/products" />
-              <DrawerItem label="Pricing" onClick={onClick} url="/pricing" />
               <DrawerItem label="The Ymir" onClick={onClick} url="/about" />
               <DrawerItem label="Contact" onClick={onClick} url="/contact" />
             </ul>

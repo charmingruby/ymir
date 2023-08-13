@@ -31,7 +31,6 @@ export function Header() {
           <nav className="hidden lg:flex gap-8">
             <NavItem label="Features" url="/features" currentUrl={pathname} />
             <NavItem label="Products" url="/products" currentUrl={pathname} />
-            <NavItem label="Pricing" url="/pricing" currentUrl={pathname} />
             <NavItem label="The Ymir" url="/about" currentUrl={pathname} />
             <NavItem label="Contact" url="/contact" currentUrl={pathname} />
           </nav>

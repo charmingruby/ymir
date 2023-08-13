@@ -7,6 +7,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model BetaKey {
+  id     String @id @default(cuid())
+  value  String
+  userId String
+
+  betaUser BetaUser?
+
+  @@map("beta_keys")
+}
+
+model BetaUser {
+  id         String   @id @default(cuid())
+  validUntil DateTime
+  createdAt  DateTime @default(now())
+
+  betaKeyId String @unique
+  userId    String @unique
+
+  user    User    @relation(fields: [userId], references: [id])
+  betaKey BetaKey @relation(fields: [betaKeyId], references: [id])
+
+  @@map("beta_users")
+}
+
 model User {
   id        String @id @default(cuid())
   name      String
@@ -15,10 +39,11 @@ model User {
   password  String
   birthDate String @map("birth_date")
 
+  betaUser    BetaUser?
+  userProfile UserProfile?
+
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @map("updated_at")
-
-  userProfile UserProfile?
 
   @@map("users")
 }

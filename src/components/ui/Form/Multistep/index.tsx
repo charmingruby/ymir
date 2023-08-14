@@ -7,8 +7,8 @@ interface MultistepProps {
 
 export function Multistep({ currentStep, size }: MultistepProps) {
   return (
-    <div className="w-full pb-2 pt-4">
-      <div className="text-sm text-gray-100 mb-2">
+    <div className="w-full">
+      <div className="text-sm text-gray-100  font-medium mb-2">
         Step {currentStep} of {size}
       </div>
       <div className="w-full flex gap-2">

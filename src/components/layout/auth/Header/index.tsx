@@ -9,15 +9,15 @@ export function Header() {
         spacing="spaceless"
         className="flex flex-row justify-between items-center h-16 "
       >
-        <div className="flex flex-row items-center gap-2">
+        <div className="text-3xl flex items-center gap-2 font-medium">
           <Logo />
           <div>
-            <h2 className="font-alt text-4xl">Ymir</h2>
+            <h2 className="font-logo">Ymir</h2>
           </div>
         </div>
 
         <div>
-          <Button color="dark" size="sm" className="w-auto">
+          <Button size="sm" className="w-auto">
             Sign in
           </Button>
         </div>

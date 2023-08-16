@@ -12,7 +12,7 @@ export function NavItem({ label, url, currentUrl }: NavItemProps) {
   return (
     <Link prefetch={false} href={url} key={url}>
       <li
-        className={`flex h-[3.75rem] cursor-pointer items-center transition-colors group hover:text-primary-300
+        className={`flex h-16 cursor-pointer items-center transition-colors group hover:text-primary-300
       ${
         isTheCurrentUrl
           ? 'border-b-2 border-primary-300 text-primary-300'

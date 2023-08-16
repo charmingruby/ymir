@@ -16,7 +16,7 @@ const box = tv({
     },
     color: {
       default: 'bg-gray-800-gradient border border-gray-500 ',
-      light: 'bg-gray-50 border border-gray-100',
+      light: 'bg-white border border-gray-100',
       dark: 'bg-gray-900-gradient',
       transparent: 'bg-none',
     },

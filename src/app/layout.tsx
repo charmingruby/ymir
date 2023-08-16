@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`
           ${inter.variable} ${baiJamjuree.variable} ${righteous.variable}
-          scroll-smooth bg-white font-sans text-gray-600 scrollbar-thin scrollbar-track-gray-900 scrollbar-thumb-gray-500
+          scroll-smooth bg-white font-sans text-gray-600 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-200
         `}
       >
         <main>{children}</main>

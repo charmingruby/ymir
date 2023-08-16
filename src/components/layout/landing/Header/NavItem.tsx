@@ -16,7 +16,7 @@ export function NavItem({ label, url, currentUrl }: NavItemProps) {
       ${
         isTheCurrentUrl
           ? 'border-b-2 border-primary-300 text-primary-300'
-          : 'border-b-2 border-gray-50'
+          : 'border-b-2 border-gray-50 text-gray-400'
       }
       `}
       >

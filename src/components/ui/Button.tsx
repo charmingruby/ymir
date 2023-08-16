@@ -19,7 +19,7 @@ const button = tv({
 
       /** #16A394 */
       terciary:
-        'border border-primary-300 bg-terciary-300 text-gray-50 transition-colors hover:bg-terciary-100 hover:text-gray-50',
+        'border border-terciary-100 bg-terciary-300 text-gray-50 transition-colors hover:bg-terciary-100 hover:text-gray-50',
 
       /** #18181b */
       dark: 'text-gray-50 border border-gray-600 bg-gray-800 transition-colors hover:bg-gray-600',

@@ -12,15 +12,15 @@ export function NavItem({ label, url, currentUrl }: NavItemProps) {
   return (
     <Link prefetch={false} href={url} key={url}>
       <li
-        className={`flex h-[3.75rem] cursor-pointer items-center  transition-colors group hover:text-gray-50
+        className={`flex h-[3.75rem] cursor-pointer items-center transition-colors group hover:text-primary-300
       ${
         isTheCurrentUrl
-          ? 'border-b-2 border-primary-500 text-primary-500'
-          : 'border-b-2 border-gray-900 text-gray-200'
+          ? 'border-b-2 border-primary-300 text-primary-300'
+          : 'border-b-2 border-gray-50'
       }
       `}
       >
-        <span className="text-sm font-semibold group-hover:text-gray-50 transition-colors">
+        <span className="text-base font-medium group-hover:text-primary-300 transition-colors">
           {label}
         </span>
       </li>

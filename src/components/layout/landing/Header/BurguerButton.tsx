@@ -7,7 +7,7 @@ interface BurguerButtonProps {
 export function BurguerButton({ onClick }: BurguerButtonProps) {
   return (
     <div
-      className="cursor-pointer lg:hidden text-gray-50 rounded-sm transition-colors group"
+      className="cursor-pointer lg:hidden rounded-sm transition-colors group"
       onClick={onClick}
     >
       <AlignRight

@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: 'var(--font-inter)',
-        alt: 'var(--font-righteous)',
+        alt: 'var(--font-baiJamjuree)',
+        logo: 'var(--font-righteous)',
       },
       blur: {
         xl: '64px',
@@ -19,18 +20,20 @@ module.exports = {
       },
       colors: {
         primary: {
-          50: '#81B0EF',
-          100: '#6FA5EC',
-          300: '#4A8FE7',
-          400: '#3883E5',
-          500: '#2678E3',
-          600: '#1C6ED9',
-          700: '#1A65C7',
-          800: '#175CB5',
+          50: '#8D97F7',
+          100: '#6674f4',
+          300: '#5061fc',
+          700: '#364AFC',
         },
+        terciary: {
+          100: '#18B4A4',
+          300: '#16A394',
+          500: '#149083',
+        },
+        white: '#f7fafc',
         gray: {
-          50: '#eaeaea',
-          100: '#bebebf',
+          50: '#F5F5F5',
+          100: '#D6D6D6',
           200: '#9e9ea0',
           300: '#727275',
           400: '#56565a',

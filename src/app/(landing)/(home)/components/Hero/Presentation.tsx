@@ -1,24 +1,22 @@
 import { TypingMotivations } from './TypingMotivations'
 import { Text } from '@/components/ui/Text'
-import { Pin } from '@/components/shared/Pin'
-import { Clock } from 'lucide-react'
 
 export function Presentation() {
   return (
     <>
-      <div className="mb-16 flex w-full flex-col items-center justify-center gap-y-3.5">
-        <Pin icon={Clock} content="Beta will release soon" />
-
-        <h1 className="my-0 pb-2 text-center font-alt font-medium text-4xl text-gray-50 sm:text-6xl">
-          Development assistence that
-        </h1>
-        <TypingMotivations />
+      <div className="flex w-full flex-col items-center justify-center gap-y-3.5 mb-8">
+        <div className="space-y-2">
+          <h1 className="my-0 text-center font-alt font-semibold text-4xl sm:text-5xl">
+            Development assistence that
+          </h1>
+          <TypingMotivations />
+        </div>
       </div>
 
       <div className="flex w-full mb-12 flex-col gap-8">
         <Text size="lg" className="text-center">
           Ymir unlocks a new level of{' '}
-          <span className="font-bold text-gray-50">
+          <span className="font-bold text-gray-900">
             Software Development Experience
           </span>{' '}
           by working working in each piece of an app, since the business rules

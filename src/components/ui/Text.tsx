@@ -5,8 +5,10 @@ const text = tv({
   base: 'leading-relaxed',
   variants: {
     color: {
-      default: 'text-gray-100',
-      lowOpacity: 'text-gray-200',
+      default: 'text-gray-800',
+      onDarkColor: 'text-gray-100',
+      lowOpacity: 'text-gray-500',
+      observation: 'text-gray-300',
     },
     size: {
       default: 'text-base',

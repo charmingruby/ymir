@@ -16,7 +16,7 @@ export function TypingMotivations() {
   })
 
   return (
-    <p className="my-0 h-16 text-center font-alt text-4xl text-primary-gradient  md:text-5xl">
+    <p className="my-0 h-[6rem] leading-normal text-center font-alt font-semibold text-4xl sm:text-5xl text-primary-gradient">
       {serviceMotivationsData}
     </p>
   )

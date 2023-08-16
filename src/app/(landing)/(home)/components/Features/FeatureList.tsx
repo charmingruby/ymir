@@ -4,7 +4,7 @@ import { FeatureItem } from './FeatureItem'
 export function FeatureList() {
   return (
     <div className="">
-      <Text className="text-sm italic mb-4" color="lowOpacity">
+      <Text className="text-sm italic mb-4" color="observation">
         *Most notable features that saves the paronamic view of application.
       </Text>
 

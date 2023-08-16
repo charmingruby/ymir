@@ -7,7 +7,7 @@ export function SectionTitle({ title, dark = false }: SectionTitleProps) {
   return (
     <h2
       className={`text-4xl sm:text-5xl font-semibold ${
-        dark ? 'text-gray-900' : 'text-gray-50'
+        dark ? 'text-gray-700' : 'text-gray-50'
       }`}
     >
       {title}

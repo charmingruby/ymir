@@ -5,7 +5,7 @@ import { Plus } from 'lucide-react'
 
 export function Footnote() {
   return (
-    <div className="flex w-full flex-col items-center gap-2 mt-16">
+    <div className="flex w-full flex-col items-center gap-2 mt-12">
       <p className="text-sm text-gray-300 text-center">
         Abstracted of technologies{' '}
       </p>

@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const container = tv({
-  base: 'mx-auto my-0 flex w-full flex-col overflow-hidden px-4 md:px-8',
+  base: 'mx-auto my-0 flex w-full flex-col overflow-hidden px-6 md:px-8',
   variants: {
     size: {
       default: 'max-w-7xl',
@@ -10,7 +10,7 @@ const container = tv({
     },
     spacing: {
       default: 'py-8 lg:py-16',
-      topPage: 'pb-8 pt-24',
+      topPage: 'pb-8 pt-20',
       spaceless: 'py-0',
     },
   },

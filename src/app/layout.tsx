@@ -1,12 +1,18 @@
 import { ReactNode } from 'react'
 import './globals.css'
-import { Inter, Righteous } from 'next/font/google'
+import { Inter, Bai_Jamjuree as BaiJamjuree, Righteous } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   weight: ['400', '500', '700'],
 })
+const baiJamjuree = BaiJamjuree({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-baiJamjuree',
+})
+
 const righteous = Righteous({
   subsets: ['latin'],
   weight: '400',
@@ -23,8 +29,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className="antialiased">
       <body
         className={`
-          ${inter.variable} ${righteous.variable} 
-          scroll-smooth bg-gray-800-gradient font-sans text-gray-50 scrollbar-thin scrollbar-track-gray-900 scrollbar-thumb-gray-500
+          ${inter.variable} ${baiJamjuree.variable} ${righteous.variable}
+          scroll-smooth bg-white font-sans text-gray-600 scrollbar-thin scrollbar-track-gray-900 scrollbar-thumb-gray-500
         `}
       >
         <main>{children}</main>

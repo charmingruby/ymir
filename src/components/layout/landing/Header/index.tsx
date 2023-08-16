@@ -19,7 +19,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 z-50 h-16 w-full border-b border-gray-500 bg-gray-900-gradient shadow-lg">
+    <header className="fixed top-0 z-50 h-16 w-full bg-gray-50 shadow-md">
       {isMenuOpen && <Drawer onClick={handleMenuToggle} />}
 
       <Container spacing="spaceless">

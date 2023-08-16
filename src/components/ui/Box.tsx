@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const box = tv({
-  base: 'rounded-lg border border-gray-500 shadow-md transition-shadow transition-all group text-base',
+  base: 'rounded-lg shadow-md transition-shadow transition-all group text-base',
   variants: {
     spacing: {
       default: 'p-4',
@@ -15,8 +15,8 @@ const box = tv({
       hover: 'hover:shadow-lg hover:bg-gray-600 cursor-pointer',
     },
     color: {
-      default: 'bg-gray-800-gradient',
-      light: 'bg-gray-700',
+      default: 'bg-gray-800-gradient border border-gray-500 ',
+      light: 'bg-gray-50 border border-gray-100',
       dark: 'bg-gray-900-gradient',
       transparent: 'bg-none',
     },

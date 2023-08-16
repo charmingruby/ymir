@@ -13,8 +13,12 @@ export function ScrollBackToTopButton() {
 
   return (
     <div onClick={scrollToTop}>
-      <Box spacing="icon" animation="hover" className="w-10 h-10">
-        <ChevronUp className="text-xl text-gray-100 transition-colors group-hover:text-primary-300" />
+      <Box
+        spacing="icon"
+        animation="hover"
+        className="w-9 h-9 bg-primary-300 border-0 hover:bg-primary-100"
+      >
+        <ChevronUp className="text-xl text-gray-100" />
       </Box>
     </div>
   )

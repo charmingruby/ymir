@@ -4,7 +4,7 @@ import { Header } from '@/components/layout/auth/Header'
 
 export default function SignUp() {
   return (
-    <div className="flex-1 bg-gray-900 min-h-screen flex flex-col">
+    <div className="flex-1 min-h-screen flex flex-col">
       <Header />
       <Container
         spacing="spaceless"

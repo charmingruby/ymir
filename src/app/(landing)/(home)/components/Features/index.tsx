@@ -8,13 +8,13 @@ import { SectionTitle } from '@/components/shared/SectionTitle'
 
 export function Features() {
   return (
-    <div className="bg-gray-900-gradient border-b border-gray-600">
+    <div className="bg-gray-50">
       <Container className="pt-8 pb-16 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 grid-cols-1">
           <div className="flex flex-col">
             <SectionDescriptor text="developer friendly features" />
             <div className="space-y-4">
-              <SectionTitle title="Streamlined development features" />
+              <SectionTitle dark title="Streamlined development features" />
               <Text size="lg">
                 Discover the strength of our feature-rich application that
                 enables efficient project management and seamless scalability.

@@ -1,6 +1,7 @@
 import { Separator } from '@/components/ui/Separator'
 import { InternalLinkList } from './InternalLinkList'
 import { SocialMedias } from './SocialMedias'
+import { Text } from '@/components/ui/Text'
 
 export function TopFooter() {
   return (
@@ -9,9 +10,9 @@ export function TopFooter() {
       <div>
         <div className="flex flex-col gap-1">
           <h2 className="font-semibold text-primary-300">Ymir</h2>
-          <h3 className="text-sm text-gray-200">
+          <Text color="observation" size="sm">
             Trust on us and boost your productivity.
-          </h3>
+          </Text>
         </div>
         <InternalLinkList />
       </div>

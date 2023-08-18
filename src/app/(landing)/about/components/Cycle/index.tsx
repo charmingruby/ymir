@@ -8,7 +8,7 @@ import { CycleElement } from './CycleElement'
 export function Cycle() {
   return (
     <section className="bg-gray-900-gradient rounded-3xl">
-      <Container spacing="spaceless" className="py-24">
+      <Container spacing="spaceless" className="py-16 md:py-24">
         <SectionDescriptor text="From dev to dev" />
 
         <div className="flex flex-col gap-4">

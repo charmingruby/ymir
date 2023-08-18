@@ -9,7 +9,7 @@ import { SectionTitle } from '@/components/shared/SectionTitle'
 export function Products() {
   return (
     <section className="bg-gray-900-gradient rounded-b-3xl border-b-2 border-gray-400">
-      <Container spacing="spaceless" className="pb-24 pt-16">
+      <Container spacing="spaceless" className="pb-16 md:pb-24 pt-16">
         <div className="flex sm:items-center flex-col">
           <SectionDescriptor
             text="some services already done for you"

@@ -1,22 +1,28 @@
 'use client'
 
-import { ReactNode, createContext } from 'react'
+import { ReactNode, createContext, useState } from 'react'
+
+type StringOrEmpty = string | null
+type DateOrEmpty = Date | null
 
 export interface User {
-  id: string
-  name: string
-  lastName: string
-  email: string
-  password: string
-  birthDate: Date
-  country: string
+  id: StringOrEmpty
+  name: StringOrEmpty
+  lastName: StringOrEmpty
+  email: StringOrEmpty
+  password: StringOrEmpty
+  birthDate: DateOrEmpty
+  country: StringOrEmpty
+  betaKeyId: StringOrEmpty
 }
 
-// interface UserRegisterContextType {
+interface UserRegisterContextType {
+  id: string | null
+}
 
-// }
-
-export const UserRegisterFormContext = createContext({})
+export const UserRegisterFormContext = createContext(
+  {} as UserRegisterContextType,
+)
 
 interface UserRegisterProviderProps {
   children: ReactNode
@@ -25,8 +31,23 @@ interface UserRegisterProviderProps {
 export function UserRegisterFormContextProvider({
   children,
 }: UserRegisterProviderProps) {
+  const [data, setData] = useState<User>({
+    id: null,
+    name: null,
+    lastName: null,
+    email: null,
+    password: null,
+    birthDate: null,
+    betaKeyId: null,
+    country: null,
+  })
+
   return (
-    <UserRegisterFormContext.Provider value={[]}>
+    <UserRegisterFormContext.Provider
+      value={{
+        id: data.id,
+      }}
+    >
       {children}
     </UserRegisterFormContext.Provider>
   )

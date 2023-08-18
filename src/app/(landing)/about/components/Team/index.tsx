@@ -1,11 +1,9 @@
 import { Container } from '@/components/ui/Container'
-import { Invitation } from './Invitation'
 import { Members } from './Members'
 
 export function Team() {
   return (
-    <Container>
-      <Invitation />
+    <Container spacing="spaceless" className="pt-8 lg:pt-16 pb-4 lg:pb-8">
       <Members />
     </Container>
   )

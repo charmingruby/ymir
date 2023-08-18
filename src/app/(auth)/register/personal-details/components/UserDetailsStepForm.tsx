@@ -1,13 +1,13 @@
 import * as Input from '@/components/ui/Form/Input'
 import { Multistep } from '@/components/ui/Form/Multistep'
 import { Box } from '@/components/ui/Box'
-import { StepDescription } from '../../components/StepDescription'
-import { NextStepButton } from '../../components/NextStepButton'
+import { StepDescription } from '../../../../../components/shared/StepDescription'
+import { NextStepButton } from '../../../../../components/shared/NextStepButton'
 
 export function UserDetailsStepForm() {
   return (
     <section className="space-y-4">
-      <div className="px-4 flex flex-col gap-8  mb-6">
+      <div className="px-4 flex flex-col gap-8 mb-6">
         <StepDescription
           title="Create a new account"
           description="at the speeed of thought"

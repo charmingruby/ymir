@@ -1,6 +1,6 @@
 import { Container } from '@/components/ui/Container'
 import { Header } from '@/components/layout/auth/Header'
-import { UserDetailsStepForm } from './personal-details/components/UserDetailsStepForm'
+import ValidateBetaKey from './validate-beta-key/page'
 
 export default function SignUp() {
   return (
@@ -10,7 +10,7 @@ export default function SignUp() {
         spacing="spaceless"
         className="flex flex-col max-w-xl w-full pt-6"
       >
-        <UserDetailsStepForm />
+        <ValidateBetaKey />
       </Container>
     </div>
   )

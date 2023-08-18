@@ -1,6 +1,6 @@
 import { Container } from '@/components/ui/Container'
-import { UserDetailsStepForm } from './step-1/components/UserDetailsStepForm'
 import { Header } from '@/components/layout/auth/Header'
+import { UserDetailsStepForm } from './personal-details/components/UserDetailsStepForm'
 
 export default function SignUp() {
   return (

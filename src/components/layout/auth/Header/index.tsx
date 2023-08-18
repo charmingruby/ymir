@@ -1,6 +1,7 @@
 import { Container } from '@/components/ui/Container'
 import { Logo } from './Logo'
 import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 
 export function Header() {
   return (
@@ -9,12 +10,16 @@ export function Header() {
         spacing="spaceless"
         className="flex flex-row justify-between items-center h-16 "
       >
-        <div className="text-3xl flex items-center gap-2 font-medium">
+        <Link
+          href="/"
+          prefetch={false}
+          className="text-3xl flex items-center gap-2 font-medium"
+        >
           <Logo />
           <div>
             <h2 className="font-logo">Ymir</h2>
           </div>
-        </div>
+        </Link>
 
         <div>
           <Button size="sm" className="w-auto">

@@ -12,7 +12,7 @@ interface PlanItemProps {
 
 export function PlanItem({ icon: Icon, name, description }: PlanItemProps) {
   return (
-    <Box className="flex flex-col bg-gray-900" spacing="spaceless">
+    <Box className="flex flex-col" spacing="spaceless">
       <div className="sm:px-8 px-4 py-4 flex flex-col items-center">
         <div className="w-12 h-12 items-center flex justify-center">
           <Icon className="text-terciary-300" size={32} />

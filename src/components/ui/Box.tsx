@@ -15,9 +15,9 @@ const box = tv({
       hover: 'hover:shadow-lg hover:bg-gray-600 cursor-pointer',
     },
     color: {
-      default: 'bg-gray-800-gradient border border-gray-500 ',
+      default: 'bg-gray-800 border border-gray-500 ',
       light: 'bg-white border border-gray-100',
-      dark: 'bg-gray-900-gradient',
+      dark: 'bg-gray-900',
       transparent: 'bg-none',
     },
   },

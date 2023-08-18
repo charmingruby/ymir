@@ -37,6 +37,7 @@ model User {
   email     String @unique
   password  String
   birthDate String @map("birth_date")
+  country   String
 
   betaUser    BetaUser?
   userProfile UserProfile?
@@ -53,7 +54,6 @@ model UserProfile {
   description   String?
   roles         String[]
   techonologies String[]
-  country       String
 
   user   User   @relation(fields: [userId], references: [id])
   userId String @unique

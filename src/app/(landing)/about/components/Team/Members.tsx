@@ -11,11 +11,11 @@ export function Members() {
   return (
     <div className="flex flex-col items-center">
       <div className="max-w-2xl mb-12">
-        <div className="flex flex-col items-center justify-center gap-2 mb-4">
+        <div className="flex flex-col md:items-center justify-center gap-4 mb-4">
           <Users className="h-8 w-8 text-primary-300" />
           <SectionTitle title="Meet the team" dark />
         </div>
-        <Text className="text-center">
+        <Text className="md:text-center">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum
           tempore temporibus eaque iusto velit beatae perferendis voluptate,
           aperiam numquam, nostrum ea exercitationem corrupti expedita deleniti
@@ -23,7 +23,7 @@ export function Members() {
         </Text>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
+      <div className="flex flex-col w-full md:w-auto md:grid md:grid-cols-2 gap-4 md:gap-8">
         <MemberProfile
           avatarPath={gustavoProfile}
           name="Gustavo Dias"

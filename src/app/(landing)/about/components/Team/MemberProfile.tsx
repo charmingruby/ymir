@@ -32,7 +32,7 @@ export function MemberProfile({
       <Link
         href={linkedinUrl}
         prefetch={false}
-        className="p-2 hover:bg-gray-100 rounded-md transition-colors"
+        className="p-2 hover:brightness-[95%] bg-white rounded-md transition-all"
       >
         <Linkedin className="h-5 w-5 text-primary-300" />
       </Link>

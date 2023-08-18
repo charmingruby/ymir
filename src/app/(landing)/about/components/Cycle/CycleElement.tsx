@@ -6,7 +6,7 @@ export function CycleElement() {
   return (
     <Box className="relative">
       <Box spacing="icon" className="absolute -top-6">
-        <Users className="text-primary-300" />
+        <Users className="text-terciary-300" />
       </Box>
 
       <span className="text-xl font-semibold mt-4 block text-gray-50">

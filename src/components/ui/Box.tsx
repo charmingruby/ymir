@@ -12,7 +12,7 @@ const box = tv({
     },
     animation: {
       default: '',
-      hover: 'hover:shadow-lg hover:bg-gray-600 cursor-pointer',
+      hover: 'hover:shadow-lg  hover:brightness-[95%] cursor-pointer',
     },
     color: {
       default: 'bg-gray-800 border border-gray-500 ',

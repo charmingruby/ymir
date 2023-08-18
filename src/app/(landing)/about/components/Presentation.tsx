@@ -16,7 +16,7 @@ export function Presentation() {
           </div>
 
           <div className="flex flex-col justify-center">
-            <div className="flex gap-4 items-center mb-16">
+            <div className="flex gap-4 items-center mb-8 md:mb-16">
               <Box
                 spacing="icon"
                 className="h-16 w-16 bg-primary-300 border-none"

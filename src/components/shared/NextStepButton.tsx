@@ -9,7 +9,7 @@ interface NextStepButtonProps {
 
 export function NextStepButton({ url, onClick }: NextStepButtonProps) {
   return (
-    <Link href={url} prefetch={false} onClick={onClick} className="flex">
+    <Link href={url} prefetch={false} onClick={onClick} className="flex mt-6">
       <Button className="md:w-full">
         <span>Next</span>
         <ArrowRight className="h-3.5 w-3.5" />

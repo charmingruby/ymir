@@ -4,7 +4,7 @@ import { Container } from '@/components/ui/Container'
 
 export function Footer() {
   return (
-    <footer className="bg-gray-50">
+    <footer className="bg-white">
       <div className="border-t border-gray-100 py-8">
         <Container spacing="spaceless">
           <TopFooter />

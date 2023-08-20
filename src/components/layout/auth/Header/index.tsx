@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export function Header() {
   return (
-    <header className="h-16 mb-8 shadow-md">
+    <header className="h-16 shadow-md">
       <Container
         spacing="spaceless"
         className="flex flex-row justify-between items-center h-16 "

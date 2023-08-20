@@ -10,10 +10,11 @@ export default function ValidateBetaKey() {
     >
       <AuthForm.Form>
         <Input.Root>
+          <Input.Label text="Beta key" />
           <Input.Control placeholder="Key" />
         </Input.Root>
 
-        <Button>
+        <Button size="form">
           <span>Submit key</span>
         </Button>
       </AuthForm.Form>

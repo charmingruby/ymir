@@ -7,6 +7,7 @@ const button = tv({
     size: {
       default: 'px-6 py-2 ',
       sm: 'text-base py-1 px-4',
+      form: 'h-12 px-4',
     },
     color: {
       /** #5061fc */

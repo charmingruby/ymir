@@ -5,10 +5,10 @@ import Link from 'next/link'
 
 export function Header() {
   return (
-    <header className="h-16 shadow-md">
+    <header className="h-16 shadow-md flex w-full bg-white fixed">
       <Container
         spacing="spaceless"
-        className="flex flex-row justify-between items-center h-16 "
+        className="flex flex-row justify-between items-center h-16"
       >
         <Link
           href="/"

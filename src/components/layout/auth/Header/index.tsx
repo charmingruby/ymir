@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/Container'
 import { Logo } from './Logo'
-import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { ActionButton } from './ActionButton'
 
 export function Header() {
   return (
@@ -21,11 +21,7 @@ export function Header() {
           </div>
         </Link>
 
-        <div>
-          <Button size="sm" className="w-auto">
-            Sign in
-          </Button>
-        </div>
+        <ActionButton />
       </Container>
     </header>
   )

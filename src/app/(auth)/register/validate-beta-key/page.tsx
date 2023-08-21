@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/Button'
 import * as Input from '@/components/ui/Form/Input'
 import * as AuthForm from '@/components/shared/AuthForm'
+import { Label } from '@/components/ui/Form/Label'
 
 export default function ValidateBetaKey() {
   return (
@@ -10,7 +11,7 @@ export default function ValidateBetaKey() {
     >
       <AuthForm.Form>
         <Input.Root>
-          <Input.Label text="Beta key" />
+          <Label text="Beta key" />
           <Input.Control placeholder="Key" />
         </Input.Root>
 

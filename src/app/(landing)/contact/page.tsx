@@ -4,12 +4,11 @@ import { EmailForm } from './EmailForm'
 
 export default function Contact() {
   return (
-    <Container
-      spacing="topPage"
-      className="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-8"
-    >
+    <Container className="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-8">
       <Content />
-      <EmailForm />
+      <div className="flex items-center w-full">
+        <EmailForm />
+      </div>
     </Container>
   )
 }

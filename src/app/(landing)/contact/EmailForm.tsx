@@ -2,15 +2,11 @@ import { Button } from '@/components/ui/Button'
 import * as Input from '@/components/ui/Form/Input'
 import * as TextArea from '@/components/ui/Form/TextArea'
 import { Label } from '@/components/ui/Form/Label'
-import { Mail } from 'lucide-react'
+import { Box } from '@/components/ui/Box'
 
 export function EmailForm() {
   return (
-    <section className="gap-4 flex flex-col justify-center pt-8 lg:pt-12">
-      <div className="flex items-center gap-2">
-        <Mail className="h-5 w-5 text-primary-300" />
-        <span className="text-2xl font-medium">Leave us a message</span>
-      </div>
+    <Box className="max-h-[32rem] w-full" color="light">
       <form className="flex flex-col gap-4 justify-center">
         <Input.Root>
           <Label text="Name" />
@@ -33,6 +29,6 @@ export function EmailForm() {
           Send
         </Button>
       </form>
-    </section>
+    </Box>
   )
 }

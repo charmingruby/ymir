@@ -1,11 +1,12 @@
 import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { SectionTitle } from '@/components/shared/SectionTitle'
 import { Text } from '@/components/ui/Text'
-import { Phone } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
+import { AdditionalInfo } from './AdditionalInfo'
 
 export function Content() {
   return (
-    <section className="flex flex-col justify-center">
+    <section className="flex flex-col justify-center pt-16 lg:pt-0">
       <SectionDescriptor text="Contact us" />
 
       <div className="space-y-4 mb-12">
@@ -19,44 +20,21 @@ export function Content() {
       </div>
 
       <div className="space-y-6">
-        <div className="flex  items-center gap-4">
-          <div className="w-14 h-14 bg-primary-300 rounded-md shadow-sm justify-center items-center flex">
-            <Phone className="text-white h-6 w-6" />
-          </div>
-
-          <div className="flex flex-col gap-0.5">
-            <span className="text-base font-medium  ">Phone number</span>
-            <small className="block text-sm text-gray-400">
-              +55 (32) 9 9110-0990
-            </small>
-          </div>
-        </div>
-
-        <div className="flex  items-center gap-4">
-          <div className="w-14 h-14 bg-primary-300 rounded-md shadow-sm justify-center items-center flex">
-            <Phone className="text-white h-6 w-6" />
-          </div>
-
-          <div className="flex flex-col gap-0.5">
-            <span className="text-base font-medium  ">Phone number</span>
-            <small className="block text-sm text-gray-400">
-              +55 (32) 9 9110-0990
-            </small>
-          </div>
-        </div>
-
-        <div className="flex  items-center gap-4">
-          <div className="w-14 h-14 bg-primary-300 rounded-md shadow-sm justify-center items-center flex">
-            <Phone className="text-white h-6 w-6" />
-          </div>
-
-          <div className="flex flex-col gap-0.5">
-            <span className="text-base font-medium  ">Phone number</span>
-            <small className="block text-sm text-gray-400">
-              +55 (32) 9 9110-0990
-            </small>
-          </div>
-        </div>
+        <AdditionalInfo
+          icon={Phone}
+          label="Phone number"
+          content="+55 (32) 9 9110-0990"
+        />
+        <AdditionalInfo
+          icon={Mail}
+          label="Email"
+          content="gustavodiasa2121@gmail.com"
+        />
+        <AdditionalInfo
+          icon={MapPin}
+          label="Location"
+          content="Minas Gerais, Brazil"
+        />
       </div>
     </section>
   )

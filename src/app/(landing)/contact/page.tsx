@@ -4,10 +4,15 @@ import { Container } from '@/components/ui/Container'
 
 export default function Contact() {
   return (
-    <Container className="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <Content />
-      <div className="flex items-center w-full">
-        <EmailForm />
+    <Container
+      className="min-h-screen flex items-center flex-row"
+      spacing="topPage"
+    >
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Content />
+        <div className="flex w-full">
+          <EmailForm />
+        </div>
       </div>
     </Container>
   )

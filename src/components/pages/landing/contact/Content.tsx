@@ -6,7 +6,7 @@ import { AdditionalInfo } from './AdditionalInfo'
 
 export function Content() {
   return (
-    <section className="flex flex-col justify-center pt-16 lg:pt-0">
+    <section className="flex flex-col">
       <SectionDescriptor text="Contact us" />
 
       <div className="space-y-4 mb-12">

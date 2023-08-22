@@ -2,11 +2,10 @@ import { Button } from '@/components/ui/Button'
 import * as Input from '@/components/ui/Form/Input'
 import * as TextArea from '@/components/ui/Form/TextArea'
 import { Label } from '@/components/ui/Form/Label'
-import { Box } from '@/components/ui/Box'
 
 export function EmailForm() {
   return (
-    <Box className="max-h-[32rem] w-full" color="light">
+    <div className="max-h-[32rem] w-full">
       <form className="flex flex-col gap-4 justify-center">
         <Input.Root>
           <Label text="Name" />
@@ -29,6 +28,6 @@ export function EmailForm() {
           Send
         </Button>
       </form>
-    </Box>
+    </div>
   )
 }

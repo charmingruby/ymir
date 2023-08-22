@@ -1,6 +1,6 @@
+import { Content } from '@/components/pages/landing/contact/Content'
+import { EmailForm } from '@/components/pages/landing/contact/EmailForm'
 import { Container } from '@/components/ui/Container'
-import { Content } from './Content'
-import { EmailForm } from './EmailForm'
 
 export default function Contact() {
   return (

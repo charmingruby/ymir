@@ -1,10 +1,10 @@
-import { Hero } from './components/Hero'
-import { WhyUs } from './components/WhyUs'
-import { Features } from './components/Features'
-import { Attractive } from './components/Attractive'
-import { Plans } from './components/Plans'
-import { CTA } from './components/CTA'
-import { Products } from './components/Products'
+import { Attractive } from '@/components/pages/landing/home/Attractive'
+import { CTA } from '@/components/pages/landing/home/CTA'
+import { Features } from '@/components/pages/landing/home/Features'
+import { Hero } from '@/components/pages/landing/home/Hero'
+import { Plans } from '@/components/pages/landing/home/Plans'
+import { Products } from '@/components/pages/landing/home/Products'
+import { WhyUs } from '@/components/pages/landing/home/WhyUs'
 
 export default function Home() {
   return (

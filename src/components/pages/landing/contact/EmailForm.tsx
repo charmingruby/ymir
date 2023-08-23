@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/Form/Label'
 
 export function EmailForm() {
   return (
-    <div className="max-h-[32rem] w-full">
+    <div className="w-full">
       <form className="flex flex-col gap-4 justify-center">
         <Input.Root>
           <Label text="Name" />

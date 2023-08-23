@@ -1,19 +1,19 @@
 import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { SectionTitle } from '@/components/shared/SectionTitle'
-import { Container } from '@/components/ui/Container'
+import * as Container from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
 import { ArrowDown, ArrowRight, ArrowUp } from 'lucide-react'
 import { CycleElement } from './CycleElement'
 
 export function Cycle() {
   return (
-    <section className="bg-gray-900-gradient">
-      <Container spacing="spaceless" className="py-16 md:py-24">
+    <Container.Root backgroundColor="dark">
+      <Container.Content spacing="spaceless" className="py-16 md:py-24">
         <SectionDescriptor text="From dev to dev" onDarkColor />
 
         <div className="flex flex-col gap-4">
           <SectionTitle title="We provide the resolutions of devs" />
-          <Text color="onDarkColor">
+          <Text variant="white">
             We think about helping not only our team, but the entire ecosystem
             of developers.
           </Text>
@@ -52,7 +52,7 @@ export function Cycle() {
             <CycleElement />
           </div>
         </div>
-      </Container>
-    </section>
+      </Container.Content>
+    </Container.Root>
   )
 }

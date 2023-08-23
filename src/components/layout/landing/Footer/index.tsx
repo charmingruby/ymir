@@ -1,21 +1,20 @@
 import { TopFooter } from './TopFooter'
 import { BottomFooter } from './BottomFooter'
-import { Container } from '@/components/ui/Container'
-
+import * as Container from '@/components/ui/Container'
 export function Footer() {
   return (
     <footer className="bg-white">
-      <div className="border-t border-gray-100 py-8">
-        <Container spacing="spaceless">
+      <Container.Root className="border-t border-gray-100 py-8">
+        <Container.Content spacing="spaceless">
           <TopFooter />
-        </Container>
-      </div>
+        </Container.Content>
+      </Container.Root>
 
-      <div className="border-t border-gray-100 py-4">
-        <Container spacing="spaceless">
+      <Container.Root className="border-t border-gray-100 py-4">
+        <Container.Content spacing="spaceless">
           <BottomFooter />
-        </Container>
-      </div>
+        </Container.Content>
+      </Container.Root>
     </footer>
   )
 }

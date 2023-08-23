@@ -1,4 +1,4 @@
-import { Container } from '@/components/ui/Container'
+import * as Container from '@/components/ui/Container'
 import { Logo } from './Logo'
 import Link from 'next/link'
 import { ActionButton } from './ActionButton'
@@ -6,7 +6,7 @@ import { ActionButton } from './ActionButton'
 export function Header() {
   return (
     <header className="h-16 shadow-md flex w-full bg-white fixed">
-      <Container
+      <Container.Content
         spacing="spaceless"
         className="flex flex-row justify-between items-center h-16"
       >
@@ -22,7 +22,7 @@ export function Header() {
         </Link>
 
         <ActionButton />
-      </Container>
+      </Container.Content>
     </header>
   )
 }

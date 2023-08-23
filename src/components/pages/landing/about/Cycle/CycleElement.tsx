@@ -13,7 +13,7 @@ export function CycleElement() {
         Team Friendly
       </span>
 
-      <Text className="mt-2" color="onDarkColor">
+      <Text className="mt-2" variant="white" size="sm">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
         consequuntur cupiditate earum impedit rerum enim minima, maxime
         voluptatibus. Cupiditate commodi obcaecati pariatur dignissimos a, earum

@@ -11,28 +11,27 @@ model BetaKey {
   id         String    @id @default(cuid())
   hash       String
   validUntil DateTime? @map("valid_until")
+  userId     String?   @unique
   createdAt  DateTime  @default(now()) @map("created_at")
 
-  user User?
+  user User? @relation(fields: [userId], references: [id])
 
   @@map("beta_keys")
 }
 
 model User {
-  id        String  @id @default(cuid())
+  id        String   @id @default(cuid())
   name      String
-  lastName  String  @map("last_name")
-  email     String  @unique
+  lastName  String   @map("last_name")
+  email     String   @unique
   password  String
-  birthDate String  @map("birth_date")
+  birthDate String   @map("birth_date")
   country   String
-  betaKeyId String? @unique @map("beta_key_id")
-
-  betaKey     BetaKey?     @relation(fields: [betaKeyId], references: [id])
-  userProfile UserProfile?
-
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  userProfile UserProfile?
+  betaKey     BetaKey?
 
   @@map("users")
 }

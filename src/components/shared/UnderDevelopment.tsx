@@ -1,11 +1,11 @@
 import { AlertTriangle } from 'lucide-react'
-import { Container } from '../ui/Container'
+import * as Container from '../ui/Container'
 import { Box } from '../ui/Box'
 
 export function UnderDevelopment() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <Container>
+    <Container.Root className="flex min-h-screen items-center justify-center">
+      <Container.Content>
         <Box
           className="flex w-auto flex-col items-center justify-between gap-16 md:flex-row md:self-center"
           spacing="larger"
@@ -22,7 +22,7 @@ export function UnderDevelopment() {
             <p className="text-gray-400">Page under development.</p>
           </div>
         </Box>
-      </Container>
-    </div>
+      </Container.Content>
+    </Container.Root>
   )
 }

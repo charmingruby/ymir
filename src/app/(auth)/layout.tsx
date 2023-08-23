@@ -1,7 +1,7 @@
 'use client'
 
 import { Header } from '@/components/layout/auth/Header'
-import { Container } from '@/components/ui/Container'
+import * as Container from '@/components/ui/Container'
 import { usePathname } from 'next/navigation'
 import { ReactNode } from 'react'
 
@@ -12,23 +12,23 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex-1 flex flex-col min-h-screen bg-gray-50">
       <Header />
-      <section className="flex flex-1">
+      <Container.Root className="flex flex-1">
         {isRootRegisterUrl ? (
-          <Container
+          <Container.Content
             spacing="spaceless"
             className="flex flex-col flex-1 justify-center max-w-xl w-full"
           >
             {children}
-          </Container>
+          </Container.Content>
         ) : (
-          <Container
+          <Container.Content
             spacing="spaceless"
             className="flex flex-col flex-1 pt-24 max-w-xl w-full"
           >
             {children}
-          </Container>
+          </Container.Content>
         )}
-      </section>
+      </Container.Root>
     </div>
   )
 }

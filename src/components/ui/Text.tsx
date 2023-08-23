@@ -4,11 +4,10 @@ import { VariantProps, tv } from 'tailwind-variants'
 const text = tv({
   base: 'leading-relaxed',
   variants: {
-    color: {
+    variant: {
       default: 'text-gray-800',
-      onDarkColor: 'text-gray-100',
-      lowOpacity: 'text-gray-500',
-      observation: 'text-gray-300',
+      white: 'text-gray-100',
+      lowOpacity: 'text-gray-400',
     },
     size: {
       default: 'text-base',
@@ -27,11 +26,11 @@ type BoxProps = VariantProps<typeof text> & {
   className?: string
 }
 
-export function Text({ children, className, size, color }: BoxProps) {
+export function Text({ children, className, size, variant }: BoxProps) {
   return (
     <div
       className={text({
-        color,
+        variant,
         size,
         class: className,
       })}

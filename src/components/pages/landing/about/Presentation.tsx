@@ -4,12 +4,12 @@ import { Text } from '@/components/ui/Text'
 import { Code2, ArrowDown } from 'lucide-react'
 import Image from 'next/image'
 import ideaLogo from '@/assets/images/ideas.svg'
-import { Container } from '@/components/ui/Container'
+import * as Container from '@/components/ui/Container'
 
 export function Presentation() {
   return (
-    <div className="md:min-h-screen flex items-center justify-center">
-      <Container spacing="topPage">
+    <Container.Root className="md:min-h-screen flex items-center justify-center">
+      <Container.Content spacing="topPage">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="hidden md:flex">
             <Image src={ideaLogo} alt="Brainstorm illustration" />
@@ -38,7 +38,7 @@ export function Presentation() {
                 </strong>
               </div>
 
-              <Text>
+              <Text variant="default">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
                 ipsum et labore molestias recusandae, nemo natus non accusantium
                 accusamus qui culpa earum quasi veritatis repellat eligendi ab
@@ -52,7 +52,7 @@ export function Presentation() {
             </div>
           </div>
         </section>
-      </Container>
-    </div>
+      </Container.Content>
+    </Container.Root>
   )
 }

@@ -1,15 +1,15 @@
-import { Container } from '@/components/ui/Container'
 import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
 import { Text } from '@/components/ui/Text'
 import { FeatureList } from './FeatureList'
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
 import { SectionTitle } from '@/components/shared/SectionTitle'
+import * as Container from '@/components/ui/Container'
 
 export function Features() {
   return (
-    <div className="bg-gray-50">
-      <Container className="pt-8 pb-16 lg:py-16">
+    <Container.Root>
+      <Container.Content className="pt-8 pb-16 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 grid-cols-1">
           <div className="flex flex-col">
             <SectionDescriptor text="developer friendly features" />
@@ -32,7 +32,7 @@ export function Features() {
 
           <FeatureList />
         </div>
-      </Container>
-    </div>
+      </Container.Content>
+    </Container.Root>
   )
 }

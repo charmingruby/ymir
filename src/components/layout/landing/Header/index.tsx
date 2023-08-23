@@ -1,6 +1,6 @@
 'use client'
 
-import { Container } from '@/components/ui/Container'
+import * as Container from '@/components/ui/Container'
 import { Logo } from './Logo'
 import { NavItem } from './NavItem'
 import { useState } from 'react'
@@ -22,7 +22,7 @@ export function Header() {
     <header className="fixed top-0 z-50 h-16 w-full bg-white shadow-md">
       {isMenuOpen && <Drawer onClick={handleMenuToggle} />}
 
-      <Container spacing="spaceless">
+      <Container.Content spacing="spaceless">
         <div className="flex items-center h-16 justify-between">
           <div className="flex items-center h-16 gap-4 lg:gap-16">
             <Logo />
@@ -40,7 +40,7 @@ export function Header() {
 
           <BurguerButton onClick={handleMenuToggle} />
         </div>
-      </Container>
+      </Container.Content>
     </header>
   )
 }

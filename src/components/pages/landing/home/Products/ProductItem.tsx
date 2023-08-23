@@ -26,7 +26,7 @@ export function ProductItem() {
       </div>
 
       <div className="flex sm:px-8 px-4 py-4 rounded-b-lg border-t border-gray-500 sm:flex-row gap-4 bg-gray-700">
-        <Button size="sm" color="terciary" className="flex-1 md:flex-none">
+        <Button size="sm" variant="terciary" className="flex-1 md:flex-none">
           <span>Demo</span>
           <ArrowUpRight className="h-4 w-4" />
         </Button>

@@ -8,16 +8,14 @@ import { WhyUs } from '@/components/pages/landing/home/WhyUs'
 
 export default function Home() {
   return (
-    <>
-      <div className="relative">
-        <Hero />
-        <WhyUs />
-        <Features />
-        <Plans />
-        <Products />
-        <Attractive />
-        <CTA />
-      </div>
-    </>
+    <div>
+      <Hero />
+      <WhyUs />
+      <Features />
+      <Plans />
+      <Products />
+      <Attractive />
+      <CTA />
+    </div>
   )
 }

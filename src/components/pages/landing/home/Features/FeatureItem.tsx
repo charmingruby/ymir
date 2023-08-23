@@ -11,7 +11,7 @@ export function FeatureItem() {
 
       <div className="space-y-2">
         <span className="text-lg font-semibold">Smart Route Handling</span>
-        <Text size="sm" color="lowOpacity">
+        <Text size="sm" variant="lowOpacity">
           Streamline responses and routing, enhance adaptability, and elevate
           user experience.
         </Text>

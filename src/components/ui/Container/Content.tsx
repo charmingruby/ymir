@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
-const container = tv({
+const content = tv({
   base: 'mx-auto my-0 flex w-full flex-col overflow-hidden px-6 md:px-8',
   variants: {
     size: {
@@ -20,20 +20,15 @@ const container = tv({
   },
 })
 
-type ContainerProps = VariantProps<typeof container> & {
+type ContentProps = VariantProps<typeof content> & {
   children: ReactNode
   className?: string
 }
 
-export function Container({
-  children,
-  className,
-  size,
-  spacing,
-}: ContainerProps) {
+export function Content({ children, className, size, spacing }: ContentProps) {
   return (
     <div
-      className={container({
+      className={content({
         size,
         spacing,
         class: className,

@@ -10,7 +10,7 @@ export function TopFooter() {
       <div>
         <div className="flex flex-col gap-1">
           <h2 className="font-semibold text-primary-300">Ymir</h2>
-          <Text color="observation" size="sm">
+          <Text variant="lowOpacity" size="sm">
             Trust on us and boost your productivity.
           </Text>
         </div>

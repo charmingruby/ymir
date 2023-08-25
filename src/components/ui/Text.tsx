@@ -6,7 +6,7 @@ const text = tv({
   variants: {
     variant: {
       default: 'text-gray-800',
-      white: 'text-gray-100',
+      white: 'text-white',
       lowOpacity: 'text-gray-400',
     },
     size: {

@@ -7,13 +7,13 @@ import { CycleElement } from './CycleElement'
 
 export function Cycle() {
   return (
-    <Container.Root backgroundColor="dark">
+    <Container.Root>
       <Container.Content spacing="spaceless" className="py-16 md:py-24">
-        <SectionDescriptor text="From dev to dev" onDarkColor />
+        <SectionDescriptor text="From dev to dev" />
 
         <div className="flex flex-col gap-4">
-          <SectionTitle title="We provide the resolutions of devs" />
-          <Text variant="white">
+          <SectionTitle title="We provide the resolutions of devs" dark />
+          <Text>
             We think about helping not only our team, but the entire ecosystem
             of developers.
           </Text>
@@ -24,15 +24,15 @@ export function Cycle() {
           <div className="flex flex-col md:flex-row gap-8">
             <CycleElement />
             <div className="flex justify-center items-center">
-              <ArrowRight className="hidden md:block text-terciary-300" />
-              <ArrowDown className="block md:hidden text-terciary-300" />
+              <ArrowRight className="hidden md:block text-primary-300" />
+              <ArrowDown className="block md:hidden text-primary-300" />
             </div>
             <CycleElement />
           </div>
         </div>
 
         {/* Mid Cycle */}
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-8 text-terciary-100">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-8 text-primary-100">
           <div className="hidden md:flex items-center justify-center">
             <ArrowUp />
           </div>
@@ -45,9 +45,9 @@ export function Cycle() {
         <div className="mt-8 flex flex-col gap-8">
           <div className="flex flex-col md:flex-row gap-8">
             <CycleElement />
-            <div className="flex justify-center items-center text-terciary-100">
-              <ArrowRight className="hidden md:block text-terciary-300" />
-              <ArrowDown className="block md:hidden text-terciary-300" />
+            <div className="flex justify-center items-center text-primary-100">
+              <ArrowRight className="hidden md:block text-primary-300" />
+              <ArrowDown className="block md:hidden text-primary-300" />
             </div>
             <CycleElement />
           </div>

@@ -8,6 +8,9 @@ import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
 import { SolutionCard } from '@/components/pages/landing/solutions/SolutionCard'
 import { Invitation } from '@/components/pages/landing/solutions/Invitation'
+import { Box } from '@/components/ui/Box'
+import { Guarantee } from '@/components/pages/landing/solutions/Guarantee'
+import Link from 'next/link'
 
 export default function Solutions() {
   return (
@@ -43,12 +46,6 @@ export default function Solutions() {
 
               <div className="flex gap-12 mt-16">
                 <div className="flex flex-col gap-0.5">
-                  <p className="font-medium text-base text-gray-400">
-                    Technology
-                  </p>
-                  <span className="text-sm text-gray-300">React</span>
-                </div>
-                <div className="flex flex-col gap-0.5">
                   <p className="font-medium text-base text-gray-400">Area</p>
                   <span className="text-sm text-gray-300">Interfaces</span>
                 </div>
@@ -64,13 +61,6 @@ export default function Solutions() {
               <Image src={solvingPuzzle} alt="People solving a puzzle" />
             </div>
           </div>
-        </Container.Content>
-      </Container.Root>
-
-      {/* Request  */}
-      <Container.Root>
-        <Container.Content>
-          <Invitation />
         </Container.Content>
       </Container.Root>
 
@@ -99,9 +89,44 @@ export default function Solutions() {
         </Container.Content>
       </Container.Root>
 
-      {/* Our guarantees */}
+      {/* Request  */}
+      <Container.Root>
+        <Container.Content>
+          <Invitation />
+        </Container.Content>
+      </Container.Root>
 
-      {/* CTA */}
+      {/* Our guarantees */}
+      <Container.Root>
+        <Container.Content>
+          <div className="flex flex-col mb-12 items-center">
+            <SectionDescriptor text="Our Guarantees" />
+            <SectionTitle title="We provides with excellence" dark />
+          </div>
+          <Box color="light" className="p-0">
+            <div className="grid lg:grid-cols-4 gap-4 p-8">
+              <Guarantee />
+              <Guarantee />
+              <Guarantee />
+              <Guarantee />
+              <Guarantee />
+              <Guarantee />
+              <Guarantee />
+              <Guarantee />
+            </div>
+            <div className="border-t border-gray-100 rounded-b-lg px-8 py-4">
+              <Link
+                href="/contact"
+                prefetch={false}
+                className="flex gap-2 items-center justify-center text-gray-200 transition-colors hover:text-primary-300"
+              >
+                <span className="font-medium">Talk with us to get a demo</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </Box>
+        </Container.Content>
+      </Container.Root>
     </>
   )
 }

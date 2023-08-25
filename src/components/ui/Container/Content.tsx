@@ -9,7 +9,7 @@ const content = tv({
       lg: 'max-w-[90rem]',
     },
     spacing: {
-      default: 'py-8 lg:py-16',
+      default: 'py-8 lg:py-10',
       topPage: 'pb-8 pt-20',
       spaceless: 'py-0',
     },

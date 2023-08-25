@@ -4,16 +4,14 @@ import { Users } from 'lucide-react'
 
 export function CycleElement() {
   return (
-    <Box className="relative">
-      <Box spacing="icon" className="absolute -top-6">
-        <Users className="text-terciary-300" />
+    <Box className="relative" color="light">
+      <Box color="light" spacing="icon" className="absolute -top-6">
+        <Users className="text-primary-300" />
       </Box>
 
-      <span className="text-xl font-semibold mt-4 block text-gray-50">
-        Team Friendly
-      </span>
+      <span className="text-xl font-semibold mt-4 block">Team Friendly</span>
 
-      <Text className="mt-2" variant="white" size="sm">
+      <Text className="mt-2" variant="lowOpacity" size="sm">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
         consequuntur cupiditate earum impedit rerum enim minima, maxime
         voluptatibus. Cupiditate commodi obcaecati pariatur dignissimos a, earum

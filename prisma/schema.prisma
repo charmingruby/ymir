@@ -25,7 +25,6 @@ model User {
   lastName  String   @map("last_name")
   email     String   @unique
   password  String
-  birthDate String   @map("birth_date")
   country   String
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")

@@ -1,23 +1,28 @@
+import { Box } from '@/components/ui/Box'
 import * as Container from '@/components/ui/Container'
 import { Text } from '@/components/ui/Text'
 
 export function Banner() {
   return (
-    <Container.Root className="border-t border-gray-100 ">
-      <Container.Content
-        spacing="spaceless"
-        className="flex flex-col justify-center items-center gap-8 py-20"
-      >
-        <Text
-          className="max-w-2xl  text-center text-xl font-medium leading-7"
-          variant="lowOpacity"
+    <Container.Root>
+      <Container.Content>
+        <Box
+          className="flex flex-col md:flex-row justify-between gap-6 md:gap-16 items-center px-16 py-8  bg-primary-100"
+          spacing="spaceless"
+          color="transparent"
         >
-          We provide a dedicated space for developers, offering support in{' '}
-          <span className="font-semibold text-gray-800">
-            project advancement through collaborative resources
-          </span>{' '}
-          while promoting continuous learning and career growth.
-        </Text>
+          <Text
+            variant="white"
+            size="lg"
+            className="max-w-2xl mx-auto text-center"
+          >
+            We provide a dedicated space for developers, offering{' '}
+            <strong className="font-bold">
+              support in project advancement through collaborative resources
+            </strong>{' '}
+            while promoting continuous learning and career growth.
+          </Text>
+        </Box>
       </Container.Content>
     </Container.Root>
   )

@@ -10,14 +10,14 @@ export function Invitation() {
       spacing="spaceless"
       color="transparent"
     >
-      <strong className="text-xl text-gray-50">Join team</strong>
+      <strong className="text-xl text-gray-50">Request us</strong>
       <Text variant="white" className="flex-1 text-center md:text-start ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae
         quam corporis, facilis quo eum, blanditiis ea, reiciendis ducimus
         voluptate iure corrupti in esse excepturi et. Placeat quo nisi quis!
       </Text>
       <Link href="/contact" prefetch={false}>
-        <Button color="light">Contact</Button>
+        <Button variant="light">Contact</Button>
       </Link>
     </Box>
   )

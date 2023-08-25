@@ -7,7 +7,7 @@ export interface LinkProps {
 
 const links: LinkProps[] = [
   { label: 'Features', url: '/features' },
-  { label: 'Products', url: '/products' },
+  { label: 'Solutions', url: '/solutions' },
   { label: 'The Ymir', url: '/about' },
   { label: 'Contact', url: '/contact' },
 ]

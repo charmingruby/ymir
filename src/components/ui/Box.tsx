@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
 
 const box = tv({
-  base: 'rounded-lg shadow-md transition-shadow transition-all group text-base',
+  base: 'rounded-lg shadow-sm transition-shadow transition-all group text-base',
   variants: {
     spacing: {
       default: 'p-4',

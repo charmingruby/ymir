@@ -1,8 +1,7 @@
 import { Box } from '@/components/ui/Box'
 import { Button } from '@/components/ui/Button'
 import { Text } from '@/components/ui/Text'
-import { ArrowRight, ArrowUpRight, Building } from 'lucide-react'
-import Link from 'next/link'
+import { ArrowUpRight, Building } from 'lucide-react'
 
 export function ProductItem() {
   return (
@@ -30,15 +29,6 @@ export function ProductItem() {
           <span>Demo</span>
           <ArrowUpRight className="h-4 w-4" />
         </Button>
-
-        <Link
-          href="/"
-          prefetch={false}
-          className="text-gray-100 justify-center flex items-center gap-2 hover:text-terciary-300 cursor-pointer transition-colors"
-        >
-          <span className="">Get plan</span>
-          <ArrowRight className="" size={16} />
-        </Link>
       </div>
     </Box>
   )

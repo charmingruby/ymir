@@ -28,7 +28,7 @@ export default function Solutions() {
               <SectionDescriptor text="Customizable projects" />
               <SectionTitle title="We have ready solutions" dark />
 
-              <div className="flex flex-col gap-4 mt-8">
+              <div className="flex flex-col mt-8">
                 <Text variant="lowOpacity">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Aliquid odio totam sed, qui ut et reiciendis autem
@@ -36,22 +36,24 @@ export default function Solutions() {
                   molestiae vero omnis quidem possimus ut.
                 </Text>
 
-                <div>
+                <div className="flex gap-12 mt-8">
+                  <div className="flex flex-col gap-0.5">
+                    <p className="font-medium text-base text-gray-400">Area</p>
+                    <span className="text-sm text-gray-300">Interfaces</span>
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <p className="font-medium text-base text-gray-400">Scope</p>
+                    <span className="text-sm text-gray-300">
+                      Web and Mobile
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-6">
                   <Button>
                     <span>Access</span>
                     <ArrowRight className="h-4 w-4" />
                   </Button>
-                </div>
-              </div>
-
-              <div className="flex gap-12 mt-16">
-                <div className="flex flex-col gap-0.5">
-                  <p className="font-medium text-base text-gray-400">Area</p>
-                  <span className="text-sm text-gray-300">Interfaces</span>
-                </div>
-                <div className="flex flex-col gap-0.5">
-                  <p className="font-medium text-base text-gray-400">Scope</p>
-                  <span className="text-sm text-gray-300">Web and Mobile</span>
                 </div>
               </div>
             </div>
@@ -67,7 +69,7 @@ export default function Solutions() {
       {/* Areas */}
       <Container.Root>
         <Container.Content>
-          <div className="flex flex-col items-center max-w-2xl mx-auto text-center">
+          <div className="flex flex-col lg:items-center lg:max-w-2xl lg:mx-auto lg:text-center">
             <SectionDescriptor text="Includes" />
             <SectionTitle title="Built in solutions" dark />
             <Text className="mt-7">
@@ -99,12 +101,12 @@ export default function Solutions() {
       {/* Our guarantees */}
       <Container.Root>
         <Container.Content>
-          <div className="flex flex-col mb-12 items-center">
+          <div className="flex flex-col mb-12 lg:items-center">
             <SectionDescriptor text="Our Guarantees" />
             <SectionTitle title="We provides with excellence" dark />
           </div>
           <Box color="light" className="p-0">
-            <div className="grid lg:grid-cols-4 gap-4 p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-8">
               <Guarantee />
               <Guarantee />
               <Guarantee />

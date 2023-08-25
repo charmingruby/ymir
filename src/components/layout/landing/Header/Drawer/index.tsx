@@ -18,7 +18,6 @@ export function Drawer({ onClick }: DrawerProps) {
 
             <ul className="flex flex-col items-center gap-2">
               <DrawerItem label="Home" onClick={onClick} url="/" />
-              <DrawerItem label="The Ymir" onClick={onClick} url="/about" />
               <DrawerItem label="Features" onClick={onClick} url="/features" />
               <DrawerItem
                 label="Solutions"
@@ -26,6 +25,7 @@ export function Drawer({ onClick }: DrawerProps) {
                 url="/solutions"
               />
               <DrawerItem label="Contact" onClick={onClick} url="/contact" />
+              <DrawerItem label="The Ymir" onClick={onClick} url="/about" />
             </ul>
           </div>
 

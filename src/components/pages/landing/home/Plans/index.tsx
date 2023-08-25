@@ -10,26 +10,23 @@ export function Plans() {
   return (
     <Container.Root backgroundColor="dark">
       <Container.Content className="pt-16 md:pt-24 pb-16">
-        <div className="flex flex-col">
-          <div className="grid-cols-1 md:grid-cols-3 grid">
-            <div className="flex flex-col md:col-span-2">
-              <SectionDescriptor
-                text="we can make everyone happy"
-                onDarkColor
-              />
-              <div className="space-y-4">
-                <SectionTitle title="We are a platform to multiple types of works" />
-                <Text variant="white">
-                  Whether you&apos;re an individual developer, a team, or a
-                  thriving enterprise, Ymir provides all the essential
-                  components to craft a website that outshines the competition.
-                </Text>
-                <Button variant="terciary">
-                  <span>View all</span>
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
+        <div className="flex sm:items-center flex-col">
+          <SectionDescriptor text="we make everyone satisfied" onDarkColor />
+
+          <div className="sm:text-center gap-4 flex flex-col sm:items-center">
+            <SectionTitle title="We are a platform to multiple types of works" />
+            <Text className="max-w-2xl sm:text-center" variant="white">
+              Whether you{"'"}re an individual developer, a team, or a thriving
+              enterprise, Ymir provides all the essential components to craft a
+              website that outshines the competition.
+            </Text>
+          </div>
+
+          <div className="mt-4">
+            <Button variant="terciary">
+              <span>View all</span>
+              <ArrowRight className="h-4 w-4" />
+            </Button>
           </div>
         </div>
 

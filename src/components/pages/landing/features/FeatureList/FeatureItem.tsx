@@ -1,19 +1,17 @@
 import { Box } from '@/components/ui/Box'
-import { Building } from 'lucide-react'
 import { Text } from '@/components/ui/Text'
+import { Boxes } from 'lucide-react'
 
-export function SolutionCard() {
+export function FeatureItem() {
   return (
-    <Box className="flex flex-col items-center py-8" color="light">
-      <div className="bg-primary-300 p-5 rounded-md">
-        <Building className="text-gray-50 h-8 w-8" />
+    <Box color="light" className="flex flex-col justify-center py-8">
+      <div className="h-16 w-16 bg-primary-300 flex items-center self-center justify-center rounded-md">
+        <Boxes className="h-8 w-8 text-gray-50" />
       </div>
 
-      <div className="mt-6">
-        <strong className="text-primary-300 text-xl">
-          Institutional Website
-        </strong>
-      </div>
+      <strong className="mt-6 text-center text-xl text-primary-300">
+        Unlimited Projects
+      </strong>
 
       <Text variant="lowOpacity" className="text-center mt-2">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. In mollitia

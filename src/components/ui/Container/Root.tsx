@@ -11,8 +11,7 @@ const root = tv({
     },
 
     size: {
-      default: '',
-      screen: '',
+      default: 'default',
     },
   },
   defaultVariants: {

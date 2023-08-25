@@ -6,11 +6,11 @@ import { SectionTitle } from '@/components/shared/SectionTitle'
 import { Text } from '@/components/ui/Text'
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
-import { SolutionCard } from '@/components/pages/landing/solutions/SolutionCard'
-import { Invitation } from '@/components/pages/landing/solutions/Invitation'
+import { SolutionItem } from '@/components/pages/landing/solutions/SolutionItem'
 import { Box } from '@/components/ui/Box'
 import { Guarantee } from '@/components/pages/landing/solutions/Guarantee'
 import Link from 'next/link'
+import { Invitation } from '@/components/pages/landing/solutions/Invitation'
 
 export default function Solutions() {
   return (
@@ -72,7 +72,7 @@ export default function Solutions() {
           <div className="flex flex-col lg:items-center lg:max-w-2xl lg:mx-auto lg:text-center">
             <SectionDescriptor text="Includes" />
             <SectionTitle title="Built in solutions" dark />
-            <Text className="mt-7">
+            <Text className="mt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               consectetur ut voluptate dolore repudiandae eaque reiciendis
               officiis esse ipsa, exercitationem quasi tenetur. Sequi similique
@@ -81,12 +81,12 @@ export default function Solutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14 gap-8">
-            <SolutionCard />
-            <SolutionCard />
-            <SolutionCard />
-            <SolutionCard />
-            <SolutionCard />
-            <SolutionCard />
+            <SolutionItem />
+            <SolutionItem />
+            <SolutionItem />
+            <SolutionItem />
+            <SolutionItem />
+            <SolutionItem />
           </div>
         </Container.Content>
       </Container.Root>

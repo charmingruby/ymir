@@ -5,7 +5,7 @@ import { ActionButton } from './ActionButton'
 
 export function Header() {
   return (
-    <header className="h-16 shadow-md flex w-full bg-white fixed">
+    <header className="h-16 shadow-md flex w-full bg-white fixed z-20">
       <Container.Content
         spacing="spaceless"
         className="flex flex-row justify-between items-center h-16"

@@ -7,7 +7,7 @@ import { ReactNode } from 'react'
 
 export default function DefaultLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
-  const isRootRegisterUrl = pathname === '/register'
+  const isRootRegisterUrl = pathname === '/auth/register'
 
   return (
     <div className="flex-1 flex flex-col min-h-screen bg-gray-50">

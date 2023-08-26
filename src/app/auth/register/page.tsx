@@ -23,7 +23,7 @@ export default function SignUp() {
       <div className="mt-8 flex-col flex max-w-xs w-full">
         <Link
           prefetch={false}
-          href="/register/validate-beta-key"
+          href="/auth/register/validate-beta-key"
           className="w-full flex"
         >
           <Button
@@ -40,7 +40,7 @@ export default function SignUp() {
       <span className="text-sm  mt-3 font-medium">
         Already have an account?{' '}
         <Link
-          href="/login"
+          href="/auth/login"
           prefetch={false}
           className="text-primary-300 font-semibold"
         >

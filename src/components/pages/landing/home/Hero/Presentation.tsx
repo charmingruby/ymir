@@ -16,7 +16,7 @@ export function Presentation() {
       <div className="flex w-full mb-12 flex-col gap-8">
         <Text size="lg" className="text-center">
           Ymir unlocks a new level of{' '}
-          <span className="font-bold text-gray-900">
+          <span className="font-semibold text-gray-900">
             Software Development Experience
           </span>{' '}
           by working working in each piece of an app, since the business rules

@@ -1,8 +1,8 @@
-import { Box } from '@/components/ui/Box'
+import { Box } from '@/components/ui/box'
 import { ChevronRight } from 'lucide-react'
 import logo from '@/assets/images/logo.svg'
 import Image from 'next/image'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function SignUp() {
@@ -23,7 +23,7 @@ export default function SignUp() {
       <div className="mt-8 flex-col flex max-w-xs w-full">
         <Link
           prefetch={false}
-          href="/auth/register/validate-beta-key"
+          href="/auth/register/beta-key"
           className="w-full flex"
         >
           <Button

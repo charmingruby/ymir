@@ -1,29 +1,27 @@
-import * as Container from '@/components/ui/Container'
+import { SectionDescriptor } from '@/components/section-descriptor'
+import { SectionTitle } from '@/components/section-title'
+import { Button } from '@/components/ui/button'
 import solvingPuzzle from '@/assets/images/solving-puzzle.svg'
+import * as Container from '@/components/ui/container'
+import { Text } from '@/components/ui/text'
+import { ArrowRight, Flame } from 'lucide-react'
 import Image from 'next/image'
-import { SectionDescriptor } from '@/components/shared/SectionDescriptor'
-import { SectionTitle } from '@/components/shared/SectionTitle'
-import { Text } from '@/components/ui/Text'
-import { Button } from '@/components/ui/Button'
-import { ArrowRight } from 'lucide-react'
-import { SolutionItem } from '@/components/pages/landing/solutions/SolutionItem'
-import { Box } from '@/components/ui/Box'
-import { Guarantee } from '@/components/pages/landing/solutions/Guarantee'
+import { FeatureList } from './components/feature-list'
+import { GuaranteeList } from './components/guarantee-list'
 import Link from 'next/link'
-import { Invitation } from '@/components/pages/landing/solutions/Invitation'
+import { Box } from '@/components/ui/box'
+import { Highlights } from './components/highlights'
 
-export default function Solutions() {
+export default function Features() {
   return (
     <>
-      {/* Presentation */}
+      {/* Hero */}
       <Container.Root>
         <Container.Content
           spacing="topPage"
           className="flex flex-row items-center md:min-h-screen"
         >
-          {/* Presentation */}
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8">
-            {/* Content */}
             <div className="flex flex-col justify-center">
               <SectionDescriptor text="Customizable projects" />
               <SectionTitle title="We have ready solutions" dark />
@@ -32,8 +30,8 @@ export default function Solutions() {
                 <Text variant="lowOpacity">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Aliquid odio totam sed, qui ut et reiciendis autem
-                  reprehenderit. Quisquam, harum minima iure tempora sed
-                  molestiae vero omnis quidem possimus ut.
+                  reprehenderit. Quisquam, harum minima iure tempora sed molestiae
+                  vero omnis quidem possimus ut.
                 </Text>
 
                 <div className="flex gap-12 mt-8">
@@ -43,9 +41,7 @@ export default function Solutions() {
                   </div>
                   <div className="flex flex-col gap-0.5">
                     <p className="font-medium text-base text-gray-400">Scope</p>
-                    <span className="text-sm text-gray-300">
-                      Web and Mobile
-                    </span>
+                    <span className="text-sm text-gray-300">Web and Mobile</span>
                   </div>
                 </div>
 
@@ -66,56 +62,55 @@ export default function Solutions() {
         </Container.Content>
       </Container.Root>
 
-      {/* Areas */}
-      <Container.Root>
-        <Container.Content>
-          <div className="flex flex-col lg:items-center lg:max-w-2xl lg:mx-auto lg:text-center">
-            <SectionDescriptor text="Includes" />
-            <SectionTitle title="Built in solutions" dark />
-            <Text className="mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              consectetur ut voluptate dolore repudiandae eaque reiciendis
-              officiis esse ipsa, exercitationem quasi tenetur. Sequi similique
-              labore enim facere in, obcaecati libero!
+      {/* Banner */}
+      <Container.Root className="bg-primary-gradient">
+        <Container.Content className="flex w-full text-center items-center gap-8 flex-col max-w-2xl mx-auto">
+          <div className="flex flex-col gap-4 items-center">
+            <Flame className="text-white h-10 w-10" />
+            <SectionTitle title="Blazing features" />
+            <Text variant="white">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+              laborum iste laudantium adipisci enim, nemo earum illum veritatis
+              fugiat doloribus ea accusamus? Aut rerum nesciunt qui optio
+              repudiandae eaque dolore?
             </Text>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14 gap-8">
-            <SolutionItem />
-            <SolutionItem />
-            <SolutionItem />
-            <SolutionItem />
-            <SolutionItem />
-            <SolutionItem />
-          </div>
+          <Button variant="light">Request demo</Button>
         </Container.Content>
       </Container.Root>
 
-      {/* Request  */}
+      {/* FeatureList */}
       <Container.Root>
         <Container.Content>
-          <Invitation />
+          <div className="flex sm:items-center flex-col">
+            <SectionDescriptor text="Dev's time saver" />
+
+            <div className="sm:text-center gap-4 flex flex-col sm:items-center">
+              <SectionTitle title="Made for productivity" dark />
+              <Text className="max-w-2xl sm:text-center" variant="lowOpacity">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusamus officia aliquam cum ipsum explicabo, quo excepturi alias
+                provident voluptatum nihil nobis debitis ullam veritatis ex
+                distinctio quis culpa incidunt ipsam?
+              </Text>
+            </div>
+          </div>
+
+          <FeatureList />
         </Container.Content>
       </Container.Root>
 
-      {/* Our guarantees */}
+      {/* Guarantees */}
       <Container.Root>
         <Container.Content>
           <div className="flex flex-col mb-12 lg:items-center">
             <SectionDescriptor text="Our Guarantees" />
             <SectionTitle title="We provides with excellence" dark />
           </div>
+
           <Box color="light" className="p-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-8">
-              <Guarantee />
-              <Guarantee />
-              <Guarantee />
-              <Guarantee />
-              <Guarantee />
-              <Guarantee />
-              <Guarantee />
-              <Guarantee />
-            </div>
+            <GuaranteeList />
+
             <div className="border-t border-gray-100 rounded-b-lg px-8 py-4">
               <Link
                 href="/contact"
@@ -127,6 +122,54 @@ export default function Solutions() {
               </Link>
             </div>
           </Box>
+        </Container.Content>
+      </Container.Root>
+
+      {/* Invite */}
+      <Container.Root>
+        <Container.Content>
+          <Box
+            className="flex flex-col md:flex-row justify-between gap-6 md:gap-16 items-center px-16 py-8  bg-primary-100"
+            spacing="spaceless"
+            color="transparent"
+          >
+            <strong className="text-xl text-gray-50">Request us</strong>
+            <Text variant="white" className="flex-1 text-center md:text-start ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae
+              quam corporis, facilis quo eum, blanditiis ea, reiciendis ducimus
+              voluptate iure corrupti in esse excepturi et. Placeat quo nisi quis!
+            </Text>
+            <Link href="/contact" prefetch={false}>
+              <Button variant="light">Contact</Button>
+            </Link>
+          </Box>
+        </Container.Content>
+      </Container.Root>
+
+      {/* Highlights */}
+      <Container.Root className="">
+        <Container.Content className="flex flex-col gap-32">
+          <Highlights />
+        </Container.Content>
+      </Container.Root>
+
+      {/* CTA */}
+      <Container.Root backgroundColor="blueGradient">
+        <Container.Content className="flex flex-col justify-center items-center gap-8 py-16">
+          <div className="flex flex-col text-4xl sm:text-5xl text-center text-white">
+            <strong>Our solutions</strong>
+          </div>
+
+          <Text className="max-w-2xl text-center text-gray-50">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, beatae.
+            Repellat inventore fuga voluptatibus? Provident nemo ea dolorem ipsum
+            sapiente? Esse id exercitationem omnis labore placeat officiis! Neque,
+            qui voluptas.
+          </Text>
+
+          <div className="w-full flex justify-center">
+            <Button variant="light">Check</Button>
+          </div>
         </Container.Content>
       </Container.Root>
     </>

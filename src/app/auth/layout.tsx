@@ -1,7 +1,7 @@
 'use client'
 
-import { Header } from '@/components/layout/auth/Header'
-import * as Container from '@/components/ui/Container'
+import { Header } from '@/app/auth/components/header'
+import * as Container from '@/components/ui/container'
 import { usePathname } from 'next/navigation'
 import { ReactNode } from 'react'
 

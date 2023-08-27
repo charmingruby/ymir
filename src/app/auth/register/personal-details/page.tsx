@@ -1,6 +1,6 @@
-import * as Input from '@/components/ui/Form/Input'
-import * as AuthForm from '@/components/shared/AuthForm'
-import { NextStepButton } from '@/components/shared/NextStepButton'
+import * as Input from '@/components/ui/form/input'
+import * as AuthForm from '../../components/auth-form'
+import { NextStepButton } from '@/components/next-step-button'
 
 export default function PersonalDetailsForm() {
   return (

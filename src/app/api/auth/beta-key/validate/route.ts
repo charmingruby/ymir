@@ -30,14 +30,10 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    console.log(betaKey.hash, secretValue)
-
     const hashesMatch = await compareHash({
       hash: betaKey.hash,
       valueToValidate: secretValue,
     })
-
-    console.log(hashesMatch)
 
     if (!hashesMatch) {
       return new Response(

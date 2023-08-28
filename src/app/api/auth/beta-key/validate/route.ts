@@ -8,11 +8,26 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
 
-    const { secretValue, senderId } = ValidateBetaKeyValidator.parse(body)
+    const { secretValue, senderUsername } = ValidateBetaKeyValidator.parse(body)
 
+    /* Verify if username exists */
+    const senderUser = await prisma.user.findUnique({
+      where: {
+        username: senderUsername,
+      },
+    })
+
+    if (!senderUser) {
+      return new Response(
+        ResponseMessage({ message: 'Sender user not found.', statusCode: 404 }),
+        { status: 404 },
+      )
+    }
+
+    /* Verify if beta key exists */
     const betaKey = await prisma.betaKey.findUnique({
       where: {
-        senderId,
+        senderId: senderUser.id,
       },
     })
 
@@ -23,13 +38,14 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    /* Verify if beta key have already been accepted */
     if (betaKey.acceptedAt) {
       return new Response(
         ResponseMessage({ message: 'Beta key already used.', statusCode: 401 }),
         { status: 401 },
       )
     }
-
+    /* Verify if secret value match */
     const hashesMatch = await compareHash({
       hash: betaKey.hash,
       valueToValidate: secretValue,
@@ -48,7 +64,7 @@ export async function POST(req: NextRequest) {
 
     await prisma.betaKey.update({
       where: {
-        senderId,
+        senderId: senderUser.id,
       },
       data: {
         acceptedAt: new Date(),

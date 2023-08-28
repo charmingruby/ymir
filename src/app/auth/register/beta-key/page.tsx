@@ -5,13 +5,35 @@ import * as Input from '@/components/ui/form/input'
 import * as AuthForm from '../../components/auth-form'
 import { Label } from '@/components/ui/form/label'
 import { useRouter } from 'next/navigation'
+import { z } from 'zod'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { FieldError } from '@/components/ui/form/field-error'
+
+const betaKeyFormSchema = z.object({
+  secretValue: z.string({ required_error: "Secret value can't be blank." }),
+  senderUsername: z.string({
+    required_error: "Sender username can't be blank.",
+  }),
+})
+
+type BetaKeyFormData = z.infer<typeof betaKeyFormSchema>
 
 export default function BetaKey() {
   const router = useRouter()
 
-  function handleBetaKeySubmit(e: any) {
-    e.preventDefault()
-    router.push('personal-details')
+  const {
+    register,
+    handleSubmit,
+    control,
+    watch,
+    formState: { errors },
+  } = useForm<BetaKeyFormData>({
+    resolver: zodResolver(betaKeyFormSchema),
+  })
+
+  function handleBetaKeySubmit(data: BetaKeyFormData) {
+    console.log(data)
   }
 
   return (
@@ -19,13 +41,32 @@ export default function BetaKey() {
       title="Early access"
       description="If you have a beta key, enter here"
     >
-      <AuthForm.Form>
+      <AuthForm.Form onSubmit={handleSubmit(handleBetaKeySubmit)}>
         <Input.Root>
-          <Label text="Beta key" />
-          <Input.Control placeholder="Key" />
+          <Label text="Secret value" />
+          <Input.Control
+            hasError={!!errors.secretValue}
+            placeholder="saturn-moon"
+            {...register('secretValue')}
+          />
+          {errors.secretValue && (
+            <FieldError errorMessage={errors.secretValue.message} />
+          )}
         </Input.Root>
 
-        <Button size="form" onClick={handleBetaKeySubmit}>
+        <Input.Root>
+          <Label text="Sender username" />
+          <Input.Control
+            hasError={!!errors.senderUsername}
+            placeholder="John Doe"
+            {...register('senderUsername')}
+          />
+          {errors.senderUsername && (
+            <FieldError errorMessage={errors.senderUsername.message} />
+          )}
+        </Input.Root>
+
+        <Button size="form" type="submit">
           <span>Submit key</span>
         </Button>
       </AuthForm.Form>

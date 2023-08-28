@@ -17,7 +17,8 @@ export default function About() {
     <section>
       {/* Hero */}
       <Container.Root className="md:min-h-screen flex items-center justify-center">
-        <Container.Content spacing="topPage"
+        <Container.Content
+          spacing="topPage"
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {/* Illustration */}
@@ -67,7 +68,7 @@ export default function About() {
 
       {/* Banner */}
       <Container.Root>
-        <Container.Content spacing='spaceless'>
+        <Container.Content spacing="spaceless">
           <Box
             className="flex flex-col md:flex-row justify-between gap-6 md:gap-16 items-center px-16 py-8  bg-primary-100"
             spacing="spaceless"
@@ -92,13 +93,13 @@ export default function About() {
       <Container.Root>
         <Container.Content spacing="spaceless" className="py-16 md:py-24">
           {/* Header */}
-          <div className='flex flex-col'>
+          <div className="flex flex-col">
             <SectionDescriptor text="From dev to dev" />
             <div className="flex flex-col gap-4">
               <SectionTitle title="We provide the resolutions of devs" dark />
               <Text>
-                We think about helping not only our team, but the entire ecosystem
-                of developers.
+                We think about helping not only our team, but the entire
+                ecosystem of developers.
               </Text>
             </div>
           </div>
@@ -118,10 +119,11 @@ export default function About() {
                 <SectionTitle title="Meet the team" dark />
               </div>
               <Text className="md:text-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum
-                tempore temporibus eaque iusto velit beatae perferendis voluptate,
-                aperiam numquam, nostrum ea exercitationem corrupti expedita deleniti
-                consectetur dignissimos nihil excepturi!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Suscipit eum tempore temporibus eaque iusto velit beatae
+                perferendis voluptate, aperiam numquam, nostrum ea
+                exercitationem corrupti expedita deleniti consectetur
+                dignissimos nihil excepturi!
               </Text>
             </div>
 
@@ -143,18 +145,16 @@ export default function About() {
 
       {/* Free Trial */}
       <Container.Root>
-        <Container.Content
-          className="grid grid-cols md:grid-cols-2 gap-8"
-        >
+        <Container.Content className="grid grid-cols md:grid-cols-2 gap-8">
           <div className="flex flex-col justify-center">
             <SectionDescriptor text="Interested?" />
             <SectionTitle title="Have a free trial before start" dark />
             <div className="mt-8 space-y-4">
               <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                voluptate eveniet, consectetur eos omnis iusto temporibus, aliquam
-                enim cum voluptatibus voluptatem obcaecati in ipsam reprehenderit
-                harum dicta amet. Reiciendis, odit?
+                voluptate eveniet, consectetur eos omnis iusto temporibus,
+                aliquam enim cum voluptatibus voluptatem obcaecati in ipsam
+                reprehenderit harum dicta amet. Reiciendis, odit?
               </Text>
               <Button className="">
                 <span>Free test for 2 weeks</span>

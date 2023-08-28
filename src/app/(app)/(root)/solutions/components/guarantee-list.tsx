@@ -1,4 +1,4 @@
-import { Guarantee } from "./guarantee-item";
+import { Guarantee } from './guarantee-item'
 
 export function GuaranteeList() {
   return (
@@ -14,7 +14,3 @@ export function GuaranteeList() {
     </div>
   )
 }
-
-
-
-

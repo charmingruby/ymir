@@ -8,15 +8,15 @@ export function EmailForm() {
     <form className="flex flex-col gap-4 justify-center w-full">
       <Input.Root>
         <Label text="Name" />
-        <Input.Control placeholder="John Doe" />
+        <Input.Control hasError={false} placeholder="John Doe" />
       </Input.Root>
       <Input.Root>
         <Label text="Email" />
-        <Input.Control placeholder="johndoe@email.com" />
+        <Input.Control hasError={false} placeholder="johndoe@email.com" />
       </Input.Root>
       <Input.Root>
         <Label text="Subject" />
-        <Input.Control placeholder="Subject" />
+        <Input.Control hasError={false} placeholder="Subject" />
       </Input.Root>
       <TextArea.Root>
         <Label text="Message" />
@@ -27,6 +27,5 @@ export function EmailForm() {
         Send
       </Button>
     </form>
-
   )
 }

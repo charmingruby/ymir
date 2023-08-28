@@ -22,6 +22,7 @@ model BetaKey {
 
 model User {
   id         String   @id @default(cuid())
+  username   String?  @unique
   name       String
   lastName   String   @map("last_name")
   email      String   @unique
@@ -39,7 +40,6 @@ model User {
 
 model UserProfile {
   id            String   @id @default(cuid())
-  username      String?
   description   String?
   roles         String
   techonologies String

@@ -9,8 +9,9 @@ export function SectionDescriptor({
 }: SectionDescriptorProps) {
   return (
     <span
-      className={`text-sm font-semibold uppercase mb-4 ${onDarkColor ? 'text-terciary-300' : 'text-primary-300'
-        }`}
+      className={`text-sm font-semibold uppercase mb-4 ${
+        onDarkColor ? 'text-terciary-300' : 'text-primary-300'
+      }`}
     >
       {text}
     </span>

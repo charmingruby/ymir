@@ -7,6 +7,6 @@ export const CreateBetaKeyValidator = z.object({
 })
 
 export const ValidateBetaKeyValidator = z.object({
-  senderId: z.string(),
+  senderUsername: z.string(),
   secretValue: z.string(),
 })

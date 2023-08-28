@@ -1,5 +1,12 @@
-import { Boxes, ListTodo, MessagesSquare, PieChart, Database, Wallet } from "lucide-react";
-import { FeatureItem } from "./feature-item";
+import {
+  Boxes,
+  ListTodo,
+  MessagesSquare,
+  PieChart,
+  Database,
+  Wallet,
+} from 'lucide-react'
+import { FeatureItem } from './feature-item'
 
 export function FeatureList() {
   return (

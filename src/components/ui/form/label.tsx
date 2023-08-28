@@ -7,7 +7,7 @@ type LabelProps = ComponentProps<'label'> & {
 
 export function Label({ requiredInput = true, text, ...props }: LabelProps) {
   return (
-    <label {...props} className="text-sm">
+    <label {...props} className="text-base">
       <span className="text-gray-400 font-medium">{text}</span>
       {requiredInput && <span className="text-primary-300">*</span>}
     </label>

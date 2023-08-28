@@ -20,10 +20,10 @@ export default function Contact() {
             <div className="space-y-4 mb-12">
               <SectionTitle title="Get in touch with us" dark />
               <Text variant="lowOpacity">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quos
-                eaque laborum illo vel soluta architecto, incidunt molestiae commodi
-                voluptatem quas illum rem libero minus. Facilis reiciendis veniam nisi
-                magnam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                quos eaque laborum illo vel soluta architecto, incidunt
+                molestiae commodi voluptatem quas illum rem libero minus.
+                Facilis reiciendis veniam nisi magnam.
               </Text>
             </div>
 

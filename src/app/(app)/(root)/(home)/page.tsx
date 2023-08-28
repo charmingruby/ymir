@@ -22,30 +22,29 @@ export default function Home() {
       {/* Hero */}
       <Container.Root>
         <Container.Content spacing="topPage" className="min-h-screen">
-          {/* News */}
-          <div className="flex w-auto justify-center mb-4">
-            <Pin icon={Clock} content="Beta will release soon" />
-          </div>
-
           <div className="sm:mx-auto sm:max-w-4xl flex-1 flex flex-col justify-center items-center">
+            {/* News */}
+            <div className="flex w-auto justify-center mb-16">
+              <Pin icon={Clock} content="Beta will release soon" />
+            </div>
+
             {/* Presentation */}
-            <div className="flex w-full flex-col items-center justify-center gap-y-3.2 mb-8">
-              <h1 className="my-0 text-center font-alt font-semibold text-4xl sm:text-5xl">
-                Development assistence that
+            <div className="flex w-full flex-col items-center justify-center gap-y-3.2 mb-12">
+              <h1 className="my-0 text-center font-alt font-bold text-4xl sm:text-5xl">
+                Build apps with <TypingMotivations />
               </h1>
-              <TypingMotivations />
             </div>
 
             {/* Explanation */}
-            <div className="flex w-full mb-12 flex-col gap-8">
+            <div className="flex w-full mb-12 flex-col gap-8 max-w-2xl">
               <Text size="lg" className="text-center">
                 Ymir unlocks a new level of{' '}
                 <span className="font-semibold text-gray-900">
                   Software Development Experience
                 </span>{' '}
-                by working working in each piece of an app, since the business rules
-                to database modeling, all of this been friendly for developers teams
-                and organizations.
+                by working working in each piece of an app, since the business
+                rules to database modeling, all of this been friendly for
+                developers teams and organizations.
               </Text>
             </div>
 
@@ -74,7 +73,8 @@ export default function Home() {
                 Ymir Development Assistance
               </span>{' '}
               is a direct line to make your applications agile management and
-              easiest to development. With our services, we ensure our users that:
+              easiest to development. With our services, we ensure our users
+              that:
             </Text>
           </div>
 
@@ -108,7 +108,8 @@ export default function Home() {
           {/* Feature List */}
           <div className="">
             <Text className="text-sm italic mb-4 text-gray-300">
-              *Most notable features that saves the paronamic view of application.
+              *Most notable features that saves the paronamic view of
+              application.
             </Text>
 
             <FeatureList />
@@ -120,16 +121,14 @@ export default function Home() {
       <Container.Root>
         <Container.Content className="pb-16 md:pb-24 pt-16">
           <div className="flex sm:items-center flex-col">
-            <SectionDescriptor
-              text="Solutions ready for you"
-            />
+            <SectionDescriptor text="Solutions ready for you" />
 
             <div className="sm:text-center gap-4 flex flex-col sm:items-center">
               <SectionTitle title="Products designed for your use" dark />
-              <Text className="max-w-2xl sm:text-center" >
-                We are thrilled to offer not only a developer platform but also a
-                variety of pre-made apps just for you. And if you need a custom
-                app, we{"'"}ve got you covered!
+              <Text className="max-w-2xl sm:text-center">
+                We are thrilled to offer not only a developer platform but also
+                a variety of pre-made apps just for you. And if you need a
+                custom app, we{"'"}ve got you covered!
               </Text>
             </div>
 
@@ -152,11 +151,14 @@ export default function Home() {
             <SectionDescriptor text="we make everyone satisfied" />
 
             <div className="gap-4 flex flex-col">
-              <SectionTitle title="We are a platform to multiple types of works" dark />
-              <Text >
-                Whether you{"'"}re an individual developer, a team, or a thriving
-                enterprise, Ymir provides all the essential components to craft a
-                website that outshines the competition.
+              <SectionTitle
+                title="We are a platform to multiple types of works"
+                dark
+              />
+              <Text>
+                Whether you{"'"}re an individual developer, a team, or a
+                thriving enterprise, Ymir provides all the essential components
+                to craft a website that outshines the competition.
               </Text>
             </div>
 
@@ -188,9 +190,9 @@ export default function Home() {
               <div className="space-y-4">
                 <SectionTitle title="Technology Independent" dark />
                 <Text>
-                  The application is technology-agnostic, offering independence to
-                  users, allowing them to choose their preferred technology stack
-                  without any constraints.
+                  The application is technology-agnostic, offering independence
+                  to users, allowing them to choose their preferred technology
+                  stack without any constraints.
                 </Text>
               </div>
             </div>
@@ -202,9 +204,9 @@ export default function Home() {
             <div className="mt-6 space-y-4">
               <Text>
                 But if needed, we can help you to choose the app lang with{' '}
-                <span className="text-success-300 font-semibold">pros </span> and{' '}
-                <span className="text-danger-300 font-semibold">cons </span> for
-                some apps.
+                <span className="text-success-300 font-semibold">pros </span>{' '}
+                and <span className="text-danger-300 font-semibold">cons </span>{' '}
+                for some apps.
               </Text>
 
               <Button>
@@ -215,8 +217,6 @@ export default function Home() {
 
             <div />
           </div>
-
-
         </Container.Content>
       </Container.Root>
 
@@ -239,6 +239,6 @@ export default function Home() {
           </div>
         </Container.Content>
       </Container.Root>
-    </section >
+    </section>
   )
 }

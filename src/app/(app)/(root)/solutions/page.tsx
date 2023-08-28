@@ -30,8 +30,8 @@ export default function Features() {
                 <Text variant="lowOpacity">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Aliquid odio totam sed, qui ut et reiciendis autem
-                  reprehenderit. Quisquam, harum minima iure tempora sed molestiae
-                  vero omnis quidem possimus ut.
+                  reprehenderit. Quisquam, harum minima iure tempora sed
+                  molestiae vero omnis quidem possimus ut.
                 </Text>
 
                 <div className="flex gap-12 mt-8">
@@ -41,7 +41,9 @@ export default function Features() {
                   </div>
                   <div className="flex flex-col gap-0.5">
                     <p className="font-medium text-base text-gray-400">Scope</p>
-                    <span className="text-sm text-gray-300">Web and Mobile</span>
+                    <span className="text-sm text-gray-300">
+                      Web and Mobile
+                    </span>
                   </div>
                 </div>
 
@@ -89,9 +91,9 @@ export default function Features() {
               <SectionTitle title="Made for productivity" dark />
               <Text className="max-w-2xl sm:text-center" variant="lowOpacity">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Accusamus officia aliquam cum ipsum explicabo, quo excepturi alias
-                provident voluptatum nihil nobis debitis ullam veritatis ex
-                distinctio quis culpa incidunt ipsam?
+                Accusamus officia aliquam cum ipsum explicabo, quo excepturi
+                alias provident voluptatum nihil nobis debitis ullam veritatis
+                ex distinctio quis culpa incidunt ipsam?
               </Text>
             </div>
           </div>
@@ -135,9 +137,10 @@ export default function Features() {
           >
             <strong className="text-xl text-gray-50">Request us</strong>
             <Text variant="white" className="flex-1 text-center md:text-start ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae
-              quam corporis, facilis quo eum, blanditiis ea, reiciendis ducimus
-              voluptate iure corrupti in esse excepturi et. Placeat quo nisi quis!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              quae quam corporis, facilis quo eum, blanditiis ea, reiciendis
+              ducimus voluptate iure corrupti in esse excepturi et. Placeat quo
+              nisi quis!
             </Text>
             <Link href="/contact" prefetch={false}>
               <Button variant="light">Contact</Button>
@@ -161,10 +164,10 @@ export default function Features() {
           </div>
 
           <Text className="max-w-2xl text-center text-gray-50">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, beatae.
-            Repellat inventore fuga voluptatibus? Provident nemo ea dolorem ipsum
-            sapiente? Esse id exercitationem omnis labore placeat officiis! Neque,
-            qui voluptas.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+            beatae. Repellat inventore fuga voluptatibus? Provident nemo ea
+            dolorem ipsum sapiente? Esse id exercitationem omnis labore placeat
+            officiis! Neque, qui voluptas.
           </Text>
 
           <div className="w-full flex justify-center">

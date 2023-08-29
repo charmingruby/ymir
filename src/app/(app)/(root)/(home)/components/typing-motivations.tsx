@@ -12,7 +12,7 @@ export function TypingMotivations() {
   })
 
   return (
-    <span className="text-primary-300 underline underline-offset-4 block md:inline-flex">
+    <span className="text-primary-300 underline underline-offset-4 block h-8 md:h-auto md:inline-flex">
       {serviceMotivationsData}
     </span>
   )

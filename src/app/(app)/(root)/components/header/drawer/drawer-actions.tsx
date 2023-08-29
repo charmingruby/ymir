@@ -11,11 +11,11 @@ export function DrawerActions({ onClick }: DrawerActionsProps) {
         <Button size="sm" color="primary" className="w-auto">
           <Link
             prefetch={false}
-            href="/register"
+            href="/auth/register"
             onClick={onClick}
             className="font-medium"
           >
-            Sign up
+            Get started
           </Link>
         </Button>
       </Link>

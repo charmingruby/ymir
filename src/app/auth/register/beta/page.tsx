@@ -11,15 +11,15 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { FieldError } from '@/components/ui/form/field-error'
 
 const betaKeyFormSchema = z.object({
-  secretValue: z.string({ required_error: "Secret value can't be blank." }),
-  senderUsername: z.string({
-    required_error: "Sender username can't be blank.",
-  }),
+  secretValue: z.string().nonempty({ message: "Secret value can't be blank." }),
+  senderUsername: z
+    .string()
+    .nonempty({ message: "Sender username can't be blank." }),
 })
 
 type BetaKeyFormData = z.infer<typeof betaKeyFormSchema>
 
-export default function BetaKey() {
+export default function Beta() {
   const router = useRouter()
 
   const {

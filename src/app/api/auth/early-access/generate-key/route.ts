@@ -1,26 +1,15 @@
 import { GenerateHash } from '@/libs/hash/generate-hash'
 import { prisma } from '@/libs/prisma'
-import { CreateBetaKeyValidator } from '@/libs/validators/beta-key'
-import { env } from '@/utils/env'
 import { NextRequest } from 'next/server'
 import dayjs from 'dayjs'
 import { ResponseMessage } from '@/utils/response-message'
+import { CreateEarlyAccessKeyValidator } from '@/libs/validators/early-access'
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
 
-    const { secretKey, value, senderId } = CreateBetaKeyValidator.parse(body)
-
-    /* Validate secret key */
-    if (secretKey !== env.SECRET) {
-      return new Response(
-        ResponseMessage({ message: 'Invalid secret key.', statusCode: 401 }),
-        {
-          status: 401,
-        },
-      )
-    }
+    const { value, senderId } = CreateEarlyAccessKeyValidator.parse(body)
 
     /* Validate if sender exists */
     const sender = await prisma.user.findUnique({

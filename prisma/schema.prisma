@@ -21,15 +21,16 @@ model BetaKey {
 }
 
 model User {
-  id         String   @id @default(cuid())
-  name       String
-  lastName   String   @map("last_name")
-  email      String   @unique
-  password   String
-  githubUser String
-  country    String
-  createdAt  DateTime @default(now()) @map("created_at")
-  updatedAt  DateTime @updatedAt @map("updated_at")
+  id            String   @id @default(cuid())
+  name          String
+  lastName      String   @map("last_name")
+  email         String   @unique
+  birthDate     DateTime
+  password      String
+  country       String
+  useMotivation String?  @map("use_motivation")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
 
   userProfile UserProfile?
   betaKey     BetaKey?

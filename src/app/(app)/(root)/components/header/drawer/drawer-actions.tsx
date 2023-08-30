@@ -6,19 +6,12 @@ interface DrawerActionsProps {
 
 export function DrawerActions({ onClick }: DrawerActionsProps) {
   return (
-    <ul className="flex flex-col items-center gap-3">
+    <div className="flex flex-col items-center gap-3">
       <Link href="/auth/register" onClick={onClick} prefetch={false}>
-        <Button size="sm" color="primary" className="w-auto">
-          <Link
-            prefetch={false}
-            href="/auth/register"
-            onClick={onClick}
-            className="font-medium"
-          >
-            Get started
-          </Link>
+        <Button size="sm" color="primary" className="w-auto font-medium">
+          Get started
         </Button>
       </Link>
-    </ul>
+    </div>
   )
 }

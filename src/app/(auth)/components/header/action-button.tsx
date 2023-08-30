@@ -9,14 +9,14 @@ export function ActionButton() {
 
   return (
     <div>
-      {pathname === '/auth/login' ? (
-        <Link prefetch={false} href="/auth/register">
+      {pathname === '/login' ? (
+        <Link prefetch={false} href="/register">
           <Button size="sm" className="w-auto">
             Sign up
           </Button>
         </Link>
       ) : (
-        <Link prefetch={false} href="/auth/login">
+        <Link prefetch={false} href="/login">
           <Button size="sm" className="w-auto">
             Sign in
           </Button>

@@ -12,6 +12,8 @@ import { useState } from 'react'
 import { ResponseMessageProps } from '@/utils/response-message'
 import { useRouter } from 'next/navigation'
 import { Spinner } from '@/components/spinner'
+import { UserServices } from '@/services/users'
+import { useUserRegisterStore } from '@/store/user-register'
 
 const earlyAccessFormSchema = z.object({
   accessKey: z.string().nonempty({ message: "Access key can't be blank." }),
@@ -22,6 +24,7 @@ type EarlyAccessFormData = z.infer<typeof earlyAccessFormSchema>
 export default function Beta() {
   const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const { assignAccessKey } = useUserRegisterStore()
 
   const { push } = useRouter()
 
@@ -41,24 +44,19 @@ export default function Beta() {
       setIsLoading(true)
       setFormSubmitErrors(null)
 
-      const res = await fetch(
-        'http://localhost:3000/api/auth/early-access/validate',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ accessKey }),
-        },
-      )
+      const res = await UserServices.validateEarlyAccessKey({ accessKey })
 
       if (res.status !== 200) {
         const error: ResponseMessageProps = await res.json()
         setFormSubmitErrors(error.message)
+        setIsLoading(false)
         return
       }
-      setIsLoading(false)
-      push('/auth/register/personal-details')
+
+      const validatedAccessKeyAt = assignAccessKey()
+
+      console.log(validatedAccessKeyAt)
+      push('/register/personal-details')
     } catch (err) {
       console.error(err)
     }

@@ -10,13 +10,13 @@ export async function POST(req: NextRequest) {
     const { accessKey } = EarlyAccessKeyValidator.parse(body)
 
     /* Verify if beta key exists */
-    const betaKey = await prisma.betaKey.findUnique({
+    const accessKeyToBeValidated = await prisma.accessKey.findUnique({
       where: {
         hash: accessKey,
       },
     })
 
-    if (!betaKey) {
+    if (!accessKeyToBeValidated) {
       return new Response(
         ResponseMessage({ message: 'Beta key not found.', statusCode: 404 }),
         { status: 404 },
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     }
 
     /* Verify if beta key have already been accepted */
-    if (betaKey.acceptedAt) {
+    if (accessKeyToBeValidated.acceptedAt) {
       return new Response(
         ResponseMessage({ message: 'Beta key already used.', statusCode: 401 }),
         { status: 401 },
@@ -32,9 +32,9 @@ export async function POST(req: NextRequest) {
     }
 
     /* Update */
-    await prisma.betaKey.update({
+    await prisma.accessKey.update({
       where: {
-        senderId: betaKey.senderId,
+        senderId: accessKeyToBeValidated.senderId,
       },
       data: {
         acceptedAt: new Date(),

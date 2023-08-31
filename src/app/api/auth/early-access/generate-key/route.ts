@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
         id: senderId,
       },
       include: {
-        betaKey: {
+        accessKey: {
           select: {
             senderId: true,
           },
@@ -36,9 +36,9 @@ export async function POST(req: NextRequest) {
     }
 
     /* Validate unique generated key for user */
-    const { betaKey } = sender
+    const { accessKey } = sender
 
-    if (betaKey?.senderId !== undefined) {
+    if (accessKey?.senderId !== undefined) {
       return new Response(
         ResponseMessage({
           message: 'User already sent the unique key invite.',
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
     const validUntil = createdAt.add(7, 'day')
     const parsedValidUntilToDate = dayjs(validUntil).toDate()
 
-    await prisma.betaKey.create({
+    await prisma.accessKey.create({
       data: {
         senderId,
         hash: valueHash,

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import './globals.css'
+import '../styles/globals.css'
 import { Inter, Bai_Jamjuree as BaiJamjuree, Righteous } from 'next/font/google'
 
 const inter = Inter({

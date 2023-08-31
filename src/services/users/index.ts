@@ -1,4 +1,4 @@
-import { validateEarlyAccessKey } from '../users-service'
+import { validateEarlyAccessKey } from './users-service'
 
 const UserServices = {
   validateEarlyAccessKey,

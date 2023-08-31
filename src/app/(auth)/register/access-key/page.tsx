@@ -70,6 +70,10 @@ export default function Beta() {
     <AuthForm.Root
       title="Early access"
       description="If you have a beta key, enter here"
+      multistep={{
+        currentStep: 1,
+        totalSteps: 4,
+      }}
     >
       <AuthForm.Form onSubmit={handleSubmit(handleBetaKeySubmit)}>
         <Input.Root>

@@ -34,7 +34,7 @@ export function Root({
         )}
       </div>
 
-      <Box spacing="spaceless" color="light" className="px-4 py-8">
+      <Box spacing="spaceless" color="light" className="px-4 py-6">
         {children}
       </Box>
     </section>

@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model BetaKey {
+model AccessKey {
   id         String    @id @default(cuid())
   hash       String    @unique
   acceptedAt DateTime?
@@ -17,7 +17,7 @@ model BetaKey {
 
   user User? @relation(fields: [senderId], references: [id])
 
-  @@map("beta_keys")
+  @@map("access_keys")
 }
 
 model User {
@@ -33,7 +33,7 @@ model User {
   updatedAt     DateTime @updatedAt @map("updated_at")
 
   userProfile UserProfile?
-  betaKey     BetaKey?
+  accessKey   AccessKey?
 
   @@map("users")
 }
@@ -41,7 +41,7 @@ model User {
 model UserProfile {
   id            String   @id @default(cuid())
   username      String
-  description   String?
+  bio           String?
   roles         String
   techonologies String
   userId        String   @unique @map("user_id")

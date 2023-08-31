@@ -2,7 +2,7 @@
 
 This app is built with Next.js 13, Tailwind, Prisma, Next Auth, Radix UI, Zustand, Tailwind and PlanetScale.
 
-![Screenshot](.github/screenshot.png)
+![Screenshot](.github/screenshot.jpeg)
 
 ## ⚠️ Under development
 

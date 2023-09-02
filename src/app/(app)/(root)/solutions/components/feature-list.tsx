@@ -5,6 +5,7 @@ import {
   PieChart,
   Database,
   Wallet,
+  Users,
 } from 'lucide-react'
 import { FeatureItem } from './feature-item'
 
@@ -24,8 +25,8 @@ export function FeatureList() {
 "
       />
       <FeatureItem
-        icon={MessagesSquare}
-        label="Team Forum"
+        icon={Users}
+        label="Squad friendly"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis dignissimos, nam ea cum minus dolore quibusdam? Saepe, fugiat. Corrupti aliquid pariatur modi. Harum molestiae impedit commodi, ratione id maxime?
 "
       />
@@ -44,8 +45,12 @@ export function FeatureList() {
       <FeatureItem
         icon={Wallet}
         label="Financial Control"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis dignissimos, nam ea cum minus dolore quibusdam? Saepe, fugiat. Corrupti aliquid pariatur modi. Harum molestiae impedit commodi, ratione id maxime?
-"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis dignissimos, nam ea cum minus dolore quibusdam? Saepe, fugiat. Corrupti aliquid pariatur modi. Harum molestiae impedit commodi, ratione id maxime?"
+      />
+      <FeatureItem
+        icon={MessagesSquare}
+        label="Forum"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis dignissimos, nam ea cum minus dolore quibusdam? Saepe, fugiat. Corrupti aliquid pariatur modi. Harum molestiae impedit commodi, ratione id maxime?"
       />
     </div>
   )

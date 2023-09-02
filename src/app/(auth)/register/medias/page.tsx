@@ -18,13 +18,13 @@ const personalDetailsForm = z.object({
   name: z.string(),
   lastName: z.string(),
   email: z.string(),
-  birthDate: z.date(),
+  birthDate: z.string(),
   country: z.string(),
 })
 
 type PersonalDetailsFormData = z.infer<typeof personalDetailsForm>
 
-export default function PersonalDetailsForm() {
+export default function Medias() {
   const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
@@ -68,55 +68,12 @@ export default function PersonalDetailsForm() {
         className="flex  w-full flex-col gap-4"
         onSubmit={handleSubmit(handleSetPersonalDetails)}
       >
-        <div className="w-full grid gap-2 grid-cols-2">
-          {/* Name */}
-          <Input.Root>
-            <Label text="Name" />
-            <Input.Control
-              hasError={false}
-              type="text"
-              placeholder="John"
-              {...register('name')}
-            />
-          </Input.Root>
-          {errors.name && <FieldError errorMessage={errors.name.message} />}
-
-          {/* Last name */}
-          <Input.Root>
-            <Label text="Last Name" />
-            <Input.Control
-              hasError={false}
-              type="text"
-              placeholder="Doe"
-              {...register('lastName')}
-            />
-          </Input.Root>
-        </div>
-
         {/* Email */}
         <Input.Root>
           <Label text="Email" />
           <Input.Control
             hasError={false}
             placeholder="john@doe.com"
-            {...register('email')}
-          />
-        </Input.Root>
-        {errors.email && <FieldError errorMessage={errors.email.message} />}
-
-        {/* Birthdate */}
-        <Input.Root>
-          <Label text="Birthdate" />
-          <Input.Control hasError={false} type="date" {...register('email')} />
-        </Input.Root>
-        {errors.email && <FieldError errorMessage={errors.email.message} />}
-
-        {/* Couuntry */}
-        <Input.Root>
-          <Label text="Country" />
-          <Input.Control
-            hasError={false}
-            placeholder="Brazil"
             {...register('email')}
           />
         </Input.Root>

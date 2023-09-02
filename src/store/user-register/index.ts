@@ -4,23 +4,26 @@ import { UserRegisterActions } from './types/actions'
 
 export const useUserRegisterStore = create<
   UserRegisterStore & UserRegisterActions
->((set, get) => ({
-  name: null,
-  lastName: null,
-  email: null,
-  country: null,
-  password: null,
-  useMotivation: null,
-  assignPersonalDetails: () => {
-    console.log()
-  },
-  assignPassword: () => {
-    console.log()
-  },
-  assignUpdateProfile: () => {
-    console.log()
-  },
-  assignUseMotivation: () => {
-    console.log()
-  },
-}))
+>((set, get) => {
+  return {
+    totalSteps: 5,
+    name: null,
+    lastName: null,
+    email: null,
+    country: null,
+    password: null,
+    useMotivation: null,
+    assignPersonalDetails: () => {
+      console.log()
+    },
+    assignPassword: () => {
+      console.log()
+    },
+    assignUpdateProfile: () => {
+      console.log()
+    },
+    assignUseMotivation: () => {
+      console.log()
+    },
+  }
+})

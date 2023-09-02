@@ -1,10 +1,10 @@
 'use client'
 
+import * as TextArea from '@/components/ui/form/text-area'
 import * as Input from '@/components/ui/form/input'
 import * as AuthForm from '../../components/auth-form'
 import { Label } from '@/components/ui/form/label'
 import { z } from 'zod'
-import { useUserRegisterStore } from '@/store/user-register'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -13,6 +13,7 @@ import { FieldError } from '@/components/ui/form/field-error'
 import { ArrowRight } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useUserRegisterStore } from '@/store/user-register'
 
 const personalDetailsForm = z.object({
   name: z.string(),
@@ -28,14 +29,13 @@ export default function PersonalDetailsForm() {
   const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const { assignPersonalDetails } = useUserRegisterStore()
+  const { totalSteps } = useUserRegisterStore()
 
   const { push } = useRouter()
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<PersonalDetailsFormData>({
     resolver: zodResolver(personalDetailsForm),
@@ -62,16 +62,16 @@ export default function PersonalDetailsForm() {
       description="at the speeed of thought"
       multistep={{
         currentStep: 3,
-        totalSteps: 4,
+        totalSteps,
       }}
     >
       <AuthForm.Form
         className="flex  w-full flex-col gap-4"
         onSubmit={handleSubmit(handleSetPersonalDetails)}
       >
-        {/* Email */}
+        {/* Username */}
         <Input.Root>
-          <Label text="Email" />
+          <Label text="Username" />
           <Input.Control
             hasError={false}
             type="email"
@@ -81,9 +81,9 @@ export default function PersonalDetailsForm() {
         </Input.Root>
         {errors.email && <FieldError errorMessage={errors.email.message} />}
 
-        {/* Email */}
+        {/* Github */}
         <Input.Root>
-          <Label text="Email" />
+          <Label text="Github" />
           <Input.Control
             hasError={false}
             type="email"
@@ -93,16 +93,11 @@ export default function PersonalDetailsForm() {
         </Input.Root>
         {errors.email && <FieldError errorMessage={errors.email.message} />}
 
-        {/* Email */}
-        <Input.Root>
-          <Label text="Email" />
-          <Input.Control
-            hasError={false}
-            type="email"
-            placeholder="john@doe.com"
-            {...register('email')}
-          />
-        </Input.Root>
+        {/* Bio */}
+        <TextArea.Root>
+          <Label text="Biography" />
+          <TextArea.Control placeholder="john@doe.com" {...register('email')} />
+        </TextArea.Root>
         {errors.email && <FieldError errorMessage={errors.email.message} />}
 
         <div className="flex flex-col gap-1 mt-2">

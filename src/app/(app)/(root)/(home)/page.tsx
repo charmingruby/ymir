@@ -119,7 +119,7 @@ export default function Home() {
 
       {/* Solutions */}
       <Container.Root>
-        <Container.Content className="pb-16 md:pb-24 pt-16">
+        <Container.Content className="pb-16 md:pb-24 pt-16 flex flex-col items-center">
           <div className="flex sm:items-center flex-col">
             <SectionDescriptor text="Solutions ready for you" />
 
@@ -131,26 +131,26 @@ export default function Home() {
                 custom app, we{"'"}ve got you covered!
               </Text>
             </div>
-
-            <div className="mt-4">
-              <Button>
-                <span>View all</span>
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
           </div>
 
           <SolutionList />
+
+          <div className="mt-4">
+            <Button>
+              <span>View all</span>
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
         </Container.Content>
       </Container.Root>
 
       {/* Plans */}
       <Container.Root>
         <Container.Content>
-          <div className="flex flex-col max-w-2xl">
+          <div className="flex flex-col lg:items-center mx-auto max-w-2xl">
             <SectionDescriptor text="we make everyone satisfied" />
 
-            <div className="gap-4 flex flex-col">
+            <div className="gap-4 flex flex-col lg:text-center">
               <SectionTitle
                 title="We are a platform to multiple types of works"
                 dark
@@ -160,13 +160,6 @@ export default function Home() {
                 thriving enterprise, Ymir provides all the essential components
                 to craft a website that outshines the competition.
               </Text>
-            </div>
-
-            <div className="mt-4">
-              <Button>
-                <span>View all</span>
-                <ArrowRight className="h-4 w-4" />
-              </Button>
             </div>
           </div>
 

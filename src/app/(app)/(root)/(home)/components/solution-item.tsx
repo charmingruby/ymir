@@ -1,8 +1,18 @@
 import { Box } from '@/components/ui/box'
 import { Text } from '@/components/ui/text'
-import { Building } from 'lucide-react'
+import { ElementType } from 'react'
 
-export function SolutionItem() {
+interface SolutionItemProps {
+  icon: ElementType
+  title: string
+  description: string
+}
+
+export function SolutionItem({
+  icon: Icon,
+  title,
+  description,
+}: SolutionItemProps) {
   return (
     <Box
       spacing="spaceless"
@@ -10,19 +20,12 @@ export function SolutionItem() {
       className="px-4 sm:px-8 py-8 flex flex-col gap-4 items-center"
     >
       <Box spacing="icon" className="bg-primary-300 border-none">
-        <Building className="text-white" />
+        <Icon className="text-white" />
       </Box>
 
       <div className="space-y-2 text-center">
-        <h2 className="font-semibold text-2xl text-primary-300">
-          Institutional website
-        </h2>
-        <Text variant="lowOpacity">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ea
-          aperiam quos ut dolorum odio doloremque voluptate, dignissimos
-          mollitia impedit placeat fugit dolores maiores! Labore laborum atque
-          porro repellat quae.
-        </Text>
+        <h2 className="font-semibold text-2xl text-primary-300">{title}</h2>
+        <Text variant="lowOpacity">{description}</Text>
       </div>
     </Box>
   )

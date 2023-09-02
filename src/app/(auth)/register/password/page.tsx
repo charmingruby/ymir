@@ -4,7 +4,6 @@ import * as Input from '@/components/ui/form/input'
 import * as AuthForm from '../../components/auth-form'
 import { Label } from '@/components/ui/form/label'
 import { z } from 'zod'
-import { useUserRegisterStore } from '@/store/user-register'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -13,6 +12,7 @@ import { FieldError } from '@/components/ui/form/field-error'
 import { ArrowRight } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useUserRegisterStore } from '@/store/user-register'
 
 const personalDetailsForm = z.object({
   name: z.string(),
@@ -28,12 +28,13 @@ export default function PasswordForm() {
   const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
+  const { totalSteps } = useUserRegisterStore()
+
   const { push } = useRouter()
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<PersonalDetailsFormData>({
     resolver: zodResolver(personalDetailsForm),
@@ -60,7 +61,7 @@ export default function PasswordForm() {
       description="at the speeed of thought"
       multistep={{
         currentStep: 2,
-        totalSteps: 4,
+        totalSteps,
       }}
     >
       <AuthForm.Form

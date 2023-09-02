@@ -12,9 +12,9 @@ export function PlanItem({ icon: Icon, name, description }: PlanItemProps) {
   return (
     <Box className="flex flex-col" color="light">
       <div className="sm:px-8 px-4 py-8 flex flex-col items-center">
-        <div className="w-12 h-12 items-center flex justify-center">
-          <Icon className="text-primary-300" size={32} />
-        </div>
+        <Box spacing="icon" className="bg-primary-300 border-none">
+          <Icon className="text-white" />
+        </Box>
 
         <strong className="font-semibold text-2xl mt-6 text-primary-300">
           {name}

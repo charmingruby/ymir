@@ -28,7 +28,7 @@ model UserProfile {
   id            String   @id @default(cuid())
   username      String
   bio           String
-  githubUrl     String
+  githubUser    String
   roles         String?
   techonologies String?
   avatarUrl     String?  @map("avatar_url")

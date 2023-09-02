@@ -7,22 +7,19 @@ export function PlanList() {
       <PlanItem
         icon={User}
         name="Individual"
-        description="Use your favorite tech stack to give your marketing team a powerful
-          and flexible custom page builder of their own."
+        description="Our app serves as an indispensable ally for individuals striving to enhance personal productivity and achieve their unique goals."
       />
 
       <PlanItem
         icon={Users}
         name="Team"
-        description="Use your favorite tech stack to give your marketing team a powerful
-          and flexible custom page builder of their own."
+        description="Empower your teams with a collaboration platform that streamlines communication, project management, and resource sharing, fostering seamless teamwork."
       />
 
       <PlanItem
         icon={Building}
         name="Enterprise"
-        description="Use your favorite tech stack to give your marketing team a powerful
-          and flexible custom page builder of their own."
+        description="Experience enterprise-level productivity optimization with our comprehensive app, tailored to meet the intricate demands and objectives of large organizations."
       />
     </div>
   )

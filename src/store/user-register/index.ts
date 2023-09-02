@@ -8,25 +8,19 @@ export const useUserRegisterStore = create<
   name: null,
   lastName: null,
   email: null,
-  password: null,
   country: null,
-  validatedAccessKeyAt: null,
+  password: null,
   useMotivation: null,
-  assignAccessKey: () => {
-    set({
-      validatedAccessKeyAt: new Date(),
-    })
+  assignPersonalDetails: () => {
+    console.log()
   },
   assignPassword: () => {
     console.log()
   },
-  assignPersonalDetails: () => {
+  assignUpdateProfile: () => {
     console.log()
   },
   assignUseMotivation: () => {
-    console.log()
-  },
-  assignUpdateProfile: () => {
     console.log()
   },
 }))

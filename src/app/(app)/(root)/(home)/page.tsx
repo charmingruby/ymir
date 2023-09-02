@@ -214,7 +214,6 @@ export default function Home() {
                 <ArrowRight size={16} />
               </Button>
             </div>
-
             <div />
           </div>
         </Container.Content>

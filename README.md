@@ -12,7 +12,8 @@ This application was made for purpose of creating a   shareable environment to w
 
 ### Features
 
-- It should be able to ...;
+- It should be able to register and auth;
+- It should be able to invite a friend;
 
 #### Details
 

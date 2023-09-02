@@ -23,7 +23,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
         ) : (
           <Container.Content
             spacing="spaceless"
-            className="flex flex-col flex-1 pt-24 max-w-xl w-full"
+            className="flex flex-col flex-1 pt-24 pb-16 max-w-xl w-full"
           >
             {children}
           </Container.Content>

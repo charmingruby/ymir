@@ -23,7 +23,7 @@ export function Root({
 }: AuthFormRootProps) {
   return (
     <section className="space-y-4">
-      <div className="px-4 flex flex-col gap-8 mb-6">
+      <div className="px-4 flex flex-col gap-2 mb-4">
         <StepDescription title={title} description={description} />
 
         {multistep && (
@@ -34,7 +34,7 @@ export function Root({
         )}
       </div>
 
-      <Box spacing="spaceless" color="light" className="px-4 py-6">
+      <Box spacing="spaceless" color="light" className="px-8 py-6">
         {children}
       </Box>
     </section>

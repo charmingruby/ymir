@@ -20,10 +20,10 @@ export default function SignUp() {
 
       <span className="mt-2 font-medium">Sign up to start using</span>
 
-      <div className="mt-8 flex-col flex max-w-xs w-full">
+      <div className="mt-12 flex-col flex max-w-xs w-full">
         <Link
           prefetch={false}
-          href="/register/access-key"
+          href="/register/personal-details"
           className="w-full flex"
         >
           <Button

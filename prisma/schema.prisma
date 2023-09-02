@@ -7,33 +7,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model AccessKey {
-  id         String    @id @default(cuid())
-  hash       String    @unique
-  acceptedAt DateTime?
-  senderId   String    @unique
-  validUntil DateTime? @map("valid_until")
-  createdAt  DateTime  @default(now()) @map("created_at")
-
-  user User? @relation(fields: [senderId], references: [id])
-
-  @@map("access_keys")
-}
-
 model User {
   id            String   @id @default(cuid())
   name          String
   lastName      String   @map("last_name")
   email         String   @unique
-  birthDate     DateTime
   password      String
+  birthdate     DateTime
   country       String
   useMotivation String?  @map("use_motivation")
   createdAt     DateTime @default(now()) @map("created_at")
   updatedAt     DateTime @updatedAt @map("updated_at")
 
   userProfile UserProfile?
-  accessKey   AccessKey?
 
   @@map("users")
 }
@@ -41,14 +27,16 @@ model User {
 model UserProfile {
   id            String   @id @default(cuid())
   username      String
-  bio           String?
-  roles         String
-  techonologies String
+  bio           String
+  githubUrl     String
+  roles         String?
+  techonologies String?
+  avatarUrl     String?  @map("avatar_url")
   userId        String   @unique @map("user_id")
   createdAt     DateTime @default(now()) @map("created_at")
   updatedAt     DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id])
 
-  @@map("users_profile")
+  @@map("users_profiles")
 }

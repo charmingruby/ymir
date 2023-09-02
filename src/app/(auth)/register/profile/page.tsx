@@ -24,9 +24,11 @@ const personalDetailsForm = z.object({
 
 type PersonalDetailsFormData = z.infer<typeof personalDetailsForm>
 
-export default function PasswordForm() {
+export default function PersonalDetailsForm() {
   const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
+
+  const { assignPersonalDetails } = useUserRegisterStore()
 
   const { push } = useRouter()
 
@@ -59,7 +61,7 @@ export default function PasswordForm() {
       title="Create a new account"
       description="at the speeed of thought"
       multistep={{
-        currentStep: 2,
+        currentStep: 3,
         totalSteps: 4,
       }}
     >
@@ -67,25 +69,37 @@ export default function PasswordForm() {
         className="flex  w-full flex-col gap-4"
         onSubmit={handleSubmit(handleSetPersonalDetails)}
       >
-        {/* Password */}
+        {/* Email */}
         <Input.Root>
-          <Label text="Password" />
+          <Label text="Email" />
           <Input.Control
             hasError={false}
-            type="password"
-            placeholder="********"
+            type="email"
+            placeholder="john@doe.com"
             {...register('email')}
           />
         </Input.Root>
         {errors.email && <FieldError errorMessage={errors.email.message} />}
 
-        {/* Confirm Password */}
+        {/* Email */}
         <Input.Root>
-          <Label text="Confirm Password" />
+          <Label text="Email" />
           <Input.Control
             hasError={false}
-            type="password"
-            placeholder="********"
+            type="email"
+            placeholder="john@doe.com"
+            {...register('email')}
+          />
+        </Input.Root>
+        {errors.email && <FieldError errorMessage={errors.email.message} />}
+
+        {/* Email */}
+        <Input.Root>
+          <Label text="Email" />
+          <Input.Control
+            hasError={false}
+            type="email"
+            placeholder="john@doe.com"
             {...register('email')}
           />
         </Input.Root>

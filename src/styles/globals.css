@@ -22,4 +22,8 @@
     .text-primary-gradient {
         @apply bg-gradient-to-r from-primary-50 to-primary-700 text-transparent bg-clip-text
     }
+
+    input::-webkit-calendar-picker-indicator {
+      filter: invert(100%) brightness(50%);
+    }
 }

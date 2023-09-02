@@ -112,7 +112,6 @@ export default function Features() {
 
           <Box color="light" className="p-0">
             <GuaranteeList />
-
             <div className="border-t border-gray-100 rounded-b-lg px-8 py-4">
               <Link
                 href="/contact"

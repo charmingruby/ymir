@@ -14,7 +14,6 @@ model User {
   email         String   @unique
   password      String
   birthdate     DateTime
-  country       String
   useMotivation String?  @map("use_motivation")
   createdAt     DateTime @default(now()) @map("created_at")
   updatedAt     DateTime @updatedAt @map("updated_at")

@@ -2,58 +2,15 @@
 
 import * as Input from '@/components/ui/form/input'
 import * as AuthForm from '../../components/auth-form'
-import { Label } from '@/components/ui/form/label'
-import { z } from 'zod'
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Spinner } from '@/components/spinner'
-import { FieldError } from '@/components/ui/form/field-error'
 import { ArrowRight } from 'lucide-react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useUserRegisterStore } from '@/store/user-register'
-
-const personalDetailsForm = z.object({
-  name: z.string(),
-  lastName: z.string(),
-  email: z.string(),
-  birthDate: z.string(),
-  country: z.string(),
-})
-
-type PersonalDetailsFormData = z.infer<typeof personalDetailsForm>
+import { usePasswordController } from './usePasswordController'
 
 export default function PasswordForm() {
-  const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const { handleSubmit, register } = usePasswordController()
 
-  const { totalSteps } = useUserRegisterStore()
-
-  const { push } = useRouter()
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<PersonalDetailsFormData>({
-    resolver: zodResolver(personalDetailsForm),
-  })
-
-  async function handleSetPersonalDetails(data: PersonalDetailsFormData) {
-    try {
-      setIsLoading(true)
-      setFormSubmitErrors(null)
-
-      console.log(data)
-
-      push('/register/personal-details')
-    } catch (err) {
-      console.error(err)
-    }
-  }
-
-  const isButtonDisabled = isLoading
+  const isLoading = false
 
   return (
     <AuthForm.Root
@@ -61,39 +18,35 @@ export default function PasswordForm() {
       description="at the speeed of thought"
       multistep={{
         currentStep: 2,
-        totalSteps,
+        totalSteps: 5,
       }}
     >
       <AuthForm.Form
         className="flex  w-full flex-col gap-4"
-        onSubmit={handleSubmit(handleSetPersonalDetails)}
+        onSubmit={handleSubmit}
       >
         {/* Password */}
         <Input.Root>
-          <Label text="Password" />
           <Input.Control
             hasError={false}
             type="password"
-            placeholder="********"
-            {...register('email')}
+            placeholder="Password"
+            {...register('password')}
           />
         </Input.Root>
-        {errors.email && <FieldError errorMessage={errors.email.message} />}
 
         {/* Confirm Password */}
         <Input.Root>
-          <Label text="Confirm Password" />
           <Input.Control
             hasError={false}
             type="password"
-            placeholder="********"
-            {...register('email')}
+            placeholder="Confirm password"
+            {...register('confirmPassword')}
           />
         </Input.Root>
-        {errors.email && <FieldError errorMessage={errors.email.message} />}
 
         <div className="flex flex-col gap-1 mt-2">
-          <Button size="form" type="submit" disabled={isButtonDisabled}>
+          <Button size="form" type="submit" disabled={isLoading}>
             {isLoading ? (
               <Spinner size="md" />
             ) : (
@@ -103,7 +56,6 @@ export default function PasswordForm() {
               </>
             )}
           </Button>
-          {formSubmitErrors && <FieldError errorMessage={formSubmitErrors} />}
         </div>
       </AuthForm.Form>
     </AuthForm.Root>

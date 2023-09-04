@@ -2,58 +2,22 @@
 
 import * as Input from '@/components/ui/form/input'
 import * as AuthForm from '../../components/auth-form'
-import { Label } from '@/components/ui/form/label'
-import { z } from 'zod'
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Spinner } from '@/components/spinner'
 import { FieldError } from '@/components/ui/form/field-error'
 import { ArrowRight } from 'lucide-react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useUserRegisterStore } from '@/store/user-register'
-
-const personalDetailsForm = z.object({
-  name: z.string(),
-  lastName: z.string(),
-  email: z.string(),
-  birthDate: z.date(),
-  country: z.string(),
-})
-
-type PersonalDetailsFormData = z.infer<typeof personalDetailsForm>
+import { usePersonalDetailsController } from './usePersonalDetailsController'
 
 export default function PersonalDetailsForm() {
-  const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-
-  const { totalSteps } = useUserRegisterStore()
-
-  const { push } = useRouter()
-
   const {
+    totalSteps,
+    errors,
+    isButtonDisabled,
+    formSubmitErrors,
+    isLoading,
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm<PersonalDetailsFormData>({
-    resolver: zodResolver(personalDetailsForm),
-  })
-
-  async function handleSetPersonalDetails(data: PersonalDetailsFormData) {
-    try {
-      setIsLoading(true)
-      setFormSubmitErrors(null)
-
-      console.log(data)
-
-      push('/register/personal-details')
-    } catch (err) {
-      console.error(err)
-    }
-  }
-
-  const isButtonDisabled = isLoading
+  } = usePersonalDetailsController()
 
   return (
     <AuthForm.Root
@@ -66,61 +30,42 @@ export default function PersonalDetailsForm() {
     >
       <AuthForm.Form
         className="flex  w-full flex-col gap-4"
-        onSubmit={handleSubmit(handleSetPersonalDetails)}
+        onSubmit={handleSubmit}
       >
         <div className="w-full grid gap-2 grid-cols-2">
           {/* Name */}
           <Input.Root>
-            <Label text="Name" />
-            <Input.Control
-              hasError={false}
-              type="text"
-              placeholder="John"
-              {...register('name')}
-            />
+            <Input.Control placeholder="Name" {...register('name')} />
+            {errors.name && <FieldError errorMessage={errors.name.message} />}
           </Input.Root>
-          {errors.name && <FieldError errorMessage={errors.name.message} />}
 
           {/* Last name */}
           <Input.Root>
-            <Label text="Last Name" />
-            <Input.Control
-              hasError={false}
-              type="text"
-              placeholder="Doe"
-              {...register('lastName')}
-            />
+            <Input.Control placeholder="Last name" {...register('lastName')} />
+            {errors.lastName && (
+              <FieldError errorMessage={errors.lastName?.message} />
+            )}
           </Input.Root>
         </div>
 
         {/* Email */}
         <Input.Root>
-          <Label text="Email" />
-          <Input.Control
-            hasError={false}
-            placeholder="john@doe.com"
-            {...register('email')}
-          />
+          <Input.Control placeholder="Email" {...register('email')} />
+          {errors.email && <FieldError errorMessage={errors.email.message} />}
         </Input.Root>
-        {errors.email && <FieldError errorMessage={errors.email.message} />}
 
         {/* Birthdate */}
         <Input.Root>
-          <Label text="Birthdate" />
-          <Input.Control hasError={false} type="date" {...register('email')} />
-        </Input.Root>
-        {errors.email && <FieldError errorMessage={errors.email.message} />}
-
-        {/* Couuntry */}
-        <Input.Root>
-          <Label text="Country" />
           <Input.Control
-            hasError={false}
-            placeholder="Brazil"
-            {...register('email')}
+            type="date"
+            placeholder="Birthdate"
+            required={false}
+            {...register('birthdate')}
           />
+          {errors.birthdate && (
+            <FieldError errorMessage={errors.birthdate?.message} />
+          )}
         </Input.Root>
-        {errors.email && <FieldError errorMessage={errors.email.message} />}
 
         <div className="flex flex-col gap-1 mt-2">
           <Button size="form" type="submit" disabled={isButtonDisabled}>

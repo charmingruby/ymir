@@ -1,3 +1,4 @@
+import { getUserByEmail } from '@/services/users'
 import { useUserRegisterStore } from '@/store/user-register'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
@@ -26,12 +27,7 @@ const personalDetailsForm = z.object({
   birthdate: z
     .string()
     .nonempty({ message: "Birthdate can't be blank." })
-    .pipe(z.coerce.date().max(new Date())),
-  country: z
-    .string({
-      required_error: "Country can't be blank.",
-    })
-    .nonempty(),
+    .pipe(z.coerce.date().max(new Date(), { message: 'Invalid birthdate.' })),
 })
 
 type PersonalDetailsFormData = z.infer<typeof personalDetailsForm>
@@ -50,14 +46,33 @@ export function usePersonalDetailsController() {
     resolver: zodResolver(personalDetailsForm),
   })
 
-  const handleSubmit = hookFormHandleSubmit((data: PersonalDetailsFormData) => {
-    console.log(data)
-    try {
-      push('/register/personal-details')
-    } catch (err) {
-      console.error(err)
-    }
-  })
+  const handleSubmit = hookFormHandleSubmit(
+    async ({ name, lastName, email, birthdate }: PersonalDetailsFormData) => {
+      try {
+        setIsLoading(true)
+
+        const user = await getUserByEmail(email)
+
+        if (user) {
+          setFormSubmitErrors('Email is already taken.')
+          setIsLoading(false)
+          return
+        }
+
+        assignPersonalDetails({
+          name,
+          lastName,
+          email,
+          birthdate,
+        })
+
+        push('/register/password')
+        setIsLoading(true)
+      } catch (err) {
+        console.error(err)
+      }
+    },
+  )
 
   const isButtonDisabled = isLoading
 

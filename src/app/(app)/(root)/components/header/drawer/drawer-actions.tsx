@@ -9,7 +9,7 @@ export function DrawerActions({ onClick }: DrawerActionsProps) {
     <div className="flex flex-col items-center gap-3">
       <Link href="/register" onClick={onClick} prefetch={false}>
         <Button size="sm" color="primary" className="w-auto font-medium">
-          Get started
+          Start
         </Button>
       </Link>
     </div>

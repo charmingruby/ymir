@@ -35,13 +35,21 @@ export default function PersonalDetailsForm() {
         <div className="w-full grid gap-2 grid-cols-2">
           {/* Name */}
           <Input.Root>
-            <Input.Control placeholder="Name" {...register('name')} />
+            <Input.Control
+              placeholder="Name"
+              hasError={!!errors?.name}
+              {...register('name')}
+            />
             {errors.name && <FieldError errorMessage={errors.name.message} />}
           </Input.Root>
 
           {/* Last name */}
           <Input.Root>
-            <Input.Control placeholder="Last name" {...register('lastName')} />
+            <Input.Control
+              placeholder="Last name"
+              hasError={!!errors?.lastName}
+              {...register('lastName')}
+            />
             {errors.lastName && (
               <FieldError errorMessage={errors.lastName?.message} />
             )}
@@ -50,7 +58,11 @@ export default function PersonalDetailsForm() {
 
         {/* Email */}
         <Input.Root>
-          <Input.Control placeholder="Email" {...register('email')} />
+          <Input.Control
+            placeholder="Email"
+            hasError={!!errors?.email}
+            {...register('email')}
+          />
           {errors.email && <FieldError errorMessage={errors.email.message} />}
         </Input.Root>
 
@@ -60,6 +72,7 @@ export default function PersonalDetailsForm() {
             type="date"
             placeholder="Birthdate"
             required={false}
+            hasError={!!errors?.birthdate}
             {...register('birthdate')}
           />
           {errors.birthdate && (

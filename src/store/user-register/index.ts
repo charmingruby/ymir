@@ -1,6 +1,9 @@
 import { create } from 'zustand'
 import { UserRegisterStore } from './types/store'
-import { UserRegisterActions } from './types/actions'
+import {
+  AssignPersonalDetailsProps,
+  UserRegisterActions,
+} from './types/actions'
 
 export const useUserRegisterStore = create<
   UserRegisterStore & UserRegisterActions
@@ -10,11 +13,21 @@ export const useUserRegisterStore = create<
     name: null,
     lastName: null,
     email: null,
-    country: null,
+    birthdate: null,
     password: null,
     useMotivation: null,
-    assignPersonalDetails: () => {
-      console.log()
+    assignPersonalDetails: ({
+      name,
+      lastName,
+      email,
+      birthdate,
+    }: AssignPersonalDetailsProps) => {
+      set({
+        name,
+        lastName,
+        email,
+        birthdate,
+      })
     },
     assignPassword: () => {
       console.log()

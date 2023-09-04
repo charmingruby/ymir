@@ -28,7 +28,7 @@ const Control = forwardRef<HTMLInputElement, InputProps>(
         />
         <label
           htmlFor={inputId}
-          className='absolute left-[13px] top-2 text-xs pointer-events-none text-gray-300 peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 transition-all'
+          className={`absolute left-[13px] top-2 text-xs pointer-events-none ${hasError ? 'text-danger-300' : 'text-gray-300'} peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 transition-all`}
         >
           {placeholder}
         </label>

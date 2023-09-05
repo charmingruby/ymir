@@ -1,53 +1,24 @@
-import * as Container from '@/components/ui/container'
-import { EmailForm } from './components/email-form'
-import { Phone, Mail, MapPin } from 'lucide-react'
-import { Text } from '@/components/ui/text'
-import { AdditionalInfo } from './components/additional-info'
-import { SectionDescriptor } from '@/components/section-descriptor'
 import { SectionTitle } from '@/components/section-title'
+import * as Container from '@/components/ui/container'
+import { Text } from '@/components/ui/text'
 
 export default function Contact() {
   return (
-    <Container.Root>
-      <Container.Content
-        className="min-h-screen flex items-center flex-row"
-        spacing="topPage"
-      >
-        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <section className="flex flex-col">
-            <SectionDescriptor text="Contact us" />
+    <Container.Root className="min-h-screen">
+      <Container.Content spacing="topPage" className="grid grid-cols-2">
+        <div>
+          <SectionTitle title="Get in touch" dark />
 
-            <div className="space-y-4 mb-12">
-              <SectionTitle title="Get in touch with us" dark />
-              <Text variant="lowOpacity">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                quos eaque laborum illo vel soluta architecto, incidunt
-                molestiae commodi voluptatem quas illum rem libero minus.
-                Facilis reiciendis veniam nisi magnam.
-              </Text>
-            </div>
+          <Text>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+            similique vitae cupiditate doloribus debitis quo repellendus soluta
+            in unde molestias minus inventore porro hic quisquam fuga,
+            perferendis aspernatur iure architecto.
+          </Text>
 
-            <div className="space-y-6">
-              <AdditionalInfo
-                icon={Phone}
-                label="Phone number"
-                content="+55 (32) 9 9110-0990"
-              />
-              <AdditionalInfo
-                icon={Mail}
-                label="Email"
-                content="gustavodiasa2121@gmail.com"
-              />
-              <AdditionalInfo
-                icon={MapPin}
-                label="Location"
-                content="Minas Gerais, Brazil"
-              />
-            </div>
-          </section>
-
-          <EmailForm />
+          <div></div>
         </div>
+        <div>form</div>
       </Container.Content>
     </Container.Root>
   )

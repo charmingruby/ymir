@@ -28,10 +28,15 @@ export default function Medias() {
     >
       <AuthForm.Form className="flex  w-full flex-col gap-4">
         <div className="flex flex-col gap-8 mt-2">
-          <Box color="light" className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-2">
-              <Github />
-              <span>GitHub</span>
+          <Box
+            color="light"
+            className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between py-4"
+          >
+            <div className="flex items-center gap-3">
+              <div className="p-1.5 bg-primary-300 rounded-md border-2 border-primary-50">
+                <Github className="h-4 w-4 text-gray-50" />
+              </div>
+              <span className="font-medium">Github</span>
             </div>
             <Button variant="secondary" className="flex flex-row items-center">
               <strong className="font-semibold text-sm">Connect</strong>

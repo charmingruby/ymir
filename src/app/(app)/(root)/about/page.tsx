@@ -51,10 +51,10 @@ export default function About() {
               </div>
 
               <Text variant="default">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                ipsum et labore molestias recusandae, nemo natus non accusantium
-                accusamus qui culpa earum quasi veritatis repellat eligendi ab
-                reprehenderit aperiam voluptate.
+                Ymir is your go-to platform for developer success. It
+                streamlines project management, fosters collaboration, and
+                offers valuable learning resources. With Ymir, your coding
+                journey becomes smoother and more efficient.
               </Text>
             </div>
 
@@ -91,7 +91,10 @@ export default function About() {
 
       {/* Cycle */}
       <Container.Root>
-        <Container.Content spacing="spaceless" className="py-16 md:py-24">
+        <Container.Content
+          spacing="spaceless"
+          className="lg:pt-24 py-8 lg:pb-14"
+        >
           {/* Header */}
           <div className="flex flex-col">
             <SectionDescriptor text="From dev to dev" />
@@ -144,7 +147,10 @@ export default function About() {
 
       {/* Free Trial */}
       <Container.Root>
-        <Container.Content className="grid grid-cols md:grid-cols-2 gap-8">
+        <Container.Content
+          spacing="spaceless"
+          className="grid grid-cols md:grid-cols-2 gap-8"
+        >
           <div className="flex flex-col justify-center">
             <SectionDescriptor text="Interested?" />
             <SectionTitle title="Meke your trial" dark />

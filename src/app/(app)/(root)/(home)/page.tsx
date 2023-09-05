@@ -173,11 +173,6 @@ export default function Home() {
           spacing="aboveCTA"
           className="grid grid-cols-1 gap-12 md:grid-cols-2"
         >
-          {/* Illustration */}
-          <div className="hidden md:flex items-center justify-center">
-            <Image src={codingImage} alt="developing image" />
-          </div>
-
           {/* Content */}
           <div>
             <div className="flex flex-col">
@@ -212,25 +207,30 @@ export default function Home() {
             </div>
             <div />
           </div>
+
+          {/* Illustration */}
+          <div className="hidden md:flex items-center justify-center">
+            <Image src={codingImage} alt="developing image" />
+          </div>
         </Container.Content>
       </Container.Root>
 
       {/* CTA */}
-      <Container.Root backgroundColor="blueGradient">
-        <Container.Content className="flex flex-col justify-center items-center gap-8 py-16">
-          <div className="flex flex-col text-4xl sm:text-5xl text-center text-white">
+      <Container.Root>
+        <Container.Content className="flex flex-col justify-center items-center gap-8 lg:py-24">
+          <div className="flex flex-col text-4xl gap-2 sm:text-5xl text-center">
             <strong>Boost your productivity.</strong>
             <strong>Start using our app today.</strong>
           </div>
 
-          <Text className="max-w-2xl text-center text-gray-50">
+          <Text variant="lowOpacity" className="max-w-2xl text-center">
             Supercharge your productivity with our app. Start today and unlock a
             new level of efficiency, collaboration, and organization. Experience
             the difference firsthand.
           </Text>
 
           <div className="w-full flex justify-center">
-            <Button variant="light">Start now</Button>
+            <Button>Sign Up - It{"'"}s free</Button>
           </div>
         </Container.Content>
       </Container.Root>

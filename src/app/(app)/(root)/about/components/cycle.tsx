@@ -2,11 +2,11 @@ import {
   ArrowRight,
   ArrowDown,
   ArrowUp,
-  User2,
   ListTodo,
   Wallet,
   PencilRuler,
   ArrowLeft,
+  Users,
 } from 'lucide-react'
 import { CycleElement } from './cycle-element'
 
@@ -17,7 +17,7 @@ export function Cycle() {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col md:flex-row gap-8">
           <CycleElement
-            icon={User2}
+            icon={Users}
             title="Create your squad"
             description="Create a project and invite other developers to the team."
           />

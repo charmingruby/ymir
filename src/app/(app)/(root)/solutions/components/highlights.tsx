@@ -13,10 +13,8 @@ export function Highlights() {
           <SectionDescriptor text="Constant updates" />
           <SectionTitle title="Always improving the platform" dark />
           <Text className="mt-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            enim neque fuga voluptates ut amet ratione ipsam corrupti
-            consequatur, ducimus nobis praesentium corporis vel, provident rem
-            magnam quod ipsum? Adipisci.
+            We{"'"}re committed to continuous improvement, and our platform is
+            regularly updated with exciting new features and enhancements.
           </Text>
         </div>
         <div className="flex justify-center items-center">
@@ -37,13 +35,12 @@ export function Highlights() {
           />
         </div>
         <div className="flex flex-col justify-center -order-last md:order-last">
-          <SectionDescriptor text="Constant updates" />
-          <SectionTitle title="Always improving the platform" dark />
+          <SectionDescriptor text="Unveiling Our Platform's Hidden Treasures" />
+          <SectionTitle title="Your path to limitless potential" dark />
           <Text className="mt-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            enim neque fuga voluptates ut amet ratione ipsam corrupti
-            consequatur, ducimus nobis praesentium corporis vel, provident rem
-            magnam quod ipsum? Adipisci.
+            Uncover the full potential of your projects by exploring our
+            platform. Discover new features, tools, and possibilities that will
+            empower you to achieve more.
           </Text>
         </div>
       </div>

@@ -9,7 +9,7 @@ export const useUserRegisterStore = create<
   UserRegisterStore & UserRegisterActions
 >((set, get) => {
   return {
-    totalSteps: 5,
+    totalSteps: 4,
     name: null,
     lastName: null,
     email: null,

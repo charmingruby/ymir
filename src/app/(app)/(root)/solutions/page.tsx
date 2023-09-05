@@ -64,19 +64,20 @@ export default function Features() {
       </Container.Root>
 
       {/* Banner */}
-      <Container.Root className="bg-primary-gradient">
-        <Container.Content className="flex w-full text-center items-center gap-8 flex-col max-w-2xl mx-auto">
-          <div className="flex flex-col gap-4 items-center">
-            <Flame className="text-white h-10 w-10" />
-            <SectionTitle title="Blazing features" />
-            <Text variant="white">
-              Dive into a world of innovative features designed to streamline
-              your workflow, boost productivity, and transform the way you do
-              business. Explore the possibilities and unlock your full potential
-              with our software.
-            </Text>
-          </div>
-          <Button variant="light">Have a trial</Button>
+      <Container.Root>
+        <Container.Content className="flex w-full text-center items-center gap-8 flex-col">
+          <Box className="bg-primary-100 border-none w-full py-8">
+            <div className="flex flex-col gap-4 items-center max-w-2xl mx-auto">
+              <Flame className="text-white h-10 w-10" />
+              <SectionTitle title="Blazing features" />
+              <Text variant="white">
+                Dive into a world of innovative features designed to streamline
+                your workflow, boost productivity, and transform the way you do
+                business. Explore the possibilities and unlock your full
+                potential with our software.
+              </Text>
+            </div>
+          </Box>
         </Container.Content>
       </Container.Root>
 
@@ -109,10 +110,8 @@ export default function Features() {
           >
             <strong className="text-xl text-gray-50">Request us</strong>
             <Text variant="white" className="flex-1 text-center md:text-start ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              quae quam corporis, facilis quo eum, blanditiis ea, reiciendis
-              ducimus voluptate iure corrupti in esse excepturi et. Placeat quo
-              nisi quis!
+              We welcome your feature ideas! Share your suggestions with us, and
+              together, we{"'"}ll make our app even better.
             </Text>
             <Link href="/contact" prefetch={false}>
               <Button variant="light">Contact</Button>
@@ -129,21 +128,21 @@ export default function Features() {
       </Container.Root>
 
       {/* CTA */}
-      <Container.Root backgroundColor="blueGradient">
-        <Container.Content className="flex flex-col justify-center items-center gap-8 py-16">
-          <div className="flex flex-col text-4xl sm:text-5xl text-center text-white">
-            <strong>Our solutions</strong>
+      <Container.Root>
+        <Container.Content className="flex flex-col justify-center items-center gap-8 lg:py-24">
+          <div className="flex flex-col text-4xl sm:text-5xl text-center">
+            <strong>Enjoy our platform</strong>
           </div>
-
-          <Text className="max-w-2xl text-center text-gray-50">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-            beatae. Repellat inventore fuga voluptatibus? Provident nemo ea
-            dolorem ipsum sapiente? Esse id exercitationem omnis labore placeat
-            officiis! Neque, qui voluptas.
+          <Text className="max-w-2xl text-center">
+            Join our vibrant developer platform today and unlock endless
+            possibilities! Dive into a world of innovation, collaboration, and
+            creativity as you bring your ideas to life. Embrace the future of
+            technology and experience the thrill of coding, building, and
+            sharing with our thriving community.
           </Text>
 
           <div className="w-full flex justify-center">
-            <Button variant="light">Check</Button>
+            <Button>Start now</Button>
           </div>
         </Container.Content>
       </Container.Root>

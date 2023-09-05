@@ -11,7 +11,7 @@ import { Text } from '@/components/ui/text'
 export default function SignIn() {
   return (
     <Container.Root>
-      <Container.Content className="max-w-xl lg:max-w-7xl min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-12 lg:py-12">
+      <Container.Content className="max-w-xl lg:max-w-7xl h-screen flex-row flex-1 items-center lg:grid lg:grid-cols-2 gap-12 lg:py-12">
         <div className="flex flex-col justify-center w-full mx-auto max-w-md">
           <div className="flex flex-row items-center gap-2 justify-center">
             <Image src={grayLogo} alt="Ymir Logo" className="h-5 w-5" />
@@ -33,7 +33,12 @@ export default function SignIn() {
             </Input.Root>
 
             <Input.Root>
-              <Input.Control name="email" placeholder="Email" />
+              <Input.Control
+                name="password"
+                type="password"
+                required={false}
+                placeholder="Password"
+              />
             </Input.Root>
 
             <Button size="form" className="w-full mt-4">
@@ -53,7 +58,7 @@ export default function SignIn() {
           </span>
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex flex-col justify-center">
           <div className="flex items-center justify-center">
             <Image src={teamImage} alt="Sign in image" className="w-[30rem]" />
           </div>

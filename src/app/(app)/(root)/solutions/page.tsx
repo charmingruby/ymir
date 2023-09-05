@@ -7,7 +7,6 @@ import { Text } from '@/components/ui/text'
 import { ArrowRight, Flame } from 'lucide-react'
 import Image from 'next/image'
 import { FeatureList } from './components/feature-list'
-import { GuaranteeList } from './components/guarantee-list'
 import Link from 'next/link'
 import { Box } from '@/components/ui/box'
 import { Highlights } from './components/highlights'
@@ -97,30 +96,6 @@ export default function Features() {
           </div>
 
           <FeatureList />
-        </Container.Content>
-      </Container.Root>
-
-      {/* Guarantees */}
-      <Container.Root>
-        <Container.Content>
-          <div className="flex flex-col mb-12 lg:items-center">
-            <SectionDescriptor text="Our Guarantees" />
-            <SectionTitle title="We provides with excellence" dark />
-          </div>
-
-          <Box color="light" className="p-0">
-            <GuaranteeList />
-            <div className="border-t border-gray-100 rounded-b-lg px-8 py-4">
-              <Link
-                href="/contact"
-                prefetch={false}
-                className="flex gap-2 items-center justify-center text-gray-200 transition-colors hover:text-primary-300"
-              >
-                <span className="font-medium">Talk with us to get a demo</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </Box>
         </Container.Content>
       </Container.Root>
 

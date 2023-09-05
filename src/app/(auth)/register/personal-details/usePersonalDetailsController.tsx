@@ -42,6 +42,7 @@ export function usePersonalDetailsController() {
     register,
     handleSubmit: hookFormHandleSubmit,
     formState: { errors },
+    watch,
   } = useForm<PersonalDetailsFormData>({
     resolver: zodResolver(personalDetailsForm),
   })
@@ -74,7 +75,15 @@ export function usePersonalDetailsController() {
     },
   )
 
-  const isButtonDisabled = isLoading
+  const nameField = watch('name')
+  const lastNameField = watch('lastName')
+  const emailField = watch('email')
+  const birthdateField = watch('birthdate')
+
+  const fieldsFilled =
+    nameField && lastNameField && emailField && birthdateField
+
+  const isButtonDisabled = isLoading || !fieldsFilled
 
   return {
     handleSubmit,

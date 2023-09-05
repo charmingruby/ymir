@@ -1,28 +1,80 @@
 'use client'
 
+import { useUserRegisterStore } from '@/store/user-register'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 const passwordFormSchema = z.object({
-  password: z.string().nonempty(),
-  confirmPassword: z.string().nonempty(),
+  password: z
+    .string()
+    .nonempty({
+      message: "Password can't be blank.",
+    })
+    .min(7, 'Password must be at least 7 characters.')
+    .max(14, {
+      message: 'Password must be a maximum of 14 characters.',
+    }),
+  confirmPassword: z.string().nonempty({
+    message: "Confirmed password can't be blank.",
+  }),
 })
 
 type PasswordFormData = z.infer<typeof passwordFormSchema>
 
 export function usePasswordController() {
-  const { handleSubmit: hookFormHandleSubmit, register } =
-    useForm<PasswordFormData>({
-      resolver: zodResolver(passwordFormSchema),
-    })
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [formSubmitError, setFormSubmitError] = useState<string | null>(null)
+
+  const { totalSteps } = useUserRegisterStore()
+
+  const { push } = useRouter()
+
+  const {
+    handleSubmit: hookFormHandleSubmit,
+    register,
+    watch,
+    formState: { errors, isSubmitting },
+  } = useForm<PasswordFormData>({
+    resolver: zodResolver(passwordFormSchema),
+  })
 
   const handleSubmit = hookFormHandleSubmit((data: PasswordFormData) => {
-    console.log(data)
+    try {
+      setIsLoading(true)
+      const { password, confirmPassword } = data
+
+      const passwordsMatch = password === confirmPassword
+
+      if (!passwordsMatch) {
+        setFormSubmitError("Passwords doesn't match.")
+        setIsLoading(false)
+        return
+      }
+
+      push('/register/medias')
+      setIsLoading(false)
+    } catch (err) {
+      console.error(err)
+    }
   })
+
+  const passwordField = watch('password')
+  const confirmPasswordField = watch('confirmPassword')
+
+  const fieldsFilled = passwordField && confirmPasswordField
+
+  const isButtonDisabled = isSubmitting || isLoading || !fieldsFilled
 
   return {
     register,
     handleSubmit,
+    formSubmitError,
+    totalSteps,
+    errors,
+    isButtonDisabled,
+    isLoading,
   }
 }

@@ -1,18 +1,35 @@
-import { ArrowRight, ArrowDown, ArrowUp } from 'lucide-react'
+import {
+  ArrowRight,
+  ArrowDown,
+  ArrowUp,
+  User2,
+  ListTodo,
+  Wallet,
+  PencilRuler,
+  ArrowLeft,
+} from 'lucide-react'
 import { CycleElement } from './cycle-element'
 
 export function Cycle() {
   return (
-    <div className="mt-12">
+    <div className="mt-16 flex w-full flex-col">
       {/* Top Cycle */}
       <div className="flex flex-col gap-8">
         <div className="flex flex-col md:flex-row gap-8">
-          <CycleElement />
+          <CycleElement
+            icon={User2}
+            title="Create your squad"
+            description="Create a project and invite other developers to the team."
+          />
           <div className="flex justify-center items-center">
             <ArrowRight className="hidden md:block text-primary-300" />
             <ArrowDown className="block md:hidden text-primary-300" />
           </div>
-          <CycleElement />
+          <CycleElement
+            icon={ListTodo}
+            title="Assignments"
+            description="Divide projects tasks as sprints per developer."
+          />
         </div>
       </div>
 
@@ -29,12 +46,20 @@ export function Cycle() {
       {/* Bottom Cycle */}
       <div className="mt-8 flex flex-col gap-8">
         <div className="flex flex-col md:flex-row gap-8">
-          <CycleElement />
+          <CycleElement
+            icon={PencilRuler}
+            title="Services"
+            description="Think about the rules business of features to be developed."
+          />
           <div className="flex justify-center items-center text-primary-100">
-            <ArrowRight className="hidden md:block text-primary-300" />
+            <ArrowLeft className="hidden md:block text-primary-300" />
             <ArrowDown className="block md:hidden text-primary-300" />
           </div>
-          <CycleElement />
+          <CycleElement
+            icon={Wallet}
+            title="Expenses"
+            description="Estimate the income and outcome values for the project balance."
+          />
         </div>
       </div>
     </div>

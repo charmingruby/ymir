@@ -6,11 +6,18 @@ import { Button } from '@/components/ui/button'
 import { Spinner } from '@/components/spinner'
 import { ArrowRight } from 'lucide-react'
 import { usePasswordController } from './usePasswordController'
+import { FieldError } from '@/components/ui/form/field-error'
 
 export default function PasswordForm() {
-  const { handleSubmit, register } = usePasswordController()
-
-  const isLoading = false
+  const {
+    handleSubmit,
+    register,
+    totalSteps,
+    isButtonDisabled,
+    isLoading,
+    formSubmitError,
+    errors,
+  } = usePasswordController()
 
   return (
     <AuthForm.Root
@@ -18,35 +25,39 @@ export default function PasswordForm() {
       description="at the speeed of thought"
       multistep={{
         currentStep: 2,
-        totalSteps: 5,
+        totalSteps,
       }}
     >
       <AuthForm.Form
-        className="flex  w-full flex-col gap-4"
+        className="flex w-full flex-col gap-4"
         onSubmit={handleSubmit}
       >
         {/* Password */}
         <Input.Root>
           <Input.Control
-            hasError={false}
+            hasError={!!errors.password}
             type="password"
+            required={false}
             placeholder="Password"
             {...register('password')}
           />
+          <FieldError errorMessage={errors?.password?.message} />
         </Input.Root>
 
         {/* Confirm Password */}
         <Input.Root>
           <Input.Control
-            hasError={false}
+            hasError={!!errors.confirmPassword}
             type="password"
             placeholder="Confirm password"
+            required={false}
             {...register('confirmPassword')}
           />
+          <FieldError errorMessage={errors?.confirmPassword?.message} />
         </Input.Root>
 
         <div className="flex flex-col gap-1 mt-2">
-          <Button size="form" type="submit" disabled={isLoading}>
+          <Button size="form" type="submit" disabled={isButtonDisabled}>
             {isLoading ? (
               <Spinner size="md" />
             ) : (
@@ -56,6 +67,7 @@ export default function PasswordForm() {
               </>
             )}
           </Button>
+          {formSubmitError && <FieldError errorMessage={formSubmitError} />}
         </div>
       </AuthForm.Form>
     </AuthForm.Root>

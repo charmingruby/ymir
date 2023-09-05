@@ -95,9 +95,9 @@ export default function About() {
           {/* Header */}
           <div className="flex flex-col">
             <SectionDescriptor text="From dev to dev" />
-            <div className="flex flex-col gap-4">
-              <SectionTitle title="We provide the resolutions of devs" dark />
-              <Text>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <SectionTitle title="Development cycle" dark />
+              <Text variant="lowOpacity">
                 We think about helping not only our team, but the entire
                 ecosystem of developers.
               </Text>
@@ -119,11 +119,10 @@ export default function About() {
                 <SectionTitle title="Meet the team" dark />
               </div>
               <Text className="md:text-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Suscipit eum tempore temporibus eaque iusto velit beatae
-                perferendis voluptate, aperiam numquam, nostrum ea
-                exercitationem corrupti expedita deleniti consectetur
-                dignissimos nihil excepturi!
+                Meet our extraordinary team of developers. With a wealth of
+                expertise, a relentless pursuit of excellence, and a track
+                record of delivering exceptional software solutions, we{"'"}re
+                here to transform your vision into reality.
               </Text>
             </div>
 
@@ -148,18 +147,21 @@ export default function About() {
         <Container.Content className="grid grid-cols md:grid-cols-2 gap-8">
           <div className="flex flex-col justify-center">
             <SectionDescriptor text="Interested?" />
-            <SectionTitle title="Have a free trial before start" dark />
-            <div className="mt-8 space-y-4">
+            <SectionTitle title="Meke your trial" dark />
+            <div className="mt-8 flex flex-col gap-8">
               <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                voluptate eveniet, consectetur eos omnis iusto temporibus,
-                aliquam enim cum voluptatibus voluptatem obcaecati in ipsam
-                reprehenderit harum dicta amet. Reiciendis, odit?
+                Join us in shaping the future! We invite you to be a part of our
+                software testing community. Your valuable feedback will help us
+                refine and improve our product, ensuring it meets your needs and
+                expectations. Together, we can create a better software
+                experience. Become a tester today and make a difference!
               </Text>
-              <Button className="">
-                <span>Free test for 2 weeks</span>
-                <ArrowRight size={16} />
-              </Button>
+              <Link href="/register" prefetch={false}>
+                <Button className="">
+                  <span>Get started</span>
+                  <ArrowRight size={16} />
+                </Button>
+              </Link>
             </div>
           </div>
 

@@ -1,21 +1,28 @@
 import { Box } from '@/components/ui/box'
 import { Text } from '@/components/ui/text'
-import { Users } from 'lucide-react'
+import { ElementType } from 'react'
 
-export function CycleElement() {
+interface CycleElementProps {
+  icon: ElementType
+  title: string
+  description: string
+}
+
+export function CycleElement({
+  icon: Icon,
+  title,
+  description,
+}: CycleElementProps) {
   return (
-    <Box className="relative" color="light">
-      <Box color="light" spacing="icon" className="absolute -top-6">
-        <Users className="text-primary-300" />
+    <Box className="w-full py-8 flex flex-col items-center" color="light">
+      <Box spacing="icon" className="bg-primary-300 border-none">
+        <Icon className="text-gray-50" />
       </Box>
 
-      <span className="text-xl font-semibold mt-4 block">Team Friendly</span>
+      <span className="text-xl font-semibold mt-4 block">{title}</span>
 
       <Text className="mt-2" variant="lowOpacity" size="sm">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-        consequuntur cupiditate earum impedit rerum enim minima, maxime
-        voluptatibus. Cupiditate commodi obcaecati pariatur dignissimos a, earum
-        inventore. Officiis veritatis reiciendis laudantium.
+        {description}
       </Text>
     </Box>
   )

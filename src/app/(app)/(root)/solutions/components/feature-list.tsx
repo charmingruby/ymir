@@ -5,7 +5,6 @@ import {
   PieChart,
   Database,
   Wallet,
-  Users,
 } from 'lucide-react'
 import { FeatureItem } from './feature-item'
 
@@ -22,12 +21,6 @@ export function FeatureList() {
         icon={ListTodo}
         label="Assignments Control"
         description="          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis dignissimos, nam ea cum minus dolore quibusdam? Saepe, fugiat. Corrupti aliquid pariatur modi. Harum molestiae impedit commodi, ratione id maxime?
-"
-      />
-      <FeatureItem
-        icon={Users}
-        label="Squad friendly"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis dignissimos, nam ea cum minus dolore quibusdam? Saepe, fugiat. Corrupti aliquid pariatur modi. Harum molestiae impedit commodi, ratione id maxime?
 "
       />
       <FeatureItem

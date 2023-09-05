@@ -28,10 +28,10 @@ export default function Features() {
 
               <div className="flex flex-col mt-8">
                 <Text variant="lowOpacity">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Aliquid odio totam sed, qui ut et reiciendis autem
-                  reprehenderit. Quisquam, harum minima iure tempora sed
-                  molestiae vero omnis quidem possimus ut.
+                  Turbocharge your projects with our expertly crafted
+                  developer-ready templates. Whether you{"'"}re a seasoned pro
+                  or just starting, our extensive collection accelerates your
+                  work while ensuring top-quality results.
                 </Text>
 
                 <div className="flex gap-12 mt-8">
@@ -71,13 +71,13 @@ export default function Features() {
             <Flame className="text-white h-10 w-10" />
             <SectionTitle title="Blazing features" />
             <Text variant="white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-              laborum iste laudantium adipisci enim, nemo earum illum veritatis
-              fugiat doloribus ea accusamus? Aut rerum nesciunt qui optio
-              repudiandae eaque dolore?
+              Dive into a world of innovative features designed to streamline
+              your workflow, boost productivity, and transform the way you do
+              business. Explore the possibilities and unlock your full potential
+              with our software.
             </Text>
           </div>
-          <Button variant="light">Request demo</Button>
+          <Button variant="light">Have a trial</Button>
         </Container.Content>
       </Container.Root>
 
@@ -90,10 +90,8 @@ export default function Features() {
             <div className="sm:text-center gap-4 flex flex-col sm:items-center">
               <SectionTitle title="Made for productivity" dark />
               <Text className="max-w-2xl sm:text-center" variant="lowOpacity">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Accusamus officia aliquam cum ipsum explicabo, quo excepturi
-                alias provident voluptatum nihil nobis debitis ullam veritatis
-                ex distinctio quis culpa incidunt ipsam?
+                Each element is dedicated to streamlining your workflow,
+                ensuring efficiency at every turn.
               </Text>
             </div>
           </div>

@@ -122,8 +122,8 @@ export default function Features() {
       </Container.Root>
 
       {/* Highlights */}
-      <Container.Root className="">
-        <Container.Content className="flex flex-col gap-32">
+      <Container.Root>
+        <Container.Content spacing="aboveCTA" className="flex flex-col gap-32">
           <Highlights />
         </Container.Content>
       </Container.Root>

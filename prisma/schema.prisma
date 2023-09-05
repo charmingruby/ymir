@@ -8,15 +8,14 @@ datasource db {
 }
 
 model User {
-  id            String   @id @default(cuid())
-  name          String
-  lastName      String   @map("last_name")
-  email         String   @unique
-  password      String
-  birthdate     DateTime
-  useMotivation String?  @map("use_motivation")
-  createdAt     DateTime @default(now()) @map("created_at")
-  updatedAt     DateTime @updatedAt @map("updated_at")
+  id        String   @id @default(cuid())
+  name      String
+  lastName  String   @map("last_name")
+  email     String   @unique
+  password  String
+  birthdate DateTime
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   userProfile UserProfile?
 
@@ -27,6 +26,7 @@ model UserProfile {
   id            String   @id @default(cuid())
   username      String
   bio           String
+  useMotivation String?  @map("use_motivation")
   roles         String?
   techonologies String?
   avatarUrl     String?  @map("avatar_url")

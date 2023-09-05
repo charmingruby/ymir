@@ -1,3 +1,5 @@
+import PersonalDetailsForm from './personal-details/page'
+
 export default function SignUp() {
-  return <div>kk</div>
+  return <PersonalDetailsForm />
 }

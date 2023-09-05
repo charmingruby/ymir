@@ -21,7 +21,7 @@ export function CycleElement({
 
       <span className="text-xl font-semibold mt-4 block">{title}</span>
 
-      <Text className="mt-2" variant="lowOpacity" size="sm">
+      <Text className="mt-2" variant="lowOpacity">
         {description}
       </Text>
     </Box>

@@ -12,6 +12,7 @@ const content = tv({
       default: 'py-8 lg:py-14',
       topPage: 'pb-8 pt-20',
       spaceless: 'py-0',
+      aboveCTA: 'pt-8 pb-12 lg:pt-14 pb-20',
     },
   },
   defaultVariants: {

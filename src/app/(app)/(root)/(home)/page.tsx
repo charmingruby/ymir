@@ -135,8 +135,8 @@ export default function Home() {
 
           <SolutionList />
 
-          <div className="mt-4">
-            <Button>
+          <div className="mt-4 w-full flex justify-center">
+            <Button className="w-full">
               <span>View all</span>
               <ArrowRight className="h-4 w-4" />
             </Button>
@@ -169,7 +169,10 @@ export default function Home() {
 
       {/* Attractive */}
       <Container.Root>
-        <Container.Content className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <Container.Content
+          spacing="aboveCTA"
+          className="grid grid-cols-1 gap-12 md:grid-cols-2"
+        >
           {/* Illustration */}
           <div className="hidden md:flex items-center justify-center">
             <Image src={codingImage} alt="developing image" />

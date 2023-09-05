@@ -54,7 +54,7 @@ export function usePasswordController() {
         return
       }
 
-      push('/register/medias')
+      push('/register/connect-github')
       setIsLoading(false)
     } catch (err) {
       console.error(err)

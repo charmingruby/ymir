@@ -16,7 +16,7 @@ import { TechnologyList } from './components/technology-list'
 import { SolutionList } from './components/solution-list'
 import { PlanList } from './components/plan-list'
 
-export default function Home() {
+export default async function Home() {
   return (
     <section>
       {/* Hero */}

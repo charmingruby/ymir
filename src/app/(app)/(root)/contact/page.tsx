@@ -16,7 +16,9 @@ export default function Contact() {
             perferendis aspernatur iure architecto.
           </Text>
 
-          <div></div>
+          <div>
+            <div></div>
+          </div>
         </div>
         <div>form</div>
       </Container.Content>

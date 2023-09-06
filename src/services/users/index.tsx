@@ -1,13 +1,19 @@
+import { api } from '@/libs/axios'
+
+interface CreateUserRequest {
+  name: string
+  lastName: string
+  email: string
+  birthdate: Date
+  password: string
+}
+
 const getUserByEmail = async (email: string) => {
-  const res = await fetch(`/api/auth/get-user-by-email`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email }),
+  const res = await api.post('/api/users/get-user-by-email', {
+    email,
   })
 
-  const data = await res.json()
+  const data = await res.data
 
   if (!data) {
     return null
@@ -16,4 +22,8 @@ const getUserByEmail = async (email: string) => {
   return data
 }
 
-export { getUserByEmail }
+const createUser = async (props: CreateUserRequest) => {
+  await api.post('/api/users/register', props)
+}
+
+export { getUserByEmail, createUser }

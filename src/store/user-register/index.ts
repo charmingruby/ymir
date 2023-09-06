@@ -7,15 +7,14 @@ import {
 
 export const useUserRegisterStore = create<
   UserRegisterStore & UserRegisterActions
->((set, get) => {
+>((set) => {
   return {
     totalSteps: 4,
-    name: null,
-    lastName: null,
-    email: null,
-    birthdate: null,
-    password: null,
-    useMotivation: null,
+    name: '',
+    lastName: '',
+    email: '',
+    birthdate: new Date(),
+    password: '',
     assignPersonalDetails: ({
       name,
       lastName,

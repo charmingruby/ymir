@@ -1,5 +1,6 @@
 'use client'
 
+import { createUser } from '@/services/users'
 import { useUserRegisterStore } from '@/store/user-register'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
@@ -28,7 +29,8 @@ export function usePasswordController() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [formSubmitError, setFormSubmitError] = useState<string | null>(null)
 
-  const { totalSteps } = useUserRegisterStore()
+  const { totalSteps, name, lastName, email, birthdate } =
+    useUserRegisterStore()
 
   const { push } = useRouter()
 
@@ -41,7 +43,7 @@ export function usePasswordController() {
     resolver: zodResolver(passwordFormSchema),
   })
 
-  const handleSubmit = hookFormHandleSubmit((data: PasswordFormData) => {
+  const handleSubmit = hookFormHandleSubmit(async (data: PasswordFormData) => {
     try {
       setIsLoading(true)
       const { password, confirmPassword } = data
@@ -53,6 +55,14 @@ export function usePasswordController() {
         setIsLoading(false)
         return
       }
+
+      await createUser({
+        name,
+        lastName,
+        email,
+        birthdate,
+        password,
+      })
 
       push('/register/connect-github')
       setIsLoading(false)

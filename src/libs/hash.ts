@@ -1,4 +1,4 @@
-import { compare } from 'bcrypt'
+import { compare, hash } from 'bcrypt'
 
 interface CompareHashRequest {
   hash: string
@@ -10,4 +10,8 @@ export async function compareHash({
   valueToValidate,
 }: CompareHashRequest) {
   return await compare(valueToValidate, hash)
+}
+
+export async function generateHash(value: string) {
+  return await hash(value, 6)
 }

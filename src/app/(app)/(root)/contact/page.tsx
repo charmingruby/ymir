@@ -44,7 +44,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center gap-8 lg:gap-10 lg:max-w-sm mx-auto">
+        <div className="flex flex-col py-10 justify-center gap-8 lg:gap-10 lg:max-w-sm mx-auto">
           {/* Logo */}
           <div className="flex flex-row gap-2 items-center">
             <Image src={logo} alt="Logo" className="w-7 h-7" />

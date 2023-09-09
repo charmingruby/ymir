@@ -10,7 +10,7 @@ export function DrawerActions({ onClick }: DrawerActionsProps) {
       <Link
         href="/login"
         prefetch={false}
-        className="font-medium text-gray-300 hover:text-primary-300 transition-colors"
+        className="text-gray-300 hover:text-primary-300 transition-colors font-medium"
       >
         Sign in
       </Link>

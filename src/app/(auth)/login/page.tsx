@@ -11,10 +11,10 @@ import { Header } from '../components/header'
 
 export default function SignIn() {
   return (
-    <div className="h-screen ">
+    <div>
       <Header />
-      <Container.Root>
-        <Container.Content className="max-w-xl lg:max-w-7xl flex-row flex-1 items-center lg:grid lg:grid-cols-2 gap-12 lg:py-12">
+      <Container.Root className="min-h-screen flex items-center">
+        <Container.Content className="max-w-xl lg:max-w-7xl lg:grid lg:grid-cols-2 gap-12 lg:py-12">
           <div className="hidden lg:flex flex-col justify-center">
             <div className="flex items-center justify-center">
               <Image

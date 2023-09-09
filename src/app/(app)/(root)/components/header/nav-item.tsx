@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Link from 'next/link'
 
 interface NavItemProps {
@@ -13,11 +15,10 @@ export function NavItem({ label, url, currentUrl }: NavItemProps) {
     <Link prefetch={false} href={url} key={url}>
       <li
         className={`flex h-16 cursor-pointer items-center transition-colors group hover:text-primary-300
-      ${
-        isTheCurrentUrl
-          ? 'border-b-2 border-primary-300 text-primary-300'
-          : 'border-b-2 border-gray-50 text-gray-400'
-      }
+      ${isTheCurrentUrl
+            ? 'border-b-2 border-primary-300 text-primary-300'
+            : 'border-b-2 border-gray-50 text-gray-300'
+          }
       `}
       >
         <span className="text-base font-medium group-hover:text-primary-300 transition-colors">

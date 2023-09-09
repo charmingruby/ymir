@@ -25,10 +25,10 @@ export function Drawer({ onClick }: DrawerProps) {
                 url="/solutions"
               />
               <DrawerItem label="Contact" onClick={onClick} url="/contact" />
+
+              <DrawerActions onClick={onClick} />
             </ul>
           </div>
-
-          <DrawerActions onClick={onClick} />
         </div>
       </Container.Content>
     </Container.Root>

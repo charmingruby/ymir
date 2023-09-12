@@ -1,12 +1,12 @@
 'use client'
 
-import { createUser } from '@/services/users'
 import { useUserRegisterStore } from '@/store/user-register'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { createUser } from '@/services/users'
 
 const passwordFormSchema = z.object({
   password: z

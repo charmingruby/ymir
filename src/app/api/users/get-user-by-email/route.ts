@@ -22,10 +22,10 @@ export async function POST(req: NextRequest) {
       return new Response(
         ResponseMessage({
           message: 'Email is already taken.',
-          statusCode: 401,
+          statusCode: 404,
         }),
 
-        { status: 401 },
+        { status: 404 },
       )
     }
 

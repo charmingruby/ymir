@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight, Check } from 'lucide-react'
 import { useGithubController } from './useGithubController'
 import { FieldError } from '@/components/ui/form/field-error'
+import Link from 'next/link'
 
 export default function ConnectGithub() {
   const {
@@ -14,6 +15,7 @@ export default function ConnectGithub() {
     formSubmitErrors,
     errors,
     connectionSuccess,
+    isNextStepButtonDisabled,
   } = useGithubController()
 
   return (
@@ -41,7 +43,16 @@ export default function ConnectGithub() {
                 />
               </div>
 
-              <Button className="w-fit px-4" type="submit" variant="secondary">
+              <Button
+                className={`w-fit px-4
+                ${
+                  connectionSuccess &&
+                  'hover:bg-primary-300 bg-primary-300 text-gray-50 cursor-default'
+                }
+                `}
+                type={connectionSuccess ? 'button' : 'submit'}
+                variant="secondary"
+              >
                 {!connectionSuccess ? (
                   <>
                     <span className="hidden md:block">Connect</span>
@@ -58,10 +69,33 @@ export default function ConnectGithub() {
           </div>
 
           <div className="flex flex-col w-full gap-1">
-            <Button size="form" type="submit" className="w-full">
-              <span>Next step</span>
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            {connectionSuccess ? (
+              <Link
+                href="/register/profile"
+                prefetch={false}
+                className="w-full"
+              >
+                <Button
+                  size="form"
+                  type={connectionSuccess ? 'button' : 'submit'}
+                  className="md:w-full"
+                  disabled={isNextStepButtonDisabled}
+                >
+                  <span>Next step</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            ) : (
+              <Button
+                size="form"
+                type={connectionSuccess ? 'button' : 'submit'}
+                className="w-full"
+                disabled={isNextStepButtonDisabled}
+              >
+                <span>Next step</span>
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            )}
             {formSubmitErrors && <FieldError errorMessage={formSubmitErrors} />}
           </div>
         </div>

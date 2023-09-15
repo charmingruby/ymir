@@ -57,7 +57,11 @@ export default function PasswordForm() {
         </Input.Root>
 
         <div className="flex flex-col gap-1 mt-2">
-          <Button size="form" type="submit" disabled={isButtonDisabled}>
+          <Button
+            size="form"
+            type={isButtonDisabled ? 'button' : 'submit'}
+            disabled={isButtonDisabled}
+          >
             {isLoading ? (
               <Spinner size="md" />
             ) : (

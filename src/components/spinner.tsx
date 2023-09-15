@@ -1,10 +1,10 @@
 import { clsx } from 'clsx'
 
 interface SpinnerProps {
-  size: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg'
 }
 
-export function Spinner({ size }: SpinnerProps) {
+export function Spinner({ size = 'md' }: SpinnerProps) {
   return (
     <div role="status">
       <svg

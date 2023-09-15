@@ -83,7 +83,7 @@ export default function PersonalDetailsForm() {
         <div className="flex flex-col gap-1 mt-2">
           <Button size="form" type="submit" disabled={!!isButtonDisabled}>
             {isLoading ? (
-              <Spinner size="md" />
+              <Spinner />
             ) : (
               <>
                 <span>Next step</span>

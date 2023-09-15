@@ -26,13 +26,20 @@ export function useGithubController() {
   const [connectionSuccess, setConnectionSuccess] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const { totalSteps, email } = useUserRegisterStore()
+
   const {
     register,
     handleSubmit: hookFormHandleSubmit,
     formState: { errors },
+    watch,
   } = useForm<ConnectGithubFormData>({
     resolver: zodResolver(connectGithubForm),
   })
+
+  const githubUserField = watch('githubUser')
+
+  const isNextStepButtonDisabled =
+    !githubUserField || isLoading || !connectionSuccess
 
   const handleSubmit = hookFormHandleSubmit(
     async ({ githubUser }: ConnectGithubFormData) => {
@@ -71,5 +78,6 @@ export function useGithubController() {
     formSubmitErrors,
     isLoading,
     connectionSuccess,
+    isNextStepButtonDisabled,
   }
 }

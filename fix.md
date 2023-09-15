@@ -1,3 +1,0 @@
-- Register
-  - [ ] User id cookies
-  - [ ] Github connection errors

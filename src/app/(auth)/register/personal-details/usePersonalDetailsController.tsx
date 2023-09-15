@@ -33,11 +33,11 @@ const personalDetailsForm = z.object({
 type PersonalDetailsFormData = z.infer<typeof personalDetailsForm>
 
 export function usePersonalDetailsController() {
+  const { push } = useRouter()
+
   const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const { totalSteps, assignPersonalDetails } = useUserRegisterStore()
-  const { push } = useRouter()
-
   const {
     register,
     handleSubmit: hookFormHandleSubmit,
@@ -46,6 +46,15 @@ export function usePersonalDetailsController() {
   } = useForm<PersonalDetailsFormData>({
     resolver: zodResolver(personalDetailsForm),
   })
+
+  const nameField = watch('name')
+  const lastNameField = watch('lastName')
+  const emailField = watch('email')
+  const birthdateField = watch('birthdate')
+
+  const fieldsFilled =
+    nameField && lastNameField && emailField && birthdateField
+  const isButtonDisabled = isLoading || !fieldsFilled
 
   const handleSubmit = hookFormHandleSubmit(
     async ({ name, lastName, email, birthdate }: PersonalDetailsFormData) => {
@@ -74,16 +83,6 @@ export function usePersonalDetailsController() {
       }
     },
   )
-
-  const nameField = watch('name')
-  const lastNameField = watch('lastName')
-  const emailField = watch('email')
-  const birthdateField = watch('birthdate')
-
-  const fieldsFilled =
-    nameField && lastNameField && emailField && birthdateField
-
-  const isButtonDisabled = isLoading || !fieldsFilled
 
   return {
     handleSubmit,

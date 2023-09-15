@@ -26,13 +26,12 @@ const passwordFormSchema = z.object({
 type PasswordFormData = z.infer<typeof passwordFormSchema>
 
 export function usePasswordController() {
+  const { push } = useRouter()
+
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [formSubmitError, setFormSubmitError] = useState<string | null>(null)
-
   const { totalSteps, name, lastName, email, birthdate } =
     useUserRegisterStore()
-
-  const { push } = useRouter()
 
   const {
     handleSubmit: hookFormHandleSubmit,
@@ -42,6 +41,11 @@ export function usePasswordController() {
   } = useForm<PasswordFormData>({
     resolver: zodResolver(passwordFormSchema),
   })
+
+  const passwordField = watch('password')
+  const confirmPasswordField = watch('confirmPassword')
+  const fieldsFilled = passwordField && confirmPasswordField
+  const isButtonDisabled = isSubmitting || isLoading || !fieldsFilled
 
   const handleSubmit = hookFormHandleSubmit(async (data: PasswordFormData) => {
     try {
@@ -70,13 +74,6 @@ export function usePasswordController() {
       console.error(err)
     }
   })
-
-  const passwordField = watch('password')
-  const confirmPasswordField = watch('confirmPassword')
-
-  const fieldsFilled = passwordField && confirmPasswordField
-
-  const isButtonDisabled = isSubmitting || isLoading || !fieldsFilled
 
   return {
     register,

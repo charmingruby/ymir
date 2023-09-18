@@ -2,12 +2,7 @@ import { prisma } from '@/libs/prisma'
 import { ResponseMessage } from '@/utils/response-message'
 import { NextRequest } from 'next/server'
 import { z } from 'zod'
-
-interface ConnectGithubParams {
-  params: {
-    email: string
-  }
-}
+import { cookies } from 'next/headers'
 
 const GithubDetails = z.object({
   login: z.string(),
@@ -18,18 +13,30 @@ const ConnectGithubRequest = z.object({
   githubUser: z.string().nonempty(),
 })
 
-export async function POST(
-  request: NextRequest,
-  { params: { email } }: ConnectGithubParams,
-) {
+export async function POST(request: NextRequest) {
+  // Validate user id on cookies
+  const cookieStore = cookies()
+  const id = cookieStore.get('@ymir:userId')?.value
+  console.log(id)
+  if (!id) {
+    return new Response(
+      ResponseMessage({
+        statusCode: 403,
+        message: 'User id not found on cookies.',
+      }),
+    )
+  }
+
+  // Get body
   const body = await request.json()
   const { githubUser } = ConnectGithubRequest.parse(body)
 
+  // Get Github profile infos
   const rawData = await fetch(`https://api.github.com/users/${githubUser}`)
   const data = await rawData.json()
 
+  // Validating if user was found
   if (data.message === 'Not Found') {
-    console.log('rr')
     return new Response(
       ResponseMessage({
         message: 'Github user not found',
@@ -43,13 +50,13 @@ export async function POST(
 
   const parsedData = GithubDetails.parse(data)
 
+  // Validate if already have an user this Github User
   const user = await prisma.user.findUnique({
     where: {
-      email,
+      id,
       githubUser,
     },
   })
-
   if (user) {
     return new Response(
       ResponseMessage({
@@ -62,9 +69,10 @@ export async function POST(
     )
   }
 
+  // Connect user and Github
   await prisma.user.update({
     where: {
-      email,
+      id,
     },
     data: {
       githubUser: parsedData.login,

@@ -2,6 +2,7 @@ import { generateHash } from '@/libs/hash'
 import { prisma } from '@/libs/prisma'
 import { NextRequest } from 'next/server'
 import { z } from 'zod'
+import { cookies } from 'next/headers'
 
 const RegisterUserRequest = z.object({
   name: z.string().nonempty(),
@@ -19,7 +20,7 @@ export async function POST(req: NextRequest) {
 
   const passwordHash = await generateHash(password)
 
-  await prisma.user.create({
+  const { id } = await prisma.user.create({
     data: {
       name,
       lastName,
@@ -27,6 +28,15 @@ export async function POST(req: NextRequest) {
       password: passwordHash,
       email,
     },
+  })
+
+  // 1 week life age
+  const maxAge = 60 * 60 * 24 * 7
+
+  cookies().set({
+    name: '@ymir:userId',
+    value: id,
+    maxAge,
   })
 
   return new Response(null, { status: 201 })

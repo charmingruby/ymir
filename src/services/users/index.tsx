@@ -1,6 +1,10 @@
 import { api } from '@/libs/axios'
 import { AxiosError } from 'axios'
 
+interface ValidatePersonalDetailsRequest {
+  email: string
+}
+
 interface CreateUserRequest {
   name: string
   lastName: string
@@ -10,13 +14,14 @@ interface CreateUserRequest {
 }
 
 interface ConnectGithubRequest {
-  email: string
   githubUser: string
 }
 
-const getUserByEmail = async (email: string) => {
+const validatePersonalDetails = async ({
+  email,
+}: ValidatePersonalDetailsRequest) => {
   try {
-    const res = await api.post('/api/users/get-user-by-email', {
+    const res = await api.post('/api/users/validate-personal-details', {
       email,
     })
 
@@ -35,15 +40,19 @@ const getUserByEmail = async (email: string) => {
 }
 
 const createUser = async (props: CreateUserRequest) => {
-  await api.post('/api/register', props)
+  await api.post('/api/users', props)
 }
 
-const connectGithub = async ({ email, githubUser }: ConnectGithubRequest) => {
-  const res = await api.post(`/api/connect-github/${email}`, {
+// const getUserGithubData = async () => {
+//   await api.get('/api/')
+// }
+
+const connectGithub = async ({ githubUser }: ConnectGithubRequest) => {
+  const res = await api.post(`/api/connect-github`, {
     githubUser,
   })
 
   return res
 }
 
-export { getUserByEmail, createUser, connectGithub }
+export { validatePersonalDetails, createUser, connectGithub }

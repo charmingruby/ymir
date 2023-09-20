@@ -25,7 +25,7 @@ export function useGithubController() {
   const [formSubmitErrors, setFormSubmitErrors] = useState<string | null>(null)
   const [connectionSuccess, setConnectionSuccess] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const { totalSteps, email } = useUserRegisterStore()
+  const { totalSteps } = useUserRegisterStore()
 
   const {
     register,
@@ -49,7 +49,6 @@ export function useGithubController() {
         const {
           data: { statusCode },
         }: ConnectGithubResponse = await connectGithub({
-          email,
           githubUser,
         })
 

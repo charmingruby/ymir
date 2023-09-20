@@ -1,4 +1,4 @@
-import { getUserByEmail } from '@/services/users'
+import { validatePersonalDetails } from '@/services/users'
 import { useUserRegisterStore } from '@/store/user-register'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
@@ -61,7 +61,9 @@ export function usePersonalDetailsController() {
       try {
         setIsLoading(true)
 
-        const user = await getUserByEmail(email)
+        const user = await validatePersonalDetails({
+          email,
+        })
 
         if (user) {
           setFormSubmitErrors('Email is already taken.')

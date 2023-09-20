@@ -3,14 +3,15 @@ import { ResponseMessage } from '@/utils/response-message'
 import { NextRequest } from 'next/server'
 import { z } from 'zod'
 
-const GetUserByEmailRequest = z.object({
+const ValidatePersonalDetailsRequest = z.object({
   email: z.string(),
 })
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { email } = GetUserByEmailRequest.parse(body)
+
+    const { email } = ValidatePersonalDetailsRequest.parse(body)
 
     const user = await prisma.user.findUnique({
       where: {
@@ -22,14 +23,15 @@ export async function POST(req: NextRequest) {
       return new Response(
         ResponseMessage({
           message: 'Email is already taken.',
-          statusCode: 404,
+          statusCode: 409,
         }),
-
-        { status: 404 },
+        {
+          status: 409,
+        },
       )
     }
 
-    return new Response(JSON.stringify(user), { status: 200 })
+    return new Response(null, { status: 200 })
   } catch (err) {
     console.error(err)
   }

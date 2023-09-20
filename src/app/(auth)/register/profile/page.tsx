@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Spinner } from '@/components/spinner'
 import { ArrowRight } from 'lucide-react'
 
-export default function PersonalDetailsForm() {
+export default function ProfileForm() {
   const isButtonDisabled = false
 
   return (

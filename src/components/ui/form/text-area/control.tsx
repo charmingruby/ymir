@@ -1,12 +1,43 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, forwardRef } from 'react'
 
-type ControlProps = ComponentProps<'textarea'>
-
-export function Control(props: ControlProps) {
-  return (
-    <textarea
-      className="resize-none w-full bg-white h-24 p-4 outline-none box-border border-gray-100 focus:border-primary-300 transition-colors border rounded-md placeholder-gray-200"
-      {...props}
-    />
-  )
+interface ControlProps extends ComponentProps<'textarea'> {
+  hasError?: boolean
+  name: string
 }
+
+const Control = forwardRef<HTMLTextAreaElement, ControlProps>(
+  ({ id, name, hasError = false, placeholder, ...props }, ref) => {
+    const inputId = id ?? name
+
+    /* eslint-disable */
+    return (
+      <div className='relative'>
+        <textarea
+          {...props}
+          ref={ref}
+          id={inputId}
+          name={name}
+          className={`
+          w-full bg-white min-h-[8rem] px-3 outline-none box-border placeholder-shown:pt-4 pt-6 peer transition-colors border rounded-lg
+          ${hasError
+              ? 'border-danger-300 placeholder-danger-300'
+              : 'border-gray-100 placeholder-gray-200 focus:border-primary-300 '
+            }
+      `}
+          placeholder=' '
+        />
+        <label
+          htmlFor={inputId}
+          className={`absolute left-[13px] top-2 text-xs pointer-events-none ${hasError ? 'text-danger-300' : 'text-gray-300'} peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 transition-all`}
+        >
+          {placeholder}
+        </label>
+      </div>
+    )
+    /* eslint-enable */
+  },
+)
+
+Control.displayName = 'Control'
+
+export { Control }

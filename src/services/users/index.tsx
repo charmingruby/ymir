@@ -17,6 +17,13 @@ interface ConnectGithubRequest {
   githubUser: string
 }
 
+interface CreateProfileRequest {
+  bio: string
+  stack: string
+  role: string
+  username: string
+}
+
 const validatePersonalDetails = async ({
   email,
 }: ValidatePersonalDetailsRequest) => {
@@ -43,16 +50,28 @@ const createUser = async (props: CreateUserRequest) => {
   await api.post('/api/users', props)
 }
 
-// const getUserGithubData = async () => {
-//   await api.get('/api/')
-// }
-
 const connectGithub = async ({ githubUser }: ConnectGithubRequest) => {
-  const res = await api.post(`/api/connect-github`, {
+  const res = await api.post(`/api/users/connect-github`, {
     githubUser,
   })
 
   return res
 }
 
-export { validatePersonalDetails, createUser, connectGithub }
+const createProfile = async ({
+  bio,
+  role,
+  stack,
+  username,
+}: CreateProfileRequest) => {
+  const res = await api.post('/api/users/update-profile', {
+    bio,
+    role,
+    stack,
+    username,
+  })
+
+  return res
+}
+
+export { validatePersonalDetails, createUser, connectGithub, createProfile }

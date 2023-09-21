@@ -6,6 +6,7 @@ import { ArrowRight, Check } from 'lucide-react'
 import { useGithubController } from './useGithubController'
 import { FieldError } from '@/components/ui/form/field-error'
 import Link from 'next/link'
+import { Spinner } from '@/components/spinner'
 
 export default function ConnectGithub() {
   const {
@@ -15,7 +16,8 @@ export default function ConnectGithub() {
     formSubmitErrors,
     errors,
     connectionSuccess,
-    isNextStepButtonDisabled,
+    isButtonDisabled,
+    isSubmitting,
   } = useGithubController()
 
   return (
@@ -44,7 +46,7 @@ export default function ConnectGithub() {
               </div>
 
               <Button
-                className={`w-fit px-4
+                className={`w-fit px-4 flex items-center justify-center
                 ${
                   connectionSuccess &&
                   'hover:bg-primary-300 bg-primary-300 text-gray-50 cursor-default'
@@ -53,14 +55,14 @@ export default function ConnectGithub() {
                 type={connectionSuccess ? 'button' : 'submit'}
                 variant="secondary"
               >
-                {!connectionSuccess ? (
+                {!connectionSuccess && !isSubmitting && (
                   <>
                     <span className="hidden md:block">Connect</span>
                     <ArrowRight className="h-4 w-4" />
                   </>
-                ) : (
-                  <Check />
                 )}
+                {connectionSuccess && !isSubmitting && <Check />}
+                {!connectionSuccess && isSubmitting && <Spinner />}
               </Button>
             </div>
             {errors.githubUser?.message && (
@@ -79,7 +81,7 @@ export default function ConnectGithub() {
                   size="form"
                   type={connectionSuccess ? 'button' : 'submit'}
                   className="md:w-full"
-                  disabled={isNextStepButtonDisabled}
+                  disabled={isButtonDisabled}
                 >
                   <span>Next step</span>
                   <ArrowRight className="h-4 w-4" />
@@ -90,7 +92,7 @@ export default function ConnectGithub() {
                 size="form"
                 type={connectionSuccess ? 'button' : 'submit'}
                 className="w-full"
-                disabled={isNextStepButtonDisabled}
+                disabled={isButtonDisabled}
               >
                 <span>Next step</span>
                 <ArrowRight className="h-4 w-4" />

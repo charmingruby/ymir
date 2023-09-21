@@ -20,9 +20,6 @@ const personalDetailsForm = z.object({
     })
     .email({
       message: 'Invalid email format.',
-    })
-    .nonempty({
-      message: "E-mail can't be blank.",
     }),
   birthdate: z
     .string()

@@ -9,7 +9,7 @@ export function Spinner({ size = 'md' }: SpinnerProps) {
     <div role="status">
       <svg
         aria-hidden="true"
-        className={clsx('mr-2 text-primary-100 animate-spin fill-primary-300', {
+        className={clsx('text-primary-100 animate-spin fill-primary-300', {
           'h-4 w-4': size === 'sm',
           'h-5 w-5': size === 'md',
           'h-8 w-8': size === 'lg',

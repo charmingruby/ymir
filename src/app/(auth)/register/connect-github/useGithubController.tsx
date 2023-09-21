@@ -30,7 +30,7 @@ export function useGithubController() {
   const {
     register,
     handleSubmit: hookFormHandleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     watch,
   } = useForm<ConnectGithubFormData>({
     resolver: zodResolver(connectGithubForm),
@@ -38,8 +38,7 @@ export function useGithubController() {
 
   const githubUserField = watch('githubUser')
 
-  const isNextStepButtonDisabled =
-    !githubUserField || isLoading || !connectionSuccess
+  const isButtonDisabled = !githubUserField || isLoading || !connectionSuccess
 
   const handleSubmit = hookFormHandleSubmit(
     async ({ githubUser }: ConnectGithubFormData) => {
@@ -54,8 +53,8 @@ export function useGithubController() {
 
         if (statusCode === 409) {
           setIsLoading(false)
+          console.log('oi')
           setFormSubmitErrors('Github user already taken.')
-          return
         }
         setConnectionSuccess(true)
         setIsLoading(false)
@@ -63,6 +62,10 @@ export function useGithubController() {
         if (err instanceof AxiosError) {
           if (err.response?.status === 404) {
             setFormSubmitErrors("Github user doesn't exists.")
+          }
+
+          if (err.response?.status === 409) {
+            setFormSubmitErrors('Github user already taken.')
           }
         }
       }
@@ -77,6 +80,7 @@ export function useGithubController() {
     formSubmitErrors,
     isLoading,
     connectionSuccess,
-    isNextStepButtonDisabled,
+    isButtonDisabled,
+    isSubmitting,
   }
 }

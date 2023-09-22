@@ -42,6 +42,22 @@ export async function POST(req: NextRequest) {
 
   const { username, role, stack, bio } = ProfileData.parse(body)
 
+  const usernameAlreadyInUse = await prisma.profile.findFirst({
+    where: {
+      username,
+    },
+  })
+
+  if (usernameAlreadyInUse) {
+    return new Response(
+      ResponseMessage({
+        message: 'Username already taken.',
+        statusCode: 409,
+      }),
+      { status: 409 },
+    )
+  }
+
   await prisma.profile.create({
     data: {
       userId,

@@ -30,14 +30,13 @@ const profileForm = z.object({
 type ProfileFormData = z.infer<typeof profileForm>
 
 interface ProfileFormResponse {
-  data: {
-    message: string
-    statusCode: number
-  }
+  message: string
+  statusCode: number
 }
 
 export function useProfileController() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [formSubmitError, setFormSubmitError] = useState<string | null>(null)
   const { push } = useRouter()
 
   const { totalSteps } = useUserRegisterStore()
@@ -64,26 +63,19 @@ export function useProfileController() {
       setIsLoading(true)
 
       try {
-        const {
-          data: { statusCode },
-        }: ProfileFormResponse = await createProfile({
-          bio,
-          role,
-          stack,
-          username,
-        })
+        const { message, statusCode }: ProfileFormResponse =
+          await createProfile({
+            bio,
+            role,
+            stack,
+            username,
+          })
 
-        if (statusCode === 403) {
-          push('/register/personal-details')
+        if (statusCode === 409) {
+          setFormSubmitError(message)
           setIsLoading(false)
           return
         }
-
-        if (statusCode === 404) {
-          push('/register/personal-details')
-          setIsLoading(false)
-        }
-
         push('/login')
       } catch (err) {
         console.error(err)
@@ -92,6 +84,7 @@ export function useProfileController() {
   )
 
   return {
+    formSubmitError,
     totalSteps,
     register,
     handleSubmit,

@@ -51,11 +51,17 @@ const createUser = async (props: CreateUserRequest) => {
 }
 
 const connectGithub = async ({ githubUser }: ConnectGithubRequest) => {
-  const res = await api.post(`/api/users/connect-github`, {
-    githubUser,
-  })
+  try {
+    const res = await api.post(`/api/users/connect-github`, {
+      githubUser,
+    })
 
-  return res
+    return await res.data
+  } catch (err) {
+    if (err instanceof AxiosError) {
+      return err.response
+    }
+  }
 }
 
 const createProfile = async ({
@@ -64,14 +70,19 @@ const createProfile = async ({
   stack,
   username,
 }: CreateProfileRequest) => {
-  const res = await api.post('/api/users/update-profile', {
-    bio,
-    role,
-    stack,
-    username,
-  })
-
-  return res
+  try {
+    const res = await api.post('/api/users/update-profile', {
+      bio,
+      role,
+      stack,
+      username,
+    })
+    return await res.data
+  } catch (err) {
+    if (err instanceof AxiosError) {
+      return err.response?.data
+    }
+  }
 }
 
 export { validatePersonalDetails, createUser, connectGithub, createProfile }

@@ -17,8 +17,9 @@ export default function ProfileForm() {
     errors,
     isButtonDisabled,
     isLoading,
+    formSubmitError,
   } = useProfileController()
-
+  console.log()
   return (
     <AuthForm.Root
       title="Create a new account"
@@ -90,6 +91,7 @@ export default function ProfileForm() {
               </>
             )}
           </Button>
+          {formSubmitError && <FieldError errorMessage={formSubmitError} />}
         </div>
       </AuthForm.Form>
     </AuthForm.Root>

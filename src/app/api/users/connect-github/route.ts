@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
   // Validate user id on cookies
   const cookieStore = cookies()
   const id = cookieStore.get('@ymir:userId')?.value
-  console.log(id)
+
   if (!id) {
     return new Response(
       ResponseMessage({
@@ -27,15 +27,12 @@ export async function POST(request: NextRequest) {
     )
   }
 
-  // Get body
   const body = await request.json()
   const { githubUser } = ConnectGithubRequest.parse(body)
 
-  // Get Github profile infos
   const rawData = await fetch(`https://api.github.com/users/${githubUser}`)
   const data = await rawData.json()
 
-  // Validating if user was found
   if (data.message === 'Not Found') {
     return new Response(
       ResponseMessage({
@@ -50,13 +47,12 @@ export async function POST(request: NextRequest) {
 
   const parsedData = GithubDetails.parse(data)
 
-  // Validate if already have an user this Github User
-  const user = await prisma.user.findUnique({
+  const user = await prisma.user.findFirst({
     where: {
-      id,
       githubUser,
     },
   })
+
   if (user) {
     return new Response(
       ResponseMessage({
@@ -69,7 +65,6 @@ export async function POST(request: NextRequest) {
     )
   }
 
-  // Connect user and Github
   await prisma.user.update({
     where: {
       id,

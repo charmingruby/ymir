@@ -15,10 +15,8 @@ const connectGithubForm = z.object({
 type ConnectGithubFormData = z.infer<typeof connectGithubForm>
 
 interface ConnectGithubResponse {
-  data: {
-    message: string
-    statusCode: number
-  }
+  message: string
+  statusCode: number
 }
 
 export function useGithubController() {
@@ -45,17 +43,18 @@ export function useGithubController() {
       try {
         setFormSubmitErrors(null)
         setIsLoading(true)
-        const {
-          data: { statusCode },
-        }: ConnectGithubResponse = await connectGithub({
+        setConnectionSuccess(false)
+
+        const { statusCode }: ConnectGithubResponse = await connectGithub({
           githubUser,
         })
 
         if (statusCode === 409) {
           setIsLoading(false)
-          console.log('oi')
           setFormSubmitErrors('Github user already taken.')
+          return
         }
+
         setConnectionSuccess(true)
         setIsLoading(false)
       } catch (err) {

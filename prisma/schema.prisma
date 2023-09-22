@@ -11,7 +11,7 @@ model User {
   id         String   @id @default(cuid())
   name       String
   lastName   String   @map("last_name")
-  githubUser String?  @map("github_user")
+  githubUser String?  @unique @map("github_user")
   avatarUrl  String?  @map("avatar_url")
   email      String   @unique
   password   String
@@ -26,11 +26,11 @@ model User {
 
 model Profile {
   id        String   @id @default(cuid())
-  username  String
+  username  String   @unique
   bio       String
   role      String
   stack     String
-  user      User     @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId    String   @unique @map("user_id")
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")

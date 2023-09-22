@@ -76,7 +76,7 @@ export function useProfileController() {
           setIsLoading(false)
           return
         }
-        push('/login')
+        push('/register/success')
       } catch (err) {
         console.error(err)
       }

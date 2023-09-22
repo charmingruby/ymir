@@ -1,6 +1,4 @@
-import { Button } from '@/components/ui/button'
 import * as Container from '@/components/ui/container'
-import * as Input from '@/components/ui/form/input'
 import Link from 'next/link'
 import grayLogo from '@/assets/images/gray-logo.svg'
 import logo from '@/assets/images/logo.svg'
@@ -8,6 +6,7 @@ import Image from 'next/image'
 import teamImage from '@/assets/images/sign-in.svg'
 import { Text } from '@/components/ui/text'
 import { Header } from '../components/header'
+import { LoginForm } from './components/login-form'
 
 export default function SignIn() {
   return (
@@ -48,24 +47,7 @@ export default function SignIn() {
               </span>
             </div>
 
-            <div className="flex w-full flex-col gap-4">
-              <Input.Root>
-                <Input.Control name="email" placeholder="Email" />
-              </Input.Root>
-
-              <Input.Root>
-                <Input.Control
-                  name="password"
-                  type="password"
-                  required={false}
-                  placeholder="Password"
-                />
-              </Input.Root>
-
-              <Button size="form" className="w-full mt-4">
-                Sign in
-              </Button>
-            </div>
+            <LoginForm />
 
             <span className="mt-4 mb-12 text-base">
               Doesn{"'"}t have an account?{' '}

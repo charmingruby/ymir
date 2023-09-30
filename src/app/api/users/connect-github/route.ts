@@ -24,6 +24,9 @@ export async function POST(request: NextRequest) {
         statusCode: 403,
         message: 'User id not found on cookies.',
       }),
+      {
+        status: 403,
+      },
     )
   }
 

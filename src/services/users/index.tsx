@@ -59,7 +59,7 @@ const connectGithub = async ({ githubUser }: ConnectGithubRequest) => {
     return await res.data
   } catch (err) {
     if (err instanceof AxiosError) {
-      return err.response
+      return err.response?.data
     }
   }
 }

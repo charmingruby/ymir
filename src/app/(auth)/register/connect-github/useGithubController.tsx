@@ -55,6 +55,12 @@ export function useGithubController() {
           return
         }
 
+        if (statusCode === 404) {
+          setIsLoading(false)
+          setFormSubmitErrors("Github user doesn't exist.")
+          return
+        }
+
         setConnectionSuccess(true)
         setIsLoading(false)
       } catch (err) {

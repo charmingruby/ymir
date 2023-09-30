@@ -52,7 +52,7 @@ export default function ConnectGithub() {
                   'hover:bg-primary-300 bg-primary-300 text-gray-50 cursor-default'
                 }
                 `}
-                type={connectionSuccess ? 'button' : 'submit'}
+                type={connectionSuccess ? 'submit' : 'submit'}
                 variant="secondary"
               >
                 {!connectionSuccess && !isSubmitting && (

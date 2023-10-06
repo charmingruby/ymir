@@ -1,6 +1,6 @@
 'use client'
 
-import { useUserRegisterStore } from '@/store/user-register'
+import { useUserRegisterStore } from '@/hooks/use-user-register'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'

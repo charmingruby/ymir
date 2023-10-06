@@ -13,52 +13,29 @@ export default function SignIn() {
     <div>
       <Header />
       <Container.Root className="min-h-screen flex items-center">
-        <Container.Content className="max-w-xl lg:max-w-7xl lg:grid lg:grid-cols-2 gap-12 lg:py-12">
-          <div className="hidden lg:flex flex-col justify-center">
-            <div className="flex items-center justify-center">
-              <Image
-                src={teamImage}
-                alt="Sign in image"
-                className="w-[30rem]"
-              />
-            </div>
-            <div className="flex items-center gap-2 mb-2 border-t pt-8 border-gray-100">
-              <Image src={logo} alt="Ymir Logo" className="h-6 w-6" />
-              <span className="text-primary-300 font-logo text-3xl">Ymir</span>
-            </div>
-            <Text variant="lowOpacity">
-              Register now and embark on a journey of personal growth and
-              development with our transformative app. Start your path to
-              success today.
-            </Text>
-          </div>
+        <Container.Content className="max-w-xl mx-auto">
+          <div className="flex flex-col justify-center w-full bg-white border border-gray-100 rounded-xl py-8 px-8">
+            <div className="flex flex-col items-center mb-8">
+              <div className="flex items-center">
+                <Image src={logo} alt="" className="h-8 w-8" />
+                <strong className="block font-semibold text-2xl">
+                  Log Into Ymir
+                </strong>
+              </div>
 
-          <div className="flex flex-col justify-center w-full mx-auto max-w-md">
-            <div className="flex flex-row items-center gap-2 justify-center">
-              <Image src={grayLogo} alt="Ymir Logo" className="h-5 w-5" />
-              <span className="text-gray-200 font-logo text-2xl">Ymir</span>
-            </div>
-
-            <div className="flex flex-col items-center mt-16">
-              <strong className="block text-3xl">Sign in</strong>
-
-              <span className="mt-3 mb-8 text-gray-400 font-medium">
-                Starting using the platform
+              <span className="mt-4 text-base">
+                New here?{' '}
+                <Link
+                  href="/register"
+                  prefetch={false}
+                  className="font-semibold text-primary-300 hover:underline underline-offset-2 transition-all"
+                >
+                  Sign up
+                </Link>
               </span>
             </div>
 
             <LoginForm />
-
-            <span className="mt-4 mb-12 text-base">
-              Doesn{"'"}t have an account?{' '}
-              <Link
-                href="/register"
-                prefetch={false}
-                className="font-semibold text-primary-300 hover:underline underline-offset-2 transition-all"
-              >
-                Sign up
-              </Link>
-            </span>
           </div>
         </Container.Content>
       </Container.Root>

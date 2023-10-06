@@ -24,3 +24,9 @@ This application was made for purpose of creating a shareable environment to wor
 
 #### Details
 - Each user can have a maximum of 5 projects;
+
+
+#### Refactor
+- [ ] tRPC setup
+- [ ] React query setup
+- [ ] Change zustand use

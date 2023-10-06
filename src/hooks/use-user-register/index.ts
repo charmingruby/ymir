@@ -9,12 +9,12 @@ export const useUserRegisterStore = create<
   UserRegisterStore & UserRegisterActions
 >((set) => {
   return {
-    totalSteps: 4,
+    totalSteps: 3,
     name: '',
     lastName: '',
     email: '',
     birthdate: new Date(),
-    password: '',
+
     assignPersonalDetails: ({
       name,
       lastName,
@@ -27,15 +27,6 @@ export const useUserRegisterStore = create<
         email,
         birthdate,
       })
-    },
-    assignPassword: () => {
-      console.log()
-    },
-    assignUpdateProfile: () => {
-      console.log()
-    },
-    assignUseMotivation: () => {
-      console.log()
     },
   }
 })

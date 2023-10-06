@@ -7,7 +7,4 @@ export interface AssignPersonalDetailsProps {
 
 export type UserRegisterActions = {
   assignPersonalDetails: (props: AssignPersonalDetailsProps) => void
-  assignPassword: () => void
-  assignUpdateProfile: () => void
-  assignUseMotivation: () => void
 }

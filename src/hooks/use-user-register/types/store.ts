@@ -4,5 +4,4 @@ export type UserRegisterStore = {
   lastName: string
   birthdate: Date
   email: string
-  password: string
 }

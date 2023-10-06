@@ -1,7 +1,7 @@
 'use client'
 
 import { connectGithub } from '@/services/users'
-import { useUserRegisterStore } from '@/store/user-register'
+import { useUserRegisterStore } from '@/hooks/use-user-register'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { AxiosError } from 'axios'
 import { useState } from 'react'

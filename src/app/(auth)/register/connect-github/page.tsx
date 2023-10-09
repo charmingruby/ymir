@@ -72,11 +72,7 @@ export default function ConnectGithub() {
 
           <div className="flex flex-col w-full gap-1">
             {connectionSuccess ? (
-              <Link
-                href="/register/profile"
-                prefetch={false}
-                className="w-full"
-              >
+              <Link href="/login" prefetch={false} className="w-full">
                 <Button
                   size="form"
                   type={connectionSuccess ? 'button' : 'submit'}
